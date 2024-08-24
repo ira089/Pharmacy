@@ -1,0 +1,11 @@
+.wrapLogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+}
