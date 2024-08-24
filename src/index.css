@@ -1,12 +1,53 @@
 @import-normalize; /* bring in normalize.css styles */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Regular/Inter-Regular.ttf'),
+    url('./assets/fonts/Inter-Regular/Inter-Regular.woff'),
+    url('./assets/fonts/Inter-Regular/Inter-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Bold/Inter-Bold.ttf'),
+    url('./assets/fonts/Inter-Bold/Inter-Bold.woff'),
+    url('./assets/fonts/Inter-Bold/Inter-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-SemiBold/Inter-SemiBold.ttf'),
+    url('./assets/fonts/Inter-SemiBold/Inter-SemiBold.woff'),
+    url('./assets/fonts/Inter-SemiBold/Inter-SemiBold.woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Medium/Inter-Medium.ttf'),
+    url('./assets/fonts/Inter-Medium/Inter-Medium.woff'),
+    url('./assets/fonts/Inter-Medium/Inter-Medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 code {
