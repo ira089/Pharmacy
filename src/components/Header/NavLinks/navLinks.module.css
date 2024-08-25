@@ -1,0 +1,42 @@
+.navList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    background-image:url('../../../assets/svg/borderMenu.svg');
+    /* z-index: 333; */
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.navLink {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    /* padding: 0px 15px;
+    width: 119px;
+    height: 48px; */
+    font-size: 14px;
+    line-height: 100%;
+    color:  #93939a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLink:hover {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 24px;
+/* padding: 8px 12px; */
+width: 80px;
+height: 30px;
+background: #59b17a;
+}

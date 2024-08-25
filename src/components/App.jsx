@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { ToastContainer } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +9,7 @@ import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
-import LoginPage from 'pages/Loginpage/LoginPage';
+import LoginPage from 'pages/LoginPage/LoginPage';
 import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
 import MedicinePage from 'pages/MedicinePage/MedicinePage';
 import CartPage from 'pages/CartPage/CartPage';
@@ -33,8 +33,8 @@ const App = () => {
   ) : (
     <>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage />} />
+        <Route path="/" element={<SharedLayout component={<Navigate to="/home" />}/> }>
+          <Route path="home" element={<HomePage />} />
           <Route path="produst" element={<ProductPage/>} />
           
 

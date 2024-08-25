@@ -1,18 +1,18 @@
 .burger {
   position: fixed;
   top: -28px;
-  right: -268px;
+  right: -298px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  /* gap: 280px; */
-  width: 65%;
-  max-width: 127px;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* gap: 302px; */
+  width: 56%;
+  max-width: 210px;
   height: 94vh;
   background: #59b17a;
   transition: transform 0.3s linear;
-  padding: 31px 38px 40px 38px;
+  padding: 20px 38px 40px 38px;
 }
 
 .active {

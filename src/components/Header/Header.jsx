@@ -22,6 +22,7 @@ const Header = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   return (
     <header className={styles.wrapHeader}>
       <NavLink className={styles.link} to="/">
@@ -36,7 +37,7 @@ const Header = () => {
       </div>
       <BurgerMenu isOpen={isOpen} open={open}/>
       <button className={styles.burgerBtn} onClick={isOpen}>
-          {location.pathname === '/' ? (
+          {location.pathname === '/home' ? (
             <Icon width={32} height={26}  name={'icon-burger-btn-white'} />
           ) : (
             <Icon width={32} height={26}  name={'icon-burger-btn-green'} />

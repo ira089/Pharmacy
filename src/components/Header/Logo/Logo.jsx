@@ -8,7 +8,7 @@ import styles from './logo.module.css';
 
 const Logo = () => {
   const location = useLocation();
-  return location.pathname === '/' ? (
+  return location.pathname === '/home' ? (
     <div className={styles.wrapLogo}>
       <picture className={styles.img}>
         <source media="(max-width: 767px)" srcSet={ImgLogoWhiteM} />

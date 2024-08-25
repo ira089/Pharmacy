@@ -32,3 +32,9 @@
 .burgerBtn:hover {
   opacity: 1;
 }
+
+@media (min-width: 1440px) {
+  .burgerBtn {
+    display: none;
+  }
+}

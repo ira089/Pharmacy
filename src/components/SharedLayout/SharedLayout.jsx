@@ -10,7 +10,7 @@ const SharedLayout = () => {
   const location = useLocation();
   return (
     <div
-      style={{ background: location.pathname === '/' ? '#59b17a' : '#f7f8fa' }}
+      style={{ background: location.pathname === '/home' ? '#59b17a' : '#f7f8fa' }}
       className={styles.container}
     >
       <Header />
