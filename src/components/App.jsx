@@ -9,7 +9,7 @@ import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
-import LoginPage from '../pages/LoginPage/LoginPage';
+import LoginPage from '../pages/Loginpage/LoginPage';
 import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
 import MedicinePage from 'pages/MedicinePage/MedicinePage';
 import CartPage from 'pages/CartPage/CartPage';

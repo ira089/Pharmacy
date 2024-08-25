@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+// import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from 'react-router-dom';
+// import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 
 const PublicRoute = () => {
-  return (
-    <div>PublicRoute</div>
-  )
-}
+  // const isLogin = useSelector(selectIsLoggedIn);
+  const isLogin = true
 
-export default PublicRoute
+  return isLogin ? <Navigate to="/medicine" /> : <Outlet />;
+};
+
+export default PublicRoute;

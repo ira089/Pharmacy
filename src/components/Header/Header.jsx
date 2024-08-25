@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className={styles.wrapHeader}>
-      <NavLink className={styles.link} to="/">
+      <NavLink className={styles.link} to="/home">
       <Logo/>
       </NavLink>
       
