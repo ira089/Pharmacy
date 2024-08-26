@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { ToastContainer } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +9,7 @@ import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
-import LoginPage from '../pages/Loginpage/LoginPage';
+import Login from '../pages/Login/Login';
 import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
 import MedicinePage from 'pages/MedicinePage/MedicinePage';
 import CartPage from 'pages/CartPage/CartPage';
@@ -33,21 +33,18 @@ const App = () => {
   ) : (
     <>
       <Routes>
-        <Route path="/" element={<SharedLayout component={<Navigate to="/home" />}/> }>
-          <Route path="home" element={<HomePage />} />
+        <Route path="/" element={<SharedLayout /> }>
+          <Route index element={<HomePage />} />
           <Route path="produst" element={<ProductPage/>} />
-          
-
           <Route element={<PublicRoute />}>
             <Route path="register" element={<RegisterPage />} />
-            <Route path="login" element={<LoginPage />} />
+            <Route path="login" element={<Login />} />
             <Route path="medicine-store" element={<MedicineStorePage />} />
           </Route>
           <Route element={<PrivateRoute />}>
             <Route path="medicine" element={<MedicinePage />} />
             <Route path="cart" element={<CartPage />} />
           </Route>
-
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
