@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.a21624b6.css",
-    "main.js": "/Pharmacy/static/js/main.507776b7.js",
+    "main.css": "/Pharmacy/static/css/main.1f42e53c.css",
+    "main.js": "/Pharmacy/static/js/main.73866e94.js",
+    "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
     "static/media/Inter-Medium.ttf": "/Pharmacy/static/media/Inter-Medium.7682fdab91479338a4d5.ttf",
     "static/media/Inter-SemiBold.ttf": "/Pharmacy/static/media/Inter-SemiBold.814c22bad710b7ff6e33.ttf",
     "static/media/Inter-Bold.ttf": "/Pharmacy/static/media/Inter-Bold.b70a895538e65c462f5f.ttf",
@@ -17,11 +18,11 @@
     "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.cba573b3e8d0d4bf99b93129a7e9e068.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.a21624b6.css.map": "/Pharmacy/static/css/main.a21624b6.css.map",
-    "main.507776b7.js.map": "/Pharmacy/static/js/main.507776b7.js.map"
+    "main.1f42e53c.css.map": "/Pharmacy/static/css/main.1f42e53c.css.map",
+    "main.73866e94.js.map": "/Pharmacy/static/js/main.73866e94.js.map"
   },
   "entrypoints": [
-    "static/css/main.a21624b6.css",
-    "static/js/main.507776b7.js"
+    "static/css/main.1f42e53c.css",
+    "static/js/main.73866e94.js"
   ]
 }
