@@ -4,6 +4,10 @@
 .wrapFooter {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background: #59b17a;
+  padding: 20px;
+
 }
 .link {
   text-decoration: none;
@@ -59,4 +63,10 @@
 }
 .policy a:hover {
   color: #dfe6f5;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .wrapFooter {
+    width: 335px;
+  }
 }

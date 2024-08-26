@@ -4,13 +4,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from 'components/Header/Logo/Logo';
 import Divider from '@mui/material/Divider';
+import ImgLogoWhiteM from '../../assets/img/MaskWhiteM.png';
 import styles from './footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={styles.wrapFooter}>
       <NavLink className={styles.link} to="/home">
-      <Logo/>
+      <Logo color="#fff" logoImg={ImgLogoWhiteM}/>
       </NavLink>
       <p className={styles.textFooter}>
         Get the medicine to help you feel better, get back to your active life,
