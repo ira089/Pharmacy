@@ -1,0 +1,13 @@
+.wrapItem {
+    border: 1.15px solid #f1f1f1;
+    border-radius: 27px;
+    padding: 40px;
+    width: 100%;
+    /* height: 126px;  */
+    background: #e7f1ed;
+
+display: flex;
+flex-direction: column;
+/* gap: 14px; */
+box-sizing: border-box;
+}
