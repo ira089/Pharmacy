@@ -26,7 +26,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={styles.wrapHeader}>
+    <header
+      style={{
+        background: location.pathname === '/home' ? '#59b17a' : '#f7f8fa',
+      }}
+      className={styles.wrapHeader}
+    >
       <NavLink className={styles.link} to="/home">
         {location.pathname === '/home' ? (
           <Logo color="#fff" logoImg={ImgLogoWhiteM} />

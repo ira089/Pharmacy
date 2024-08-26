@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './authLinks.module.css';
 import Button from 'components/Button/Button';
+import styles from './authLinks.module.css';
 
 const AuthLinks = () => {
   return (

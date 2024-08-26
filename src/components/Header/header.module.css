@@ -4,6 +4,7 @@
   align-items: center;
   position: relative;
   width: 100%;
+  padding: 20px;
 }
 
 .link {
@@ -31,6 +32,12 @@
 }
 .burgerBtn:hover {
   opacity: 1;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .wrapHeader {
+    width: 335px;
+  }
 }
 
 @media (min-width: 1440px) {
