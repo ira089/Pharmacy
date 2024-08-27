@@ -7,5 +7,28 @@
     justify-items: center;
     align-items: center;
     gap: 40px;
-    /* width: 100%; */
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+.wrapMenu {
+    width: 992px;
+height: 39px;
+display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+}
+.menu p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: #1d1e21; 
+    margin: 0;
 }
