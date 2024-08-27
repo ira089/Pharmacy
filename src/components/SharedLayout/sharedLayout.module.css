@@ -1,6 +1,6 @@
 .container {
     background: #f7f8fa;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
   
   @media (min-width: 375px) and (max-width: 767px) {
     .container {
-      width: 335px;
+      width: 375px;
     }
   }
   

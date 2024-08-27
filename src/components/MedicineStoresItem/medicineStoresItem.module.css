@@ -11,6 +11,7 @@ flex-direction: column;
 gap: 18px;
 box-sizing: border-box;
 position: relative;
+overflow: hidden;
 }
 .wrapItem:hover {
     border: 1.15px solid #caf1e2;  
@@ -28,6 +29,16 @@ font-size: 16px;
 line-height: 140%;
 color: #1d1e21;
 margin: 0;
+overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  /* width: calc(100% - 20px); */
+
+  -moz-box-orient: vertical;
 }
 
 .star {
@@ -74,13 +85,26 @@ color: #93939a;
 .addresPhone p {
     margin: 0;
 }
-.decor1 {
-    top: 87px;
-    left: 271.34px;
+.decor1, .decor2, .decor3 {
+    /* top: 87px;
+    left: 271.34px; */
+   
     position: absolute;
     border-radius: 20px 0 0 20px;
     width: 166px;
     height: 35px;
     background: rgba(89, 177, 122, 0.08);
 transform: rotate(22deg); 
+}
+.decor1 {
+    top: 103px;
+    left: 287.34px;
+}
+.decor2 {
+    top: 125.75px;
+    left: 225px;
+}
+.decor3 {
+    top: 178.82px;
+    left: 238.48px;
 }

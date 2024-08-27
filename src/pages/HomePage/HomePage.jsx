@@ -7,13 +7,14 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-   <section>
+    <>
     <MainBanner/>
     <PromoBanners/>
     <MedicineStores/>
     <PromoSection/>
     <ReviewsSection/>
-   </section>
+    </>
+   
   )
 }
 

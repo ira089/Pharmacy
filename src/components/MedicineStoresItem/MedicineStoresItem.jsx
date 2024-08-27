@@ -8,7 +8,7 @@ const MedicineStoresItem = () => {
     <NavLink className= {styles.wrapItem}>
       {/* <div className={styles.wrapItem}> */}
         <div className={styles.titleStar}>
-          <h5 className={styles.title}>Baumbach LLC</h5>
+          <h5 className={styles.title}>Baumbachjjsiwjwnx LLC</h5>
           <div className={styles.star}>
             <Icon width={16} height={16} name={'icon-star'} />
             <spav>3</spav>

@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import PromoSectionImg from './PromoSectionImg';
+import PromoSectionMenu from './PromoSectionMenu';
+import styles from './promoSection.module.css';
 
 const PromoSection = () => {
   return (
-    <div>PromoSection</div>
+    <section className={styles.wrapPromo}>
+      <PromoSectionImg/>
+      <PromoSectionMenu/>
+
+    </section>
   )
 }
 
