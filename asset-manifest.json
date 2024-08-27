@@ -1,12 +1,18 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.588c861f.css",
-    "main.js": "/Pharmacy/static/js/main.9b486ad3.js",
+    "main.css": "/Pharmacy/static/css/main.b25077c0.css",
+    "main.js": "/Pharmacy/static/js/main.181782dc.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
+    "static/media/PromoSection2D .png": "/Pharmacy/static/media/PromoSection2D .94c869bdab5ee442afc1.png",
+    "static/media/PromoSection2T.png": "/Pharmacy/static/media/PromoSection2T.a6c52705c7dc74876aba.png",
+    "static/media/PromoSection2M.png": "/Pharmacy/static/media/PromoSection2M.10cc26fdd9c6117c033a.png",
     "static/media/Inter-Medium.ttf": "/Pharmacy/static/media/Inter-Medium.7682fdab91479338a4d5.ttf",
     "static/media/Inter-SemiBold.ttf": "/Pharmacy/static/media/Inter-SemiBold.814c22bad710b7ff6e33.ttf",
     "static/media/Inter-Bold.ttf": "/Pharmacy/static/media/Inter-Bold.b70a895538e65c462f5f.ttf",
     "static/media/Inter-Regular.ttf": "/Pharmacy/static/media/Inter-Regular.991468dd4e43f260e6a4.ttf",
+    "static/media/PromoSection1T.png": "/Pharmacy/static/media/PromoSection1T.856c2ad0cdfaa5d1e377.png",
+    "static/media/PromoSection1D.png": "/Pharmacy/static/media/PromoSection1D.a0dfc861f3606da9a3f0.png",
+    "static/media/PromoSection1M.png": "/Pharmacy/static/media/PromoSection1M.c1cd68a68d555df478ca.png",
     "static/media/Inter-Bold.woff": "/Pharmacy/static/media/Inter-Bold.1e547cd04bfe2dae1f98.woff",
     "static/media/Inter-SemiBold.woff": "/Pharmacy/static/media/Inter-SemiBold.7f6c3678e245486167d9.woff",
     "static/media/Inter-Medium.woff": "/Pharmacy/static/media/Inter-Medium.44e343ff76a98508d309.woff",
@@ -18,11 +24,11 @@
     "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.9f6af73fb59b9fee9852044ec31a81c6.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.588c861f.css.map": "/Pharmacy/static/css/main.588c861f.css.map",
-    "main.9b486ad3.js.map": "/Pharmacy/static/js/main.9b486ad3.js.map"
+    "main.b25077c0.css.map": "/Pharmacy/static/css/main.b25077c0.css.map",
+    "main.181782dc.js.map": "/Pharmacy/static/js/main.181782dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.588c861f.css",
-    "static/js/main.9b486ad3.js"
+    "static/css/main.b25077c0.css",
+    "static/js/main.181782dc.js"
   ]
 }
