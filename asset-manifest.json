@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.f1ed8b93.css",
-    "main.js": "/Pharmacy/static/js/main.2cdc0dc9.js",
+    "main.css": "/Pharmacy/static/css/main.65c84a98.css",
+    "main.js": "/Pharmacy/static/js/main.b9cc7896.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
     "static/media/PromoSection2D .png": "/Pharmacy/static/media/PromoSection2D .94c869bdab5ee442afc1.png",
     "static/media/PromoSection2T.png": "/Pharmacy/static/media/PromoSection2T.a6c52705c7dc74876aba.png",
@@ -23,14 +23,14 @@
     "static/media/Inter-Medium.woff2": "/Pharmacy/static/media/Inter-Medium.01f03178adde434fc9fa.woff2",
     "static/media/Inter-Regular.woff2": "/Pharmacy/static/media/Inter-Regular.bd097ceff83f90802a12.woff2",
     "static/media/photo.svg": "/Pharmacy/static/media/photo.12621f53ac0b51d9ff76118627019ad1.svg",
-    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.f804dc8095e4c4fa143d1afb035bff59.svg",
+    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.55b386310be48612156375c93ac53e88.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.f1ed8b93.css.map": "/Pharmacy/static/css/main.f1ed8b93.css.map",
-    "main.2cdc0dc9.js.map": "/Pharmacy/static/js/main.2cdc0dc9.js.map"
+    "main.65c84a98.css.map": "/Pharmacy/static/css/main.65c84a98.css.map",
+    "main.b9cc7896.js.map": "/Pharmacy/static/js/main.b9cc7896.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1ed8b93.css",
-    "static/js/main.2cdc0dc9.js"
+    "static/css/main.65c84a98.css",
+    "static/js/main.b9cc7896.js"
   ]
 }
