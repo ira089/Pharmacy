@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.99313d77.css",
-    "main.js": "/Pharmacy/static/js/main.e5a9f69c.js",
+    "main.css": "/Pharmacy/static/css/main.f1ed8b93.css",
+    "main.js": "/Pharmacy/static/js/main.2cdc0dc9.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
     "static/media/PromoSection2D .png": "/Pharmacy/static/media/PromoSection2D .94c869bdab5ee442afc1.png",
     "static/media/PromoSection2T.png": "/Pharmacy/static/media/PromoSection2T.a6c52705c7dc74876aba.png",
@@ -12,6 +12,7 @@
     "static/media/Inter-Regular.ttf": "/Pharmacy/static/media/Inter-Regular.991468dd4e43f260e6a4.ttf",
     "static/media/PromoSection1T.png": "/Pharmacy/static/media/PromoSection1T.856c2ad0cdfaa5d1e377.png",
     "static/media/PromoSection1D.png": "/Pharmacy/static/media/PromoSection1D.a0dfc861f3606da9a3f0.png",
+    "static/media/whiteRoundPill.svg": "/Pharmacy/static/media/whiteRoundPill.222b8b9d8384199ea999.svg",
     "static/media/PromoSection1M.png": "/Pharmacy/static/media/PromoSection1M.c1cd68a68d555df478ca.png",
     "static/media/Inter-Bold.woff": "/Pharmacy/static/media/Inter-Bold.1e547cd04bfe2dae1f98.woff",
     "static/media/Inter-SemiBold.woff": "/Pharmacy/static/media/Inter-SemiBold.7f6c3678e245486167d9.woff",
@@ -25,11 +26,11 @@
     "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.f804dc8095e4c4fa143d1afb035bff59.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.99313d77.css.map": "/Pharmacy/static/css/main.99313d77.css.map",
-    "main.e5a9f69c.js.map": "/Pharmacy/static/js/main.e5a9f69c.js.map"
+    "main.f1ed8b93.css.map": "/Pharmacy/static/css/main.f1ed8b93.css.map",
+    "main.2cdc0dc9.js.map": "/Pharmacy/static/js/main.2cdc0dc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.99313d77.css",
-    "static/js/main.e5a9f69c.js"
+    "static/css/main.f1ed8b93.css",
+    "static/js/main.2cdc0dc9.js"
   ]
 }
