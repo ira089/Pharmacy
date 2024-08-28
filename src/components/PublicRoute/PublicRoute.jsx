@@ -5,7 +5,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const PublicRoute = () => {
   // const isLogin = useSelector(selectIsLoggedIn);
-  const isLogin = true
+  const isLogin = false
 
   return isLogin ? <Navigate to="/medicine" /> : <Outlet />;
 };

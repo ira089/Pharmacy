@@ -1,0 +1,38 @@
+.wrapRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  padding: 50px 20px 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  background-image: url(../../assets/svg/whiteRoundPill.svg);
+  background-repeat: no-repeat;
+  background-position: 240px 0;
+  background-size: 95px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 121%;
+  color: #1d1e21;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.title span {
+  color: #59b17a;
+}
+.link {
+  font-size: 12px;
+  line-height: 150%;
+  color: rgba(29, 30, 33, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.link:hover {
+  color: #1d1e21;
+}
