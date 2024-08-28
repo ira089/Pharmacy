@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Field, ErrorMessage } from 'formik';
+import styles from './input.module.css';
 
-const Input = () => {
+
+const Input = ({ name, placeholder,type}) => {
+  
   return (
-    <div>Input</div>
-  )
-}
+    <div className={styles.inputWrap}>
+      <label>
+        <Field name={name} placeholder={placeholder} type={type} />
+        <ErrorMessage name={name}>{error => <span>{error}</span>}</ErrorMessage>
+      </label>
+    </div>
+  );
+};
 
-export default Input
+export default Input;

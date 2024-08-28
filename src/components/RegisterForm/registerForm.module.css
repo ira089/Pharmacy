@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   background-position: 240px 0;
   background-size: 95px;
+  /* overflow: hidden; */
 }
 
 .title {
@@ -35,4 +36,20 @@
 }
 .link:hover {
   color: #1d1e21;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+}
+.btn {
+    margin-top: 10px;
+    /* width: 100%; */
+}
+.elements {
+    margin-top: 23px;
+    margin-left: 139px;
+    margin-right: -20px;
 }
