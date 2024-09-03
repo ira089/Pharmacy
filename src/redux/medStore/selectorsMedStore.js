@@ -1,0 +1,1 @@
+export const selectMedStore = state => state.pharmacies;

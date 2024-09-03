@@ -3,15 +3,16 @@ import { NavLink } from 'react-router-dom';
 import Icon from 'components/Icon/Icon';
 import styles from './medicineStoresItem.module.css';
 
-const MedicineStoresItem = () => {
+const MedicineStoresItem = ({item}) => {
+  const {name, address, city, phone, rating} = item
   return (
     <NavLink className= {styles.wrapItem}>
       {/* <div className={styles.wrapItem}> */}
         <div className={styles.titleStar}>
-          <h5 className={styles.title}>Baumbachjjsiwjwnx LLC</h5>
+          <h5 className={styles.title}>{name}</h5>
           <div className={styles.star}>
             <Icon width={16} height={16} name={'icon-star'} />
-            <spav>3</spav>
+            <span>{rating}</span>
             <div className={styles.open}>
               open
             </div>
@@ -19,11 +20,11 @@ const MedicineStoresItem = () => {
         </div>
         <div className= {styles.addresPhone}>
         <Icon width={16} fillColor={'none'} strokeColor={'#59B17A'}  height={16} name={'icon-map'} /> 
-        <p>Kretoria 11007 <br />Champerico</p> 
+        <p>{address} <br />{city}</p> 
         </div>
         <div className= {styles.addresPhone}>
         <Icon width={16} height={16} fillColor={'none'} strokeColor={'#59B17A'}  name={'icon-phone'} />
-        <p>506-84-9725</p>
+        <p>{phone}</p>
         </div>
         <div className= {styles.decor1}></div>
         <div className= {styles.decor2}></div>

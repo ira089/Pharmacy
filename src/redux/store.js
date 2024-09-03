@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { newReducer } from './new/newSlice';
+import {pharmaciesReducer } from './medStore/medStoreSlice';
 // import searchReducer from './search/searchSlice';
 import { authReducer } from './auth/authSlice';
 
@@ -24,7 +24,7 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    // new: newReducer,
+    pharmacies: pharmaciesReducer,
     // search: searchReducer,
     
   },
