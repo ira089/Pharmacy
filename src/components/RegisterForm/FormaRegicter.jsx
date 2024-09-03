@@ -1,6 +1,7 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
-// import { registerThunk } from '../../redux/auth/operationsAuth';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { registerThunk } from '../../redux/auth/operationsAuth';
 import { Formik, Form } from 'formik';
 import * as schema from '../../schemas/schemas';
 import Input from '../Input/Input';
@@ -8,7 +9,8 @@ import Button from 'components/Button/Button';
 import styles from './registerForm.module.css';
 
 const FormaRegicter = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <Formik
       initialValues={{
@@ -19,10 +21,9 @@ const FormaRegicter = () => {
       }}
       validationSchema={schema.registerSchema}
       onSubmit={(values, { resetForm }) => {
-        //   const { confirmPassword, confirmpassword, ...dataThunk } = values;
-        //   dispatch(registerThunk(values));
-        console.log(values);
+        dispatch(registerThunk(values));
         resetForm();
+        navigate('/login');
       }}
     >
       <Form className={styles.form}>

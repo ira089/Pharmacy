@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
-// import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { lazy } from 'react';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
@@ -40,15 +40,16 @@ const App = () => {
             <Route path="register" element={<RegisterPage />} />
             <Route path="login" element={<Login />} />
             <Route path="medicine-store" element={<MedicineStorePage />} />
+            <Route path="medicine" element={<MedicinePage />} />
           </Route>
           <Route element={<PrivateRoute />}>
-            <Route path="medicine" element={<MedicinePage />} />
+           
             <Route path="cart" element={<CartPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-      {/* <ToastContainer autoClose={3000} /> */}
+      <ToastContainer autoClose={3000} />
     </>
   );
  
