@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {medStoreThunk} from './operationsMedStore';
+import {medStoreThunk, medStoreSixThunk} from './operationsMedStore';
 import {
   handleFulfilled,
   handlePending,
@@ -8,12 +8,18 @@ import {
 
 const initialState = {
     pharmacies:[],
+    pharmaciesSix:[],
     isLoading: false,
     error: null,
     
   };
   const handleFulfilledStore = (state, { payload }) => {
     state.pharmacies = payload;
+    handleFulfilled(state);
+  };
+
+  const handleFulfilledStoreSix = (state, { payload }) => {
+    state.pharmaciesSix = payload;
     handleFulfilled(state);
   };
 
@@ -24,7 +30,10 @@ const initialState = {
       builder
         .addCase(medStoreThunk.pending, handlePending)
         .addCase(medStoreThunk.fulfilled, handleFulfilledStore)
-        .addCase(medStoreThunk.rejected, handleRejected);
+        .addCase(medStoreThunk.rejected, handleRejected)
+        .addCase(medStoreSixThunk.pending, handlePending)
+        .addCase(medStoreSixThunk.fulfilled, handleFulfilledStoreSix)
+        .addCase(medStoreSixThunk.rejected, handleRejected);
     },
   });
   

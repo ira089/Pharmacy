@@ -11,7 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {pharmaciesReducer } from './medStore/medStoreSlice';
-// import searchReducer from './search/searchSlice';
+import {reviewsReducer } from './review/reviewSlice';
 import { authReducer } from './auth/authSlice';
 
 
@@ -25,7 +25,7 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     pharmacies: pharmaciesReducer,
-    // search: searchReducer,
+    reviews: reviewsReducer,
     
   },
   middleware: getDefaultMiddleware =>

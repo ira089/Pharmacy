@@ -2,16 +2,13 @@ import React from 'react';
 import Rev from '../../assets/svg/photo.svg';
 import styles from './reviewsItem.module.css';
 
-const ReviewsItem = () => {
+const ReviewsItem = ({item}) => {
+  const {name,testimonial} = item
   return (
     <div className={styles.itemReview}>
       <img className={styles.img} src={Rev} alt="avatar" />
-      <h3>Maria Tkachuk</h3>
-      <p>
-        I recently used this medical platform to book an appointment with a
-        specialist, and I was impressed by how easy and user-friendly the
-        process was. Highly recommended!
-      </p>
+      <h3>{name}</h3>
+      <p>{testimonial}</p>
     </div>
   );
 };

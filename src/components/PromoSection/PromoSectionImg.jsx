@@ -16,7 +16,7 @@ const PromoSectionImg = () => {
         Enjoy the convenience of having your prescriptions filled from home by
         connecting with your community pharmacy through our online platform.
       </p>
-      <NavLink className={styles.link}>Buy medicine</NavLink>
+      <NavLink className={styles.link} to="/medicine-store">Buy medicine</NavLink>
       <picture className={styles.img}>
         <source
          media="(max-width: 767px)"

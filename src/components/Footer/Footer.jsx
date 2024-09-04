@@ -28,7 +28,7 @@ const Footer = () => {
           Medicine
         </NavLink>
       </nav>
-      <ul className={styles.listFooterSocial}>
+      {/* <ul className={styles.listFooterSocial}>
         <li className={styles.footerSocialItem}>
           <a
             href=" https://www.facebook.com/goITclub/ "
@@ -62,7 +62,7 @@ const Footer = () => {
             </svg>
           </a>
         </li>
-      </ul>
+      </ul> */}
       <Divider
           aria-hidden="true"
           sx={{ bgcolor: 'rgba(247, 248, 250, 0.3)' }}
