@@ -35,7 +35,7 @@ const ReviewsSection = () => {
         <Box sx={{ width: '100%' }}>
           <Grid
             container
-            rowSpacing={{ mobile: 2, tablet: 2, desktop: 2 }}
+            rowSpacing={{ mobile: 4, tablet: 4, desktop: 2 }}
             columnSpacing={{ tablet: 2, desktop: 3.5 }}
           >
             {elements}

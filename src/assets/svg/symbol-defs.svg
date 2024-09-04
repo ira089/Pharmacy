@@ -58,5 +58,10 @@
   <path d="M30.8349 73.1906C35.7144 61.1136 49.4603 55.2788 61.5373 60.1582L245.848 134.625L228.178 178.359L43.8673 103.893C31.7903 99.0135 25.9555 85.2676 30.8349 73.1906Z" fill="#59B17A" fill-opacity="0.08" />
 </svg>
 </symbol>
+
+<symbol id="icon-loofah" viewBox="0 0 18 18" fill="none">
+  <path d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M15.7508 15.75L12.4883 12.4875" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
 </defs>
 </svg>
