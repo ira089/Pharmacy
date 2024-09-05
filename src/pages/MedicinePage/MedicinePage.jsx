@@ -12,9 +12,9 @@ const MedicinePage = () => {
   // console.log(query)
   // console.log(category)
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(productsThunk({query, category,page}));
-  // }, [category, dispatch, page, query]);
+  useEffect(() => {
+    dispatch(productsThunk({query, category,page}));
+  }, [category, dispatch, page, query]);
 
  
 

@@ -13,7 +13,7 @@ import styles from './medicineList.module.css';
 const MedicineList = () => {
   const { isLoading, error, products, totalPages, page } =
   useSelector(selectProducts);
-
+console.log(products)
 const dispatch = useDispatch();
 const isVariant = { variant: false };
 const isNotices = Boolean(products.length);
@@ -44,13 +44,13 @@ return (
     </ThemeProvider> : <p className={styles.sorry}>Nothing was found for your request</p>}
     
 {/* условие если количество продуктов больше 12 */}
-    {/* {!!totalPages && totalPages !== 1 && ( */}
+    {!!totalPages && totalPages > 12 && (
       <PaginationMy
         page={page}
         totalPages={totalPages}
         selectPage={selectPage}
       />
-    {/* )} */}
+     )} 
   </>
 );
 };

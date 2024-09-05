@@ -15,9 +15,9 @@ const initialState = {
   };
 
   const handleFulfilledProducts = (state, { payload }) => {
-    state.products = payload.products;
+    state.products = payload.result;
     state.page = payload.page;
-    state.totalPages = payload.totalPages;
+    state.totalPages = payload.total;
     handleFulfilled(state);
   };
 

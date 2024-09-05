@@ -1,4 +1,5 @@
 
+
 const customStyles = {
   control: (provided, state) => ({
     ...provided,
@@ -34,9 +35,13 @@ const customStyles = {
   menu: provided => ({
     ...provided,
     color: 'rgba(38, 38, 38, 0.6)',
+    fontFamily: 'Inter',
+    fontSize: '12px',
+    lineHeight: '150%',
     borderRadius: '15px',
     background: '#fff',
     boxShadow: 'transparent',
+    overflow: 'scroll',
   }),
   valueContainer: provided => ({
     ...provided,
