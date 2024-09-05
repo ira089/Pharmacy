@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.5ca69479.css",
-    "main.js": "/Pharmacy/static/js/main.a564f91e.js",
+    "main.css": "/Pharmacy/static/css/main.5360a18c.css",
+    "main.js": "/Pharmacy/static/js/main.072cb9c2.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
     "static/media/PromoSection2D .png": "/Pharmacy/static/media/PromoSection2D .94c869bdab5ee442afc1.png",
     "static/media/PromoSection2T.png": "/Pharmacy/static/media/PromoSection2T.a6c52705c7dc74876aba.png",
@@ -24,15 +24,15 @@
     "static/media/Inter-Regular.woff2": "/Pharmacy/static/media/Inter-Regular.bd097ceff83f90802a12.woff2",
     "static/media/Sergey Rybachok.svg": "/Pharmacy/static/media/Sergey Rybachok.394aa3d2faf09046c5bcd9ff83dc8e13.svg",
     "static/media/Natalia Chatuk.svg": "/Pharmacy/static/media/Natalia Chatuk.cc80977ea875d942f0de3da9c3940e0a.svg",
-    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.ad064a9595eb34c423474a7f956bb9d0.svg",
+    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.28d550ebaac98d61f7a0e9622d7dd2c2.svg",
     "static/media/Maria Tkachuk.svg": "/Pharmacy/static/media/Maria Tkachuk.b1e18c9c451e79492131e7f6707ff361.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.5ca69479.css.map": "/Pharmacy/static/css/main.5ca69479.css.map",
-    "main.a564f91e.js.map": "/Pharmacy/static/js/main.a564f91e.js.map"
+    "main.5360a18c.css.map": "/Pharmacy/static/css/main.5360a18c.css.map",
+    "main.072cb9c2.js.map": "/Pharmacy/static/js/main.072cb9c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ca69479.css",
-    "static/js/main.a564f91e.js"
+    "static/css/main.5360a18c.css",
+    "static/js/main.072cb9c2.js"
   ]
 }
