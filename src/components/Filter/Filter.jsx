@@ -2,20 +2,19 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import Select from 'react-select';
 import {addCategory, addQuery} from '../../redux/search/searchSlice';
-import styles from './filter.module.css';
 import Icon from 'components/Icon/Icon';
 import Button from 'components/Button/Button';
+import {options} from '../../helpers/options';
+import customStyles from './customStyles';
+import styles from './filter.module.css';
 
 const Filter = () => {
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-      ]
+    
     const dispatch = useDispatch();
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
-
+// console.log(search)
+// console.log(category)
   const handleChange = ({ target }) => {
     setSearch(target.value.trim());
   };
@@ -28,7 +27,7 @@ const Filter = () => {
     evt.preventDefault();
     dispatch(addQuery(search));
     dispatch(addCategory(category));
-    console.log('first')
+    
   };
  
 
@@ -37,10 +36,10 @@ const Filter = () => {
        <Select
           options={options}
           onChange={handleChangeCategory}
-        //   styles={customStyles}
+          styles={customStyles}
           placeholder={'Product category'}
         />
-        <label>
+        <label className={styles.searchFormLabel}>
         <input
         className={styles.searchFormInput}
         onChange={handleChange}
@@ -49,11 +48,15 @@ const Filter = () => {
         value={search}
         placeholder="Search medicine"
       />
-      <span className={styles.searchFormButtonLabel}></span>
+    
+      <div className={styles.searchFormIcon}>
       <Icon width={16} height={16} name={'icon-loofah'} />
+      </div>
+      
         </label>
        
-       <Button type="submit" >
+       <Button style={{ color: '#fff', width: '116px', height: '44px' }} type="submit" >
+        <Icon className={styles.icon} width={14} height={12} name={'icon-filter'}/>
        Filter
       </Button>
     </form>

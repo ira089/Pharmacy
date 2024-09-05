@@ -14,6 +14,7 @@ import {pharmaciesReducer } from './medStore/medStoreSlice';
 import {reviewsReducer } from './review/reviewSlice';
 import { authReducer } from './auth/authSlice';
 import searchReducer from './search/searchSlice';
+import { productsReducer } from './products/productsSlice';
 
 
 const authPersistConfig = {
@@ -28,6 +29,7 @@ export const store = configureStore({
     pharmacies: pharmaciesReducer,
     reviews: reviewsReducer,
     search: searchReducer,
+    products: productsReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

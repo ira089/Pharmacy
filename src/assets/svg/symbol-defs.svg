@@ -63,5 +63,9 @@
   <path d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M15.7508 15.75L12.4883 12.4875" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 </symbol>
+
+<symbol id="icon-filter" width="14" height="12" viewBox="0 0 14 12" fill="none">
+  <path d="M12.8307 0.75H1.16406L5.83073 6.26833V10.0833L8.16406 11.25V6.26833L12.8307 0.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
 </defs>
 </svg>

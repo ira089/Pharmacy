@@ -1,20 +1,27 @@
-import React from 'react';
-// import { useDispatch } from 'react-redux';
-import styles from './medicinePage.module.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {selectSearch} from '../../redux/search/selectorSearch';
+import {productsThunk} from '../../redux/products/operationsProducts';
 import MedicineList from 'components/MedicineList/MedicineList';
 import Filter from 'components/Filter/Filter';
+import styles from './medicinePage.module.css';
 
 
 const MedicinePage = () => {
-  // const dispatch = useDispatch();
+  const {query, category, page} = useSelector(selectSearch)
+  // console.log(query)
+  // console.log(category)
+  const dispatch = useDispatch();
   // useEffect(() => {
-  //   dispatch(medStoreThunk());
-  // }, [dispatch]);
+  //   dispatch(productsThunk({query, category,page}));
+  // }, [category, dispatch, page, query]);
+
+ 
 
   return (
     <section className={styles.wrapMed}>
         <h2 className={styles.title}>Medicine store</h2>
-        <Filter/>
+        <Filter />
         <MedicineList />
     </section>
   )
