@@ -19,14 +19,11 @@ const ProductPage = () => {
   const { products } = useSelector(selectProducts);
   const productId = products?.find(el => el._id === id);
   console.log(productId);
-  const isDescription = Boolean(productId.description);
-  console.log(isDescription);
-  const isReviews = Boolean(productId.reviews.length);
-  console.log(isReviews);
+  
   return (
     <section className={styles.wrapProduct}>
       <MedicineItem item={productId} isVariant={isVariant} />
-      <ProductDetails />
+      <ProductDetails item={productId} />
     </section>
   );
 };
