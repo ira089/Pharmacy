@@ -7,3 +7,10 @@ export const fetchProducts = async ({ page, query, category }) => {
   );
   return data;
 };
+
+export const fetchProductsId = async id => {
+  const { data } = await axios.get(
+    `/products/${id}`
+  );
+  return data;
+};
