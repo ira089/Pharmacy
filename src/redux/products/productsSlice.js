@@ -4,7 +4,7 @@ import {
   handlePending,
   handleRejected,
 } from '../../helpers/functions';
-import { productsThunk } from './operationsProducts';
+import { productsThunk, productsIdThunk } from './operationsProducts';
 
 const initialState = {
     products:[],
@@ -21,6 +21,12 @@ const initialState = {
     handleFulfilled(state);
   };
 
+  const handleFulfilledProductsId = (state, { payload }) => {
+    state.products = state.products.filter(el => el._id !== payload._id);
+    state.products.push(payload);
+    handleFulfilled(state);
+  }
+
   export const productsSlice = createSlice({
     name: 'products',
     initialState,
@@ -28,7 +34,10 @@ const initialState = {
       builder
         .addCase(productsThunk.pending, handlePending)
         .addCase(productsThunk.fulfilled, handleFulfilledProducts)
-        .addCase(productsThunk.rejected, handleRejected);
+        .addCase(productsThunk.rejected, handleRejected)
+        .addCase(productsIdThunk.pending, handlePending)
+        .addCase(productsIdThunk.fulfilled, handleFulfilledProductsId)
+        .addCase(productsIdThunk.rejected, handleRejected);
     },
   });
   
