@@ -1,12 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from 'components/Button/Button';
 import styles from './medicineItem.module.css';
+import Icon from 'components/Icon/Icon';
 
 const MedicineItem = ({ item, isVariant }) => {
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers} = item;
   const priceRound = Math.round(price);
+ 
+const [counter, setCounter] = useState(1)
+// console.log(counter)
+  const counterPlus =() => {
+setCounter((prevCounter) => prevCounter + 1);
+  }
+  const counterMinus =() => {
+    if (counter === 1) {
+      return
+    }
+    setCounter((prevCounter) => prevCounter - 1);
+      }
+
+      const addToCart = () => {
+
+      }
 
   return (
     <div className={styles.wrapProdukt}>
@@ -25,11 +42,15 @@ const MedicineItem = ({ item, isVariant }) => {
         {variant ? (
           <div className={styles.wrapBtn}>
             <div className={styles.wrapCounter}>
-              <button>+</button>
-              <span>1</span>
-              <button>-</button>
+              <button onClick={counterPlus}>
+                <Icon className={styles.icon} width={20} height={20} name={'icon-plus-green'}/>
+              </button>
+              <span>{counter}</span>
+              <button onClick={counterMinus}>
+                <Icon  width={20} height={20} name={'icon-minus-green'}/>
+              </button>
             </div>
-            <Button style={{ color: '#fff', width: '108px', height: '34px' }}>
+            <Button onClick={addToCart} style={{ color: '#fff', width: '140px', height: '44px' }}>
               Add to cart
             </Button>
           </div>

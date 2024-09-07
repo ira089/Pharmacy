@@ -18,7 +18,7 @@ const ProductPage = () => {
 
   const { products } = useSelector(selectProducts);
   const productId = products?.find(el => el._id === id);
-  console.log(productId);
+  // console.log(productId);
   
   return (
     <section className={styles.wrapProduct}>

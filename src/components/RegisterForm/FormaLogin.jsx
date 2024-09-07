@@ -21,7 +21,7 @@ const FormaLogin = () => {
       onSubmit={(values, { resetForm }) => {
         dispatch(loginThunk(values));
         resetForm();
-        navigate('/medicine');
+        navigate('/cart');
       }}
     >
       <Form className={styles.form}>

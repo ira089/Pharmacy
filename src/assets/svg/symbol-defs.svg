@@ -67,5 +67,14 @@
 <symbol id="icon-filter" width="14" height="12" viewBox="0 0 14 12" fill="none">
   <path d="M12.8307 0.75H1.16406L5.83073 6.26833V10.0833L8.16406 11.25V6.26833L12.8307 0.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 </symbol>
+
+<symbol id="icon-plus-green" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M10 4.16699V15.8337" stroke="#59B17A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M4.16602 10H15.8327" stroke="#59B17A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
+
+<symbol id="icon-minus-green" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M4.16602 10H15.8327" stroke="#59B17A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
 </defs>
 </svg>

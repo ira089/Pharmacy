@@ -27,6 +27,7 @@
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 8px;
 }
 
 .wrapName {
@@ -58,4 +59,35 @@ color: #1d1e21;
 .link:hover {
     font-weight: bold;
 }
+
+.wrapCounter {
+    border: 1px solid rgba(29, 30, 33, 0.1);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    /* padding: 0 12px; */
+font-size: 16px;
+line-height: 125%;
+text-align: center;
+color: #1d1e21;
+width: 108px;
+height: 44px;
+}
+
+.wrapCounter button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.wrapCounter button:hover  {
+    
+    border-radius: 40px;
+    background-color:  rgba(29, 30, 33, 0.1);
+    
+}
+ 
+  
+  
 
