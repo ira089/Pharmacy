@@ -5,7 +5,7 @@ const ProductDetails = ({item}) => {
   const {description, reviews} = item;
   const isDescription = Boolean(description);
   console.log(isDescription);
-  const isReviews = Boolean(reviews.length);
+  const isReviews = Boolean(reviews?.length);
   console.log(isReviews);
   const [activeTab, setActiveTab] = useState('tabDescription');
   const handleTabClick = tab => {
@@ -31,10 +31,9 @@ const ProductDetails = ({item}) => {
           Reviews
         </button>
       </div>
-      {/* {activeTab === 'tabDescription' && isDescription ?  {description} : <p>Description of this product not found</p>}
-      {activeTab === 'tabReviews' && isReviews ? {reviews} : <p>No reviews found for this product</p>} */}
-      {activeTab === 'tabDescription' &&  <p>Description of this product not found</p>}
-      {activeTab === 'tabReviews' &&  <p>No reviews found for this product</p>}
+       {activeTab === 'tabDescription' && (isDescription ?  description : <p>Description of this product not found</p>)} 
+      {activeTab === 'tabReviews' && (isReviews ? reviews : <p>No reviews found for this product</p>)} 
+      
     </div>
   )
 }
