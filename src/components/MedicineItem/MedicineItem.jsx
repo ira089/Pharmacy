@@ -1,29 +1,40 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { addProduct } from '../../redux/cart/cartSlice';
 import Button from 'components/Button/Button';
 import styles from './medicineItem.module.css';
 import Icon from 'components/Icon/Icon';
 
 const MedicineItem = ({ item, isVariant }) => {
+  const dispatch = useDispatch();
   const { variant } = isVariant;
-  const { photo, name, price, _id, suppliers} = item;
+  const { photo, name, price, _id, suppliers } = item;
   const priceRound = Math.round(price);
- 
-const [counter, setCounter] = useState(1)
-// console.log(counter)
-  const counterPlus =() => {
-setCounter((prevCounter) => prevCounter + 1);
-  }
-  const counterMinus =() => {
+
+  const [counter, setCounter] = useState(1);
+  // console.log(counter)
+  const counterPlus = () => {
+    setCounter(prevCounter => prevCounter + 1);
+  };
+  const counterMinus = () => {
     if (counter === 1) {
-      return
+      return;
     }
-    setCounter((prevCounter) => prevCounter - 1);
-      }
+    setCounter(prevCounter => prevCounter - 1);
+  };
 
-      const addToCart = () => {
-
-      }
+  const addToCart = (id, counter) => {
+  //  console.log('first');
+  //   console.log(_id); 
+    console.log(counter);
+    dispatch(
+      addProduct({
+        idProduct: id,
+        quantity: counter,
+      })
+    );
+  };
 
   return (
     <div className={styles.wrapProdukt}>
@@ -43,20 +54,31 @@ setCounter((prevCounter) => prevCounter + 1);
           <div className={styles.wrapBtn}>
             <div className={styles.wrapCounter}>
               <button onClick={counterPlus}>
-                <Icon className={styles.icon} width={20} height={20} name={'icon-plus-green'}/>
+                <Icon
+                  className={styles.icon}
+                  width={20}
+                  height={20}
+                  name={'icon-plus-green'}
+                />
               </button>
               <span>{counter}</span>
               <button onClick={counterMinus}>
-                <Icon  width={20} height={20} name={'icon-minus-green'}/>
+                <Icon width={20} height={20} name={'icon-minus-green'} />
               </button>
             </div>
-            <Button onClick={addToCart} style={{ color: '#fff', width: '140px', height: '44px' }}>
+            <Button
+              onClick={() => addToCart(_id, counter)}
+              style={{ color: '#fff', width: '140px', height: '44px' }}
+            >
               Add to cart
             </Button>
           </div>
         ) : (
           <div className={styles.wrapBtn}>
-            <Button style={{ color: '#fff', width: '108px', height: '34px' }}>
+            <Button
+              onClick={() => addToCart(_id, counter)}
+              style={{ color: '#fff', width: '108px', height: '34px' }}
+            >
               Add to cart
             </Button>
             <NavLink className={styles.link} to={`/produst/${_id}`}>

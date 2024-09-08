@@ -1,13 +1,14 @@
-import React from 'react';
+import React,{lazy, useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { lazy } from 'react';
+import {selectIsRefreshing} from '../redux/auth/selectorsAuth'
+import {refresThunk} from '../redux/auth/operationsAuth'
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
-import HomePage from 'pages/HomePage/HomePage';
+// import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import Login from '../pages/Login/Login';
 import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
@@ -17,16 +18,17 @@ import ProductPage from 'pages/ProductPage/ProductPage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 // import Loader from './Loader/Loader';
 
-// const HomePage = lazy(() => import('Pages/HomePage/HomePage'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 
 
 const App = () => {
-  // const dispatch = useDispatch();
-  // const isRefreshing = useSelector(selectIsRefreshing);
-  const isRefreshing = false
-  // useEffect(() => {
-  //   dispatch(refresThunk());
-  // }, [dispatch]);
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
+  // const isRefreshing = false
+
+  useEffect(() => {
+    dispatch(refresThunk());
+  }, [dispatch]);
 
   return isRefreshing ? (
     'Loading...'
@@ -36,11 +38,12 @@ const App = () => {
         <Route path="/" element={<SharedLayout /> }>
           <Route path="home" element={<HomePage />} />
           <Route path="produst/:id" element={<ProductPage/>} />
+          <Route path="medicine-store" element={<MedicineStorePage />} />
+            <Route path="medicine" element={<MedicinePage />} />
           <Route element={<PublicRoute />}>
             <Route path="register" element={<RegisterPage />} />
             <Route path="login" element={<Login />} />
-            <Route path="medicine-store" element={<MedicineStorePage />} />
-            <Route path="medicine" element={<MedicinePage />} />
+            
           </Route>
           <Route element={<PrivateRoute />}>
            

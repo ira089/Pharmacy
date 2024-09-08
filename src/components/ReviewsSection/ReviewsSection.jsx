@@ -17,8 +17,8 @@ const ReviewsSection = () => {
   const reviewsPhoto = reviews.map((item, index) => {
     return {...item, photo: photo[index]}
   })
-  console.log(photo)
-  console.log(reviewsPhoto)
+  // console.log(photo)
+  // console.log(reviewsPhoto)
 
   const elements = reviewsPhoto.map(item => (
     <Grid item mobile={12} tablet={6} desktop={4}>

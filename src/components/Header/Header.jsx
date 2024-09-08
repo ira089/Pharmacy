@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 import Logo from './Logo/Logo';
 import NavLinks from './NavLinks/NavLinks';
 import AuthLinks from './AuthLinks/AuthLinks';
@@ -8,11 +10,13 @@ import Icon from 'components/Icon/Icon';
 import ImgLogoM from '../../assets/img/MaskGroupD.png';
 import ImgLogoWhiteM from '../../assets/img/MaskWhiteM.png';
 import styles from './header.module.css';
+import UserNav from './UserNav/UserNav';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const isOpen = () => setOpen(!open);
   const location = useLocation();
+  const isLogin = useSelector(selectIsLoggedIn);
 
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
@@ -44,7 +48,8 @@ const Header = () => {
         <NavLinks />
       </div>
       <div className={styles.wrapNav}>
-        <AuthLinks />
+      {isLogin ? <UserNav /> : <AuthLinks />}
+      
       </div>
       <BurgerMenu isOpen={isOpen} open={open} />
       <button className={styles.burgerBtn} onClick={isOpen}>
