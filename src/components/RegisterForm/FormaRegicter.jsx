@@ -27,7 +27,7 @@ const FormaRegicter = () => {
       }}
     >
       <Form className={styles.form}>
-        <Input name="name" placeholder="User Name" type="name" />
+        <Input name="name" placeholder="User Name" type="text" />
         <Input name="email" placeholder="Email address" type="email" />
         <Input name="phone" placeholder="Phone number" type="phone" />
         <Input name="password" placeholder="Password" type="password" />

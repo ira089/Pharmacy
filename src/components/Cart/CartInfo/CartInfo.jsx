@@ -5,7 +5,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import { CustomFormControlLabel, CustomRadio } from './radioStyles';
 import styles from './cartInfo.module.css';
 
-const CartInfo = ({ handleChange }) => {
+const CartInfo = ({ handleChange, handleFormSubmit }) => {
   return (
     <div className={styles.wrapText}>
       <h4 className={styles.title}>Enter shipping info </h4>
@@ -13,7 +13,7 @@ const CartInfo = ({ handleChange }) => {
         Enter your delivery address where you get the product. You can also send
         any other location where you send the products.
       </p>
-      <CartForm />
+      <CartForm handleFormSubmit={handleFormSubmit}/>
       <div className={styles.wrapPayment}>
         <h4 className={styles.title}>Payment method</h4>
         <p className={styles.text}>

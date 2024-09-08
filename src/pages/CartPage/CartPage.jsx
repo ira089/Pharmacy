@@ -9,10 +9,16 @@ const CartPage = () => {
   const handleChangeRadio = (evt) => {
     setRadio(evt.target.value)
   }
+  // const [name, setName] = useState('');
+  const handleFormSubmit = (values) => {
+    console.log('Form values:', values);
+    
+  };
+  
   return (
     <section className={styles.wrapCart}>
     <h2 className={styles.title}>Cart</h2>
-    <CartInfo handleChange={handleChangeRadio}/>
+    <CartInfo handleChange={handleChangeRadio} handleFormSubmit={handleFormSubmit}/>
     <CartProduts />
 </section>
   )
