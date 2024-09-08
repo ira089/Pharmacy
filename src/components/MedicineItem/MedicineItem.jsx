@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { addProduct } from '../../redux/cart/cartSlice';
 import Button from 'components/Button/Button';
-import styles from './medicineItem.module.css';
 import Icon from 'components/Icon/Icon';
+import styles from './medicineItem.module.css';
 
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();

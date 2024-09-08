@@ -7,7 +7,7 @@ const PublicRoute = () => {
   const isLogin = useSelector(selectIsLoggedIn);
   // const isLogin = false
 
-  return isLogin ? <Navigate to="/medicine" /> : <Outlet />;
+  return isLogin ? <Navigate to="/cart" /> : <Outlet />;
 };
 
 export default PublicRoute;
