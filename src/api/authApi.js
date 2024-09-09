@@ -17,7 +17,7 @@ export const fetchRegister = async body => {
 
 export const fetchLogin = async body => {
   const { data } = await axios.post('/users/login', body);
-  // console.log(data);
+  console.log(data);
   setAuthHeader(data.token);
   return data;
 };

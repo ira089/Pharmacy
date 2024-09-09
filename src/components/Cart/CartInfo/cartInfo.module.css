@@ -35,3 +35,20 @@ margin-bottom: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+.wrapTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+width: 295px;
+height: 50px;
+background: #e7f1ed;
+padding: 0 18px;
+margin-bottom: 20px;
+box-sizing: border-box;
+width: 100%;
+}
+.wrapTotal h4{
+    margin: 0;
+}

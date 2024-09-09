@@ -1,11 +1,11 @@
 import React from 'react';
 import CartForm from './CartForm/CartForm';
-import CartOrder from './CartOrder/CartOrder';
 import RadioGroup from '@mui/material/RadioGroup';
 import { CustomFormControlLabel, CustomRadio } from './radioStyles';
 import styles from './cartInfo.module.css';
+import Button from 'components/Button/Button';
 
-const CartInfo = ({ handleChange, handleFormSubmit }) => {
+const CartInfo = ({ handleChange, handleChangeForm }) => {
   return (
     <div className={styles.wrapText}>
       <h4 className={styles.title}>Enter shipping info </h4>
@@ -13,7 +13,7 @@ const CartInfo = ({ handleChange, handleFormSubmit }) => {
         Enter your delivery address where you get the product. You can also send
         any other location where you send the products.
       </p>
-      <CartForm handleFormSubmit={handleFormSubmit}/>
+      <CartForm handleChangeForm={handleChangeForm} />
       <div className={styles.wrapPayment}>
         <h4 className={styles.title}>Payment method</h4>
         <p className={styles.text}>
@@ -32,8 +32,18 @@ const CartInfo = ({ handleChange, handleFormSubmit }) => {
           />
         </RadioGroup>
       </div>
-
-      <CartOrder />
+      <h4 className={styles.title}>Order details </h4>
+      <p className={styles.text}>
+        Shipping and additionnal costs are calculated based on values you have
+        entered.
+      </p>
+      <div className={styles.wrapTotal}>
+        <h4 className={styles.title}>Total:</h4>
+        <h4 className={styles.title}>৳ 122.00</h4>
+      </div>
+      <Button style={{ color: '#fff', width: '141px', height: '44px' }}>
+        Place order
+      </Button>
     </div>
   );
 };

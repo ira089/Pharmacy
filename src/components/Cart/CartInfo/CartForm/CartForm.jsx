@@ -1,47 +1,39 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
-import * as schema from '../../../../schemas/schemas';
+// import * as schema from '../../../../schemas/schemas';
+import { allFieldsFilled } from '../../../../helpers/functions';
 import Input from '../../../Input/Input';
 import styles from './cartForm.module.css';
 
-const CartForm = ({ handleFormSubmit }) => {
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   email: '',
-  //   phone: '',
-  //   address: ''
-  // });
+const CartForm = ({ handleChangeForm }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+  });
+  // console.log(formData);
 
-  // Проверка на заполненность всех полей
-  // const allFieldsFilled = (data) => {
-  //   return Object.values(data).every((field) => field.trim() !== '');
-  // };
-
-  // const handleChange = (evt) => {
-  //   const { name, value } = evt.target;
+  const handleChangeData = evt => {
+    const { name, value } = evt.target;
+    // console.log(name);
 
     // Обновляем состояние
-    // setFormData((prevData) => {
-    //   const updatedData = {
-    //     ...prevData,
-    //     [name]: value,
-    //   };
+    setFormData(prevData => {
+      const updatedData = {
+        ...prevData,
+        [name]: value,
+      };
 
       // Если все поля заполнены, вызываем handleFormSubmit
-  //     if (allFieldsFilled(updatedData)) {
-  //       handleFormSubmit(updatedData);
-  //     }
+      if (allFieldsFilled(updatedData)) {
+        handleChangeForm(updatedData);
+        setFormData({ name: '', email: '', phone: '', address: '' });
+      }
+      return updatedData;
+    });
+  };
 
-  //     return updatedData;
-  //   });
-  // };
-const [name, setName]= useState('')
-console.log(name)
-  const handleChangeName = (evt) => {
-setName(evt.target.value)
-handleFormSubmit(name)
-  }
- 
   return (
     <Formik
       initialValues={{
@@ -50,26 +42,47 @@ handleFormSubmit(name)
         phone: '',
         address: '',
       }}
-      validationSchema={schema.cartFormSchema}
-      onSubmit={(values, { resetForm }) => {
-        console.log(values);
-        // if(handleFormSubmit){handleFormSubmit(values)}
-        // else{console.log('first')}
-        
-        resetForm();
-      }}
+      // validationSchema={schema.cartFormSchema}
+      // onSubmit={(values, { resetForm }) => {
+      //   console.log(values);
+
+      //   resetForm();
+      // }}
     >
-      {/* {({ handleSubmit }) => ( */}
-        <Form 
-        // onSubmit={handleSubmit} 
-        className={styles.form}>
-          {/* <Input handleChange={(evt) => handleFormSubmit(evt.target.value)} name="name" placeholder="Enter text" type="text" textLabel="Name" /> */}
-          <Input handleChange={handleChangeName} valueInput={name} name="name" placeholder="Enter text" type="text" textLabel="Name" />
-          <Input name="email" placeholder="Enter text" type="email" textLabel="Email"/>
-          <Input name="phone" placeholder="Enter text" type="text" textLabel="Phone"/>
-          <Input name="address" placeholder="Enter text" type="text" textLabel="Address"/>
-        </Form>
-        {/* )}  */}
+      <Form className={styles.form}>
+        <Input
+          handleChange={handleChangeData}
+          valueInput={formData.name}
+          name="name"
+          placeholder="Enter text"
+          type="text"
+          textLabel="Name"
+        />
+        <Input
+          handleChange={handleChangeData}
+          valueInput={formData.email}
+          name="email"
+          placeholder="Enter text"
+          type="email"
+          textLabel="Email"
+        />
+        <Input
+          handleChange={handleChangeData}
+          valueInput={formData.phone}
+          name="phone"
+          placeholder="Enter text"
+          type="text"
+          textLabel="Phone"
+        />
+        <Input
+          handleChange={handleChangeData}
+          valueInput={formData.address}
+          name="address"
+          placeholder="Enter text"
+          type="text"
+          textLabel="Address"
+        />
+      </Form>
     </Formik>
   );
 };

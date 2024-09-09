@@ -4,6 +4,8 @@ const cartClice = createSlice({
   name: 'cart',
   initialState: {
     productsUser: [],
+    isLoading: false,
+    error: null,
   },
   // productsUser: {
   //     idProduct: '',

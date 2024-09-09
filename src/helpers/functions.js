@@ -12,4 +12,6 @@ export const handleFulfilled = state => {
   state.error = null;
 };
 
-
+export const allFieldsFilled = data => {
+  return Object.values(data).every(field => field.trim() !== '');
+};
