@@ -11,12 +11,14 @@ import ImgLogoM from '../../assets/img/MaskGroupD.png';
 import ImgLogoWhiteM from '../../assets/img/MaskWhiteM.png';
 import styles from './header.module.css';
 import UserNav from './UserNav/UserNav';
+import UserMenu from './UserMenu/UserMenu';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const isOpen = () => setOpen(!open);
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
+  
 
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
@@ -48,17 +50,19 @@ const Header = () => {
         <NavLinks />
       </div>
       <div className={styles.wrapNav}>
-      {isLogin ? <UserNav /> : <AuthLinks />}
-      
+        {isLogin ? <UserNav /> : <AuthLinks />}
       </div>
       <BurgerMenu isOpen={isOpen} open={open} />
-      <button className={styles.burgerBtn} onClick={isOpen}>
-        {location.pathname === '/home' ? (
-          <Icon width={32} height={26} name={'icon-burger-btn-white'} />
-        ) : (
-          <Icon width={32} height={26} name={'icon-burger-btn-green'} />
-        )}
-      </button>
+      <div className={styles.rightMenu}>
+        {isLogin && <UserMenu />}
+        <button className={styles.burgerBtn} onClick={isOpen}>
+          {location.pathname === '/home' ? (
+            <Icon width={32} height={26} name={'icon-burger-btn-white'} />
+          ) : (
+            <Icon width={32} height={26} name={'icon-burger-btn-green'} />
+          )}
+        </button>
+      </div>
     </header>
   );
 };

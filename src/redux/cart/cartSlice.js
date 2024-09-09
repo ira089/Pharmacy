@@ -13,20 +13,21 @@ const cartClice = createSlice({
 
   reducers: {
     addProduct: (state, { payload }) => {
-        console.log(payload)
+      console.log(payload)
       state.productsUser = state.productsUser.filter(
         el => el.idProduct !== payload.idProduct
       );
       state.productsUser.push(payload);
     },
-    // removeProduct: (state, { payload }) => {
-    //   state.productsUser = state.productsUser.filter(
-    //     el => el._id !== payload._id
-    //   );
-    //   state.products.push(payload);
-    // },
+    removeProduct: (state, { payload }) => {
+      console.log(payload)
+      state.productsUser = state.productsUser.filter(
+        el => el.idProduct !== payload
+      );
+      
+    },
   },
 });
 
-export const { addProduct } = cartClice.actions;
+export const { addProduct, removeProduct } = cartClice.actions;
 export default cartClice.reducer;
