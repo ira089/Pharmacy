@@ -31,30 +31,30 @@ const CartItem = ({item}) => {
     setCounter(prevCounter => prevCounter - 1);
   };
   return (
-    <li>
+    <li className={styles.wrapItem}>
 <div>
-    <img src={photo} alt='product'/>
+    <img className={styles.img} src={photo} alt='product'/>
 </div>
-<div>
+<div className={styles.wrapText}>
     <h4>{name}</h4>
-    <p>{category}</p>
-    <p>৳{price}</p>
+    <p className={styles.text}>{category}</p>
+    <p className={styles.price}>৳{price}</p>
     <div className={styles.wrapBtn}>
             <div className={styles.wrapCounter}>
               <button onClick={counterPlus}>
                 <Icon
-                  className={styles.icon}
-                  width={20}
-                  height={20}
+                  
+                  width={18}
+                  height={18}
                   name={'icon-plus-green'}
                 />
               </button>
               <span>{counter}</span>
               <button onClick={counterMinus}>
-                <Icon width={20} height={20} name={'icon-minus-green'} />
+                <Icon width={18} height={18} name={'icon-minus-green'} />
               </button>
             </div>
-            <button
+            <button className={styles.btnRemore}
             //   onClick={() => addToCart(_id, counter)}
               
             >
