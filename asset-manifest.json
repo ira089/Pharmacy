@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.09151cc3.css",
-    "main.js": "/Pharmacy/static/js/main.2462f7ab.js",
+    "main.css": "/Pharmacy/static/css/main.14df513e.css",
+    "main.js": "/Pharmacy/static/js/main.50dc7369.js",
     "static/css/888.d2b20356.chunk.css": "/Pharmacy/static/css/888.d2b20356.chunk.css",
     "static/js/888.dbd11d8a.chunk.js": "/Pharmacy/static/js/888.dbd11d8a.chunk.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
@@ -26,17 +26,17 @@
     "static/media/Inter-Regular.woff2": "/Pharmacy/static/media/Inter-Regular.bd097ceff83f90802a12.woff2",
     "static/media/Sergey Rybachok.svg": "/Pharmacy/static/media/Sergey Rybachok.394aa3d2faf09046c5bcd9ff83dc8e13.svg",
     "static/media/Natalia Chatuk.svg": "/Pharmacy/static/media/Natalia Chatuk.cc80977ea875d942f0de3da9c3940e0a.svg",
-    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.e922fdc7bcee4d368dc5997eb38337db.svg",
+    "static/media/symbol-defs.svg": "/Pharmacy/static/media/symbol-defs.c6584e4c709987d75c7e185b6d9c896b.svg",
     "static/media/Maria Tkachuk.svg": "/Pharmacy/static/media/Maria Tkachuk.b1e18c9c451e79492131e7f6707ff361.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.09151cc3.css.map": "/Pharmacy/static/css/main.09151cc3.css.map",
-    "main.2462f7ab.js.map": "/Pharmacy/static/js/main.2462f7ab.js.map",
+    "main.14df513e.css.map": "/Pharmacy/static/css/main.14df513e.css.map",
+    "main.50dc7369.js.map": "/Pharmacy/static/js/main.50dc7369.js.map",
     "888.d2b20356.chunk.css.map": "/Pharmacy/static/css/888.d2b20356.chunk.css.map",
     "888.dbd11d8a.chunk.js.map": "/Pharmacy/static/js/888.dbd11d8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09151cc3.css",
-    "static/js/main.2462f7ab.js"
+    "static/css/main.14df513e.css",
+    "static/js/main.50dc7369.js"
   ]
 }
