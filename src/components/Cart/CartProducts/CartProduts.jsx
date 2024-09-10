@@ -18,7 +18,7 @@ const CartProduts = () => {
     {isLoading && <p>...Loading</p>}
     {error && <p>{error.message}</p>}
      {isCartProducts ? <ul className={styles.list}>{productsUser.map(item => (
-   <CartItem key={item.idProduct}  item={item}/>
+   <CartItem key={item.idProduct} id={item.idProduct} quantity={item.quantity}/>
   ))}</ul> : <p className={styles.text}>Sorry, there are no items in your cart.</p>}
     </>
   )

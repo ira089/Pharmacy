@@ -32,6 +32,7 @@ const MedicineItem = ({ item, isVariant }) => {
       addProduct({
         idProduct: id,
         quantity: counter,
+        price: price,
       })
     );
   };

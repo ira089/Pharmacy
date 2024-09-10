@@ -10,6 +10,7 @@ const cartClice = createSlice({
   // productsUser: {
   //     idProduct: '',
   //     quantity: '',
+  // price: price,
 
   reducers: {
     addProduct: (state, { payload }) => {
