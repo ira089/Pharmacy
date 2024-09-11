@@ -12,14 +12,19 @@ const initialState = {
     phone: '',
     address: '',
     paymentMethod: '',
-    total: '',
-    totalQuantity: '',
+    total: '0',
+    totalQuantity: '0',
     status: 'Pending',
     isLoading: false,
     error: null,
+    id: '',
 };
 
 const handleFulfilledAdd = (state, { payload }) => {
+    state.id = payload._id;
+    state.total = payload.total;
+    state.totalQuantity = payload.totalQuantity;
+
   console.log(payload)
       
       handleFulfilled(state)

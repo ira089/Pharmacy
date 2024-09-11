@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectCart } from '../../redux/cart/selectorCart';
-import { calculateTotals } from '../../helpers/functions';
+import { selectOrder } from '../../redux/order/selectorOrder';
+// import { calculateTotals } from '../../helpers/functions';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
 import styles from './cartPage.module.css';
 
 const CartPage = () => {
-  const { productsUser } = useSelector(selectCart);
-  const cart = productsUser?.map(({ idProduct, quantity }) => ({
-    idProduct,
-    quantity,
-  }));
-  console.log(cart);
+  const  {total, totalQuantity} = useSelector(selectOrder);
+  // const { productsUser } = useSelector(selectCart);
+  // const cart = productsUser?.map(({ idProduct, quantity }) => ({
+  //   idProduct,
+  //   quantity,
+  // }));
+  // console.log(cart);
   // const {idProduct, quantity, price} = productsUser;
-  const totals = calculateTotals(productsUser);
-  const { total, totalQuantity } = totals;
+  // const totals = calculateTotals(productsUser);
+  // const { total, totalQuantity } = totals;
 
   const [paymentMethod, setPaymentMethod] = useState('');
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const CartPage = () => {
     address: '',
   });
   // console.log(radio)
-  console.log(formData);
+  // console.log(formData);
   const handleChangeRadio = evt => {
     setPaymentMethod(evt.target.value);
   };
@@ -40,7 +41,7 @@ const CartPage = () => {
     paymentMethod,
     total,
     totalQuantity,
-    ...cart,
+    
   };
   console.log(placeOrder);
   return (

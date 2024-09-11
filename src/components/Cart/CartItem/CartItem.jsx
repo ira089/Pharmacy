@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cartUpdThunk, removeProduct } from '../../../redux/cart/cartSlice';
+// import { cartUpdThunk, removeProduct } from '../../../redux/cart/cartSlice';
 import { productsIdThunk } from '../../../redux/products/operationsProducts';
 import { selectProducts } from '../../../redux/products/selectorProducts';
 import Icon from 'components/Icon/Icon';

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { addProduct } from '../../redux/cart/operationsCart';
+import { addOrderThunk } from '../../redux/order/operationsOrder';
+import {selectOrder} from '../../redux/order/selectorOrder'
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
 import styles from './medicineItem.module.css';
 
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();
+  const  {total, totalQuantity, id} = useSelector(selectOrder);
+  console.log(total)
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
   const priceRound = Math.round(price);
@@ -24,15 +27,21 @@ const MedicineItem = ({ item, isVariant }) => {
     setCounter(prevCounter => prevCounter - 1);
   };
 
-  const addToCart = (id, counter) => {
+  const addToCart = ( counter) => {
+    const newTotalQuantity = totalQuantity + counter;
+    const newTotal = newTotalQuantity * price
   //  console.log('first');
   //   console.log(_id); 
-    console.log(counter);
+    console.log(newTotal);
+    if(id) {
+      console.log('first')
+    return
+    }
     dispatch(
-      addProduct({
-        idProduct: id,
-        quantity: counter,
-        price: price,
+      addOrderThunk({
+        total: newTotal,
+        totalQuantity: newTotalQuantity,
+        status: "Pending",
       })
     );
   };
@@ -68,7 +77,7 @@ const MedicineItem = ({ item, isVariant }) => {
               </button>
             </div>
             <Button
-              onClick={() => addToCart(_id, counter)}
+              onClick={() => addToCart(counter)}
               style={{ color: '#fff', width: '140px', height: '44px' }}
             >
               Add to cart
@@ -77,7 +86,7 @@ const MedicineItem = ({ item, isVariant }) => {
         ) : (
           <div className={styles.wrapBtn}>
             <Button
-              onClick={() => addToCart(_id, counter)}
+              onClick={() => addToCart( counter)}
               style={{ color: '#fff', width: '108px', height: '34px' }}
             >
               Add to cart
