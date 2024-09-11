@@ -21,6 +21,7 @@ const Header = () => {
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
   const { productsUser} = useSelector(selectCart);
+  console.log(productsUser)
   const totals = calculateTotals(productsUser);
   
 

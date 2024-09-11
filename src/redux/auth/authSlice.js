@@ -25,7 +25,7 @@ const handleFulfilledRegister = (state, { payload }) => {
   state.user.name = payload.user.name;
   state.user.email = payload.user.email;
   state.user.phone = payload.user.phone;
-  // state.isLoggedIn = true;
+  state.isLoggedIn = true;
   handleFulfilled(state);
 };
 

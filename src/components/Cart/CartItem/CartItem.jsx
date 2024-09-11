@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addProduct, removeProduct } from '../../../redux/cart/cartSlice';
+import { cartUpdThunk, removeProduct } from '../../../redux/cart/cartSlice';
 import { productsIdThunk } from '../../../redux/products/operationsProducts';
 import { selectProducts } from '../../../redux/products/selectorProducts';
 import Icon from 'components/Icon/Icon';
@@ -21,15 +21,15 @@ const CartItem = ({ id, key, quantity }) => {
   const productCart = products?.find(el => el._id === id);
   const { name, photo, price, category } = productCart;
 
-  useEffect(() => {
-    dispatch(
-      addProduct({
-        idProduct: id,
-        quantity: counter,
-        price: price,
-      })
-    );
-  }, [counter, dispatch, id, price]);
+  // useEffect(() => {
+  //   dispatch(
+  //     addProduct({
+  //       idProduct: id,
+  //       quantity: counter,
+  //       price: price,
+  //     })
+  //   );
+  // }, [counter, dispatch, id, price]);
 
   const counterPlus = () => {
     setCounter(prevCounter => prevCounter + 1);
@@ -43,7 +43,7 @@ const CartItem = ({ id, key, quantity }) => {
   };
 
   const delToCart = id => {
-    dispatch(removeProduct(id));
+    // dispatch(removeProduct(id));
   };
 
   return (

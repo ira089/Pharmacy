@@ -1,34 +1,54 @@
 import { createSlice } from '@reduxjs/toolkit';
+import {addProduct, cartUpdThunk, cartGetThunk } from './operationsCart';
+import {
+  handleFulfilled,
+  handlePending,
+  handleRejected,
+} from '../../helpers/functions';
 
-const cartClice = createSlice({
-  name: 'cart',
-  initialState: {
-    productsUser: [],
+const initialState = {
+  productsUser: [],
+  total: '',
+  totalQuantity: '',
     isLoading: false,
     error: null,
-  },
-  // productsUser: {
-  //     idProduct: '',
-  //     quantity: '',
-  // price: price,
-
-  reducers: {
-    addProduct: (state, { payload }) => {
-      console.log(payload)
+};
+// убрать тотфд и кол-во
+const handleFulfilledAdd = (state, { payload }) => {
+  console.log(payload)
       state.productsUser = state.productsUser.filter(
-        el => el.idProduct !== payload.idProduct
+         el => el.idProduct !== payload.idProduct
       );
       state.productsUser.push(payload);
-    },
-    removeProduct: (state, { payload }) => {
-      console.log(payload)
-      state.productsUser = state.productsUser.filter(
-        el => el.idProduct !== payload
-      );
-      
-    },
-  },
-});
+};
 
-export const { addProduct, removeProduct } = cartClice.actions;
-export default cartClice.reducer;
+export const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  extraReducers: builder => {
+    builder
+      .addCase(addProduct.pending, handlePending)
+      .addCase(addProduct.fulfilled, handleFulfilledAdd)
+      .addCase(addProduct.rejected, handleRejected)
+  },
+})
+
+//   reducers: {
+//     addProduct: (state, { payload }) => {
+//       console.log(payload)
+//       state.productsUser = state.productsUser.filter(
+//         el => el.idProduct !== payload.idProduct
+//       );
+//       state.productsUser.push(payload);
+//     },
+//     removeProduct: (state, { payload }) => {
+//       console.log(payload)
+//       state.productsUser = state.productsUser.filter(
+//         el => el.idProduct !== payload
+//       );
+      
+//     },
+//   },
+// });
+
+export const cartReducer = cartSlice.reducer;
