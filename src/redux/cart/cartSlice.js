@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {addProduct, cartUpdThunk, cartGetThunk } from './operationsCart';
+import {addProduct} from './operationsCart';
 import {
-  handleFulfilled,
+  // handleFulfilled,
   handlePending,
   handleRejected,
 } from '../../helpers/functions';

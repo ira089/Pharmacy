@@ -16,6 +16,7 @@ import { authReducer } from './auth/authSlice';
 import searchReducer from './search/searchSlice';
 import { productsReducer } from './products/productsSlice';
 import {cartReducer} from './cart/cartSlice';
+import {orderReducer} from './order/orderSlice';
 
 
 const authPersistConfig = {
@@ -32,6 +33,7 @@ export const store = configureStore({
     search: searchReducer,
     products: productsReducer,
     cart: cartReducer,
+    order: orderReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
