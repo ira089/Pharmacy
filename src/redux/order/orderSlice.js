@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {addOrderThunk} from './operationsOrder';
+import {addOrderThunk, updOrderThunk} from './operationsOrder';
 import {
   handleFulfilled,
   handlePending,
@@ -24,10 +24,22 @@ const handleFulfilledAdd = (state, { payload }) => {
     state.id = payload._id;
     state.total = payload.total;
     state.totalQuantity = payload.totalQuantity;
-
   console.log(payload)
-      
       handleFulfilled(state)
+};
+
+const handleFulfilledUpd = (state, { payload }) => {
+  state.id = payload._id;
+  state.total = payload.total;
+  state.totalQuantity = payload.totalQuantity;
+  state.name = payload.name;
+  state.email = payload.email;
+  state.phone = payload.phone;
+  state.address = payload.address;
+  state.paymentMethod = payload.paymentMethod;
+  state.status = payload.status;
+console.log(payload)
+    handleFulfilled(state)
 };
 
 export const orderSlice = createSlice({
@@ -38,6 +50,9 @@ export const orderSlice = createSlice({
       .addCase(addOrderThunk.pending, handlePending)
       .addCase(addOrderThunk.fulfilled, handleFulfilledAdd)
       .addCase(addOrderThunk.rejected, handleRejected)
+      .addCase(updOrderThunk.pending, handlePending)
+      .addCase(updOrderThunk.fulfilled, handleFulfilledUpd)
+      .addCase(updOrderThunk.rejected, handleRejected);
   },
 })
 

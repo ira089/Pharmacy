@@ -1,5 +1,6 @@
 import axios from 'axios';
 axios.defaults.baseURL = 'https://pharmacybackend-b38i.onrender.com/api';
+// https://pharmacybackend-b38i.onrender.com
 
 export const fetchMedStore = async () => {
   const { data } = await axios.get('/pharmacies');

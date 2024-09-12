@@ -19,7 +19,6 @@ const FormaLogin = () => {
       }}
       validationSchema={schema.loginSchema}
       onSubmit={(values, { resetForm }) => {
-        console.log(values)
         dispatch(loginThunk(values));
         resetForm();
         navigate('/cart');

@@ -15,3 +15,18 @@ export const addOrderThunk = createAsyncThunk(
       }
     }
   );
+
+  export const updOrderThunk = createAsyncThunk(
+    'order/upd',
+    async (data, thunkAPI) => {
+      try {
+        const id = data.id
+        const order = await orderApi.fetchOrderAdd(id, data);
+        console.log(order)
+        return order;
+      } catch (error) {
+        toast.error(`${error.message}`);
+        return thunkAPI.rejectWithValue(error.message);
+      }
+    }
+  );

@@ -28,8 +28,9 @@ const MedicineItem = ({ item, isVariant }) => {
   };
 
   const addToCart = ( counter) => {
-    const newTotalQuantity = totalQuantity + counter;
-    const newTotal = newTotalQuantity * price
+    const newTotalQuantity = String(totalQuantity + counter);
+    const newTotal = String((counter * price + Number(total)));
+   
   //  console.log('first');
   //   console.log(_id); 
     console.log(newTotal);

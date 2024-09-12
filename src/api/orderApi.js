@@ -12,8 +12,8 @@ export const fetchOrderAdd = async body => {
   return data;
 };
 
-export const fetchOrdertUpd = async body => {
-    const { data } = await axios.put('/order/update', body);
+export const fetchOrdertUpd = async (id, body)=> {
+    const { data } = await axios.put(`/order/${id}`, body);
     console.log(data);
     setAuthHeader(data.token);
     return data;
