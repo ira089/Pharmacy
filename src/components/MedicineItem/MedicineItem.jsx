@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {
-  addOrderThunk,
+  // addOrderThunk,
   updOrderThunk,
 } from '../../redux/order/operationsOrder';
 import { addOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
@@ -14,12 +14,22 @@ import styles from './medicineItem.module.css';
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();
   const { total, totalQuantity, id } = useSelector(selectOrder);
-  console.log(total);
+  console.log(id);
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
   const priceRound = Math.round(price);
 
   const [counter, setCounter] = useState(1);
+
+  // useEffect(() => {
+  //   dispatch(
+  //     updOrderThunk({
+  //       total: newTotal,
+  //       totalQuantity: newTotalQuantity,
+  //       status: 'Pending',
+  //     })
+  //   );
+  // }, [dispatch, newTotal, newTotalQuantity]);
   // console.log(counter)
   const counterPlus = () => {
     setCounter(prevCounter => prevCounter + 1);
@@ -34,40 +44,22 @@ const MedicineItem = ({ item, isVariant }) => {
   const addToCart = counter => {
     const newTotalQuantity = String(totalQuantity + counter);
     const newTotal = String(counter * price + Number(total));
-
     //  console.log('first');
     //   console.log(_id);
     console.log(newTotal);
-    if (id) {
-      console.log('first');
-      dispatch(
-        updOrderThunk(id, {
-          total: newTotal,
-          totalQuantity: newTotalQuantity,
-          status: 'Pending',
-        })
-      );
-      dispatch(
-        addOrderItemThunk({
-          idOrder: id,
-          idProduct: _id,
-          quantity: counter,
-        })
-      );
-      return;
-    }
-    dispatch(
-      addOrderThunk({
-        total: newTotal,
-        totalQuantity: newTotalQuantity,
-        status: 'Pending',
-      })
-    );
     dispatch(
       addOrderItemThunk({
         idOrder: id,
         idProduct: _id,
-        quantity: counter,
+        quantity: String(counter),
+      })
+    );
+    dispatch(
+      updOrderThunk({
+        total: newTotal,
+        totalQuantity: newTotalQuantity,
+        status: 'Pending',
+        _id: id,
       })
     );
   };

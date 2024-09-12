@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
-import {selectOrder} from '../../redux/order/selectorOrder';
+import { selectOrder } from '../../redux/order/selectorOrder';
 // import {calculateTotals} from '../../helpers/functions'
 import Logo from './Logo/Logo';
 import NavLinks from './NavLinks/NavLinks';
@@ -20,11 +20,9 @@ const Header = () => {
   const isOpen = () => setOpen(!open);
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
-  // const { productsUser} = useSelector(selectCart);
-  const  { totalQuantity} = useSelector(selectOrder);
+  const { totalQuantity } = useSelector(selectOrder);
 
   // const totals = calculateTotals(productsUser);
-  
 
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
@@ -60,7 +58,7 @@ const Header = () => {
       </div>
       <BurgerMenu isOpen={isOpen} open={open} />
       <div className={styles.rightMenu}>
-        {isLogin && <UserMenu totalQuantity={totalQuantity}  />}
+        {isLogin && <UserMenu totalQuantity={totalQuantity} />}
         <button className={styles.burgerBtn} onClick={isOpen}>
           {location.pathname === '/home' ? (
             <Icon width={32} height={26} name={'icon-burger-btn-white'} />
