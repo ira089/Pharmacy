@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { addOrderThunk } from '../../redux/order/operationsOrder';
-import {selectOrder} from '../../redux/order/selectorOrder'
+import {
+  addOrderThunk,
+  updOrderThunk,
+} from '../../redux/order/operationsOrder';
+import { addOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
+import { selectOrder } from '../../redux/order/selectorOrder';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
 import styles from './medicineItem.module.css';
 
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();
-  const  {total, totalQuantity, id} = useSelector(selectOrder);
-  console.log(total)
+  const { total, totalQuantity, id } = useSelector(selectOrder);
+  console.log(total);
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
   const priceRound = Math.round(price);
@@ -27,22 +31,43 @@ const MedicineItem = ({ item, isVariant }) => {
     setCounter(prevCounter => prevCounter - 1);
   };
 
-  const addToCart = ( counter) => {
+  const addToCart = counter => {
     const newTotalQuantity = String(totalQuantity + counter);
-    const newTotal = String((counter * price + Number(total)));
-   
-  //  console.log('first');
-  //   console.log(_id); 
+    const newTotal = String(counter * price + Number(total));
+
+    //  console.log('first');
+    //   console.log(_id);
     console.log(newTotal);
-    if(id) {
-      console.log('first')
-    return
+    if (id) {
+      console.log('first');
+      dispatch(
+        updOrderThunk(id, {
+          total: newTotal,
+          totalQuantity: newTotalQuantity,
+          status: 'Pending',
+        })
+      );
+      dispatch(
+        addOrderItemThunk({
+          idOrder: id,
+          idProduct: _id,
+          quantity: counter,
+        })
+      );
+      return;
     }
     dispatch(
       addOrderThunk({
         total: newTotal,
         totalQuantity: newTotalQuantity,
-        status: "Pending",
+        status: 'Pending',
+      })
+    );
+    dispatch(
+      addOrderItemThunk({
+        idOrder: id,
+        idProduct: _id,
+        quantity: counter,
       })
     );
   };
@@ -87,7 +112,7 @@ const MedicineItem = ({ item, isVariant }) => {
         ) : (
           <div className={styles.wrapBtn}>
             <Button
-              onClick={() => addToCart( counter)}
+              onClick={() => addToCart(counter)}
               style={{ color: '#fff', width: '108px', height: '34px' }}
             >
               Add to cart
