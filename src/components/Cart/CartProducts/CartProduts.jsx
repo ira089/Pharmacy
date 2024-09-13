@@ -1,6 +1,6 @@
-import React, { useSelector } from 'react';
+import React from 'react';
 import { selectOrderItem } from '../../../redux/ordertItem/selectorOrdertItem';
-// import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 // import {selectCart} from '../../../redux/cart/selectorCart';
 import CartItem from '../CartItem/CartItem';
 import styles from './cartProduts.module.css';
