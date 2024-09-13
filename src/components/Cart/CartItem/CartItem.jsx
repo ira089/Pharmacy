@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { cartUpdThunk, removeProduct } from '../../../redux/cart/cartSlice';
+import {
+  delOrderItemThunk,
+  updOrderItemThunk,
+} from '../../../redux/ordertItem/operationsOrdertItem';
 import { productsIdThunk } from '../../../redux/products/operationsProducts';
 import { selectProducts } from '../../../redux/products/selectorProducts';
 import Icon from 'components/Icon/Icon';
 import styles from './cartItem.module.css';
 
-const CartItem = ({ id, key, quantity }) => {
+const CartItem = ({ id, key, quantity, idOrder }) => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(quantity);
   // console.log(id);
@@ -21,15 +24,16 @@ const CartItem = ({ id, key, quantity }) => {
   const productCart = products?.find(el => el._id === id);
   const { name, photo, price, category } = productCart;
 
-  // useEffect(() => {
-  //   dispatch(
-  //     addProduct({
-  //       idProduct: id,
-  //       quantity: counter,
-  //       price: price,
-  //     })
-  //   );
-  // }, [counter, dispatch, id, price]);
+  useEffect(() => {
+    dispatch(
+      updOrderItemThunk({
+        idProduct: id,
+        quantity: counter,
+        idOrder: idOrder,
+      })
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [counter, id]);
 
   const counterPlus = () => {
     setCounter(prevCounter => prevCounter + 1);
@@ -43,7 +47,7 @@ const CartItem = ({ id, key, quantity }) => {
   };
 
   const delToCart = id => {
-    // dispatch(removeProduct(id));
+    dispatch(delOrderItemThunk(id));
   };
 
   return (

@@ -5,7 +5,7 @@ import { CustomFormControlLabel, CustomRadio } from './radioStyles';
 import styles from './cartInfo.module.css';
 import Button from 'components/Button/Button';
 
-const CartInfo = ({ handleChange, handleChangeForm, total }) => {
+const CartInfo = ({ handleChange, handleChangeForm, total, onClick }) => {
   return (
     <div className={styles.wrapText}>
       <h4 className={styles.title}>Enter shipping info </h4>
@@ -41,7 +41,10 @@ const CartInfo = ({ handleChange, handleChangeForm, total }) => {
         <h4 className={styles.title}>Total:</h4>
         <h4 className={styles.title}>৳ {total}</h4>
       </div>
-      <Button style={{ color: '#fff', width: '141px', height: '44px' }}>
+      <Button
+        onClick={onClick}
+        style={{ color: '#fff', width: '141px', height: '44px' }}
+      >
         Place order
       </Button>
     </div>

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
-import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
+import {
+  allOrderItemThunk,
+  updOrderItemThunk,
+} from '../../redux/ordertItem/operationsOrdertItem';
 // import { calculateTotals } from '../../helpers/functions';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
@@ -28,7 +31,6 @@ const CartPage = () => {
   // console.log(cart);
   // const {idProduct, quantity, price} = productsUser;
   // const totals = calculateTotals(productsUser);
-  // const { total, totalQuantity } = totals;
 
   const [paymentMethod, setPaymentMethod] = useState('');
   const [formData, setFormData] = useState({
@@ -53,8 +55,15 @@ const CartPage = () => {
     paymentMethod,
     total,
     totalQuantity,
+    status: 'Confirmed',
+    id: _id,
   };
   console.log(placeOrder);
+
+  const submitPlaceOrder = () => {
+    dispatch(updOrderItemThunk(placeOrder));
+  };
+
   return (
     <section className={styles.wrapCart}>
       <h2 className={styles.title}>Cart</h2>
@@ -62,8 +71,9 @@ const CartPage = () => {
         total={total}
         handleChange={handleChangeRadio}
         handleChangeForm={handleChangeForm}
+        onClick={submitPlaceOrder}
       />
-      <CartProduts />
+      <CartProduts idOrder={_id} />
     </section>
   );
 };
