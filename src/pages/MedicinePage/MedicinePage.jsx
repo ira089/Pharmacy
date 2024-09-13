@@ -30,7 +30,8 @@ const MedicinePage = () => {
         })
       );
     }
-  }, [dispatch, id, isLogin]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className={styles.wrapMed}>
