@@ -63,6 +63,10 @@ const handleFulfilledCurrentFull = (state, { payload }) => {
   state.isLoggedIn = true;
   handleFulfilled(state);
 };
+const handleFulfilledUpdOrder = (state, { payload }) => {
+  state.orders = state.orders.filter(el => el.id !== payload.id);
+  state.orders.push(payload);
+};
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -93,7 +97,7 @@ export const authSlice = createSlice({
       .addCase(currentFullThunk.rejected, handleRejected)
 
       .addCase(orderUpdThunk.pending, handlePending)
-      .addCase(orderUpdThunk.fulfilled, handleFulfilledCurrentFull)
+      .addCase(orderUpdThunk.fulfilled, handleFulfilledUpdOrder)
       .addCase(orderUpdThunk.rejected, handleRejected);
   },
 });

@@ -50,7 +50,7 @@ export const fetchCurrentFull = async token => {
 export const fetchUpdOrder = async (token, id, body) => {
   setAuthHeader(token);
   try {
-    const { data } = await axios.put(`/users/current/full/${id}`, body);
+    const { data } = await axios.put(`/users/current/upd/${id}`, body);
     return data;
   } catch (error) {
     clearAuthHeader();
