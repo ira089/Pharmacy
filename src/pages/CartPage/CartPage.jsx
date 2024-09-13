@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { selectOrder } from '../../redux/order/selectorOrder';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectOrder } from '../../redux/auth/selectorsAuth';
+import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
 // import { calculateTotals } from '../../helpers/functions';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
 import styles from './cartPage.module.css';
 
 const CartPage = () => {
-  const  {total, totalQuantity} = useSelector(selectOrder);
+  const dispatch = useDispatch();
+  const order = useSelector(selectOrder);
+  const isOrden = Boolean(order.length);
+  const { totalQuantity, total, _id } =
+    isOrden && order.find(el => el.status === 'Pending');
+
+  useEffect(() => {
+    dispatch(allOrderItemThunk(_id));
+  }, [_id, dispatch]);
+
+  console.log(_id);
+  console.log(totalQuantity);
   // const { productsUser } = useSelector(selectCart);
   // const cart = productsUser?.map(({ idProduct, quantity }) => ({
   //   idProduct,
@@ -41,7 +53,6 @@ const CartPage = () => {
     paymentMethod,
     total,
     totalQuantity,
-    
   };
   console.log(placeOrder);
   return (

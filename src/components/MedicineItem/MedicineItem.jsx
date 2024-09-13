@@ -16,7 +16,7 @@ const MedicineItem = ({ item, isVariant }) => {
     totalQuantity,
     _id: id,
   } = order.find(el => el.status === 'Pending');
-  console.log(id);
+  // console.log(id);
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
   const priceRound = Math.round(price);
@@ -34,7 +34,7 @@ const MedicineItem = ({ item, isVariant }) => {
   };
 
   const addToCart = counter => {
-    const newTotalQuantity = String(totalQuantity + counter);
+    const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
     console.log(newTotalQuantity);
     const newTotal = String(counter * price + Number(total));
     //  console.log('first');

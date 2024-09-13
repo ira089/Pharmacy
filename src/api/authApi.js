@@ -51,6 +51,7 @@ export const fetchUpdOrder = async (token, id, body) => {
   setAuthHeader(token);
   try {
     const { data } = await axios.put(`/users/current/upd/${id}`, body);
+    console.log(data);
     return data;
   } catch (error) {
     clearAuthHeader();

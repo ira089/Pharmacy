@@ -20,10 +20,9 @@ export const fetchOrdertItemUpd = async (id, body) => {
   return data;
 };
 
-export const fetchOrdertItemAll = async body => {
-  const { data } = await axios.get('/orderitems', body);
+export const fetchOrdertItemAll = async id => {
+  const { data } = await axios.get(`/orderitems/${id}`);
   console.log(data);
-  //   setAuthHeader(data.token);
   return data;
 };
 

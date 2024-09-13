@@ -20,8 +20,11 @@ const Header = () => {
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
   const order = useSelector(selectOrder);
-  const { totalQuantity } = order.find(el => el.status === 'Pending');
-  // console.log(totalQuantity);
+  const isOrden = Boolean(order.length);
+  const { totalQuantity } =
+    isOrden && order.find(el => el.status === 'Pending');
+  console.log(totalQuantity);
+
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
       setOpen(false);

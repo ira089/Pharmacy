@@ -18,9 +18,9 @@ export const addOrderItemThunk = createAsyncThunk(
 
 export const allOrderItemThunk = createAsyncThunk(
   'orderitem/get',
-  async (body, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const orderItem = await orderItemsApi.fetchOrdertItemAll(body);
+      const orderItem = await orderItemsApi.fetchOrdertItemAll(id);
       console.log(orderItem);
       return orderItem;
     } catch (error) {
