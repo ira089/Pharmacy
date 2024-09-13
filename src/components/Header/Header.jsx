@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
-import { selectOrder } from '../../redux/order/selectorOrder';
+import { selectIsLoggedIn, selectOrder } from '../../redux/auth/selectorsAuth';
 // import {calculateTotals} from '../../helpers/functions'
 import Logo from './Logo/Logo';
 import NavLinks from './NavLinks/NavLinks';
@@ -20,10 +19,9 @@ const Header = () => {
   const isOpen = () => setOpen(!open);
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
-  const { totalQuantity } = useSelector(selectOrder);
-
-  // const totals = calculateTotals(productsUser);
-
+  const order = useSelector(selectOrder);
+  const { totalQuantity } = order.find(el => el.status === 'Pending');
+  // console.log(totalQuantity);
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
       setOpen(false);
@@ -38,12 +36,12 @@ const Header = () => {
   return (
     <header
       style={{
-        background: location.pathname === '/home' ? '#59b17a' : '#f7f8fa',
+        background: location.pathname === '/' ? '#59b17a' : '#f7f8fa',
       }}
       className={styles.wrapHeader}
     >
-      <NavLink className={styles.link} to="/home">
-        {location.pathname === '/home' ? (
+      <NavLink className={styles.link} to="/">
+        {location.pathname === '/' ? (
           <Logo color="#fff" logoImg={ImgLogoWhiteM} />
         ) : (
           <Logo color="#1d1e21" logoImg={ImgLogoM} />
@@ -60,7 +58,7 @@ const Header = () => {
       <div className={styles.rightMenu}>
         {isLogin && <UserMenu totalQuantity={totalQuantity} />}
         <button className={styles.burgerBtn} onClick={isOpen}>
-          {location.pathname === '/home' ? (
+          {location.pathname === '/' ? (
             <Icon width={32} height={26} name={'icon-burger-btn-white'} />
           ) : (
             <Icon width={32} height={26} name={'icon-burger-btn-green'} />

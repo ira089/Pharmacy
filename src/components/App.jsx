@@ -1,10 +1,10 @@
-import React,{lazy, useEffect} from 'react';
+import React, { lazy, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {selectIsRefreshing} from '../redux/auth/selectorsAuth'
-import {refresThunk} from '../redux/auth/operationsAuth'
+import { selectIsRefreshing } from '../redux/auth/selectorsAuth';
+import { refresThunk, currentFullThunk } from '../redux/auth/operationsAuth';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
@@ -20,14 +20,16 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 
-
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  // const isRefreshing = false
 
   useEffect(() => {
     dispatch(refresThunk());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(currentFullThunk());
   }, [dispatch]);
 
   return isRefreshing ? (
@@ -35,18 +37,17 @@ const App = () => {
   ) : (
     <>
       <Routes>
-        <Route path="/" element={<SharedLayout /> }>
-          <Route path="home" element={<HomePage />} />
-          <Route path="produst/:id" element={<ProductPage/>} />
+        <Route path="/" element={<SharedLayout />}>
+          {/* <Route path="home" element={<HomePage />} /> */}
+          <Route index element={<HomePage />} />
+          <Route path="produst/:id" element={<ProductPage />} />
           <Route path="medicine-store" element={<MedicineStorePage />} />
-            <Route path="medicine" element={<MedicinePage />} />
+          <Route path="medicine" element={<MedicinePage />} />
           <Route element={<PublicRoute />}>
             <Route path="register" element={<RegisterPage />} />
             <Route path="login" element={<Login />} />
-            
           </Route>
           <Route element={<PrivateRoute />}>
-           
             <Route path="cart" element={<CartPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
@@ -55,7 +56,6 @@ const App = () => {
       <ToastContainer autoClose={3000} />
     </>
   );
- 
 };
 
 export default App;

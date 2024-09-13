@@ -10,15 +10,15 @@ import styles from './footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.wrapFooter}>
-      <NavLink className={styles.link} to="/home">
-      <Logo color="#fff" logoImg={ImgLogoWhiteM}/>
+      <NavLink className={styles.link} to="/">
+        <Logo color="#fff" logoImg={ImgLogoWhiteM} />
       </NavLink>
       <p className={styles.textFooter}>
         Get the medicine to help you feel better, get back to your active life,
         and enjoy every moment.
       </p>
       <nav className={styles.navList}>
-        <NavLink className={styles.navLink} to="/home">
+        <NavLink className={styles.navLink} to="/">
           Home
         </NavLink>
         <NavLink className={styles.navLink} to="/medicine-store">
@@ -64,17 +64,16 @@ const Footer = () => {
         </li>
       </ul> */}
       <Divider
-          aria-hidden="true"
-          sx={{ bgcolor: 'rgba(247, 248, 250, 0.3)' }}
-        />
+        aria-hidden="true"
+        sx={{ bgcolor: 'rgba(247, 248, 250, 0.3)' }}
+      />
       <div className={styles.policy}>
-       
         <p>© E-Pharmacy 2023. All Rights Reserved</p>
-        <Divider orientation="vertical"  flexItem sx={{ bgcolor: '#f7f8fa' }}/>
+        <Divider orientation="vertical" flexItem sx={{ bgcolor: '#f7f8fa' }} />
         <a href="#" target="_blank">
           Privacy Policy
         </a>
-        <Divider orientation="vertical" flexItem sx={{ bgcolor: '#f7f8fa' }}/>
+        <Divider orientation="vertical" flexItem sx={{ bgcolor: '#f7f8fa' }} />
         <a href="#" target="_blank">
           Terms & Conditions
         </a>

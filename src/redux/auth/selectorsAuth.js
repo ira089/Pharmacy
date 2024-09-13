@@ -10,3 +10,4 @@ export const selectIsLoadin = state => state.auth.isLoading;
 
 export const selectError = state => state.auth.error;
 
+export const selectOrder = state => state.auth.orders;

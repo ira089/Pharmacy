@@ -4,7 +4,8 @@ import {
   loginThunk,
   logOutThunk,
   refresThunk,
-  
+  currentFullThunk,
+  orderUpdThunk,
 } from './operationsAuth';
 import {
   handleFulfilled,
@@ -14,6 +15,7 @@ import {
 
 const initialState = {
   user: { name: null, email: null, phone: '' },
+  orders: [],
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
@@ -53,6 +55,14 @@ const handleFulfilledRefrech = (state, { payload }) => {
   state.isRefreshing = false;
   handleFulfilled(state);
 };
+const handleFulfilledCurrentFull = (state, { payload }) => {
+  state.user.name = payload.name;
+  state.user.email = payload.email;
+  state.user.phone = payload.phone;
+  state.orders = payload.orders;
+  state.isLoggedIn = true;
+  handleFulfilled(state);
+};
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -77,8 +87,14 @@ export const authSlice = createSlice({
       .addCase(refresThunk.rejected, state => {
         state.isRefreshing = false;
         state.isLoading = false;
-      });
-      
+      })
+      .addCase(currentFullThunk.pending, handlePending)
+      .addCase(currentFullThunk.fulfilled, handleFulfilledCurrentFull)
+      .addCase(currentFullThunk.rejected, handleRejected)
+
+      .addCase(orderUpdThunk.pending, handlePending)
+      .addCase(orderUpdThunk.fulfilled, handleFulfilledCurrentFull)
+      .addCase(orderUpdThunk.rejected, handleRejected);
   },
 });
 export const authReducer = authSlice.reducer;

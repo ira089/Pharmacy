@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import {
-  // addOrderThunk,
-  updOrderThunk,
-} from '../../redux/order/operationsOrder';
 import { addOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
-import { selectOrder } from '../../redux/order/selectorOrder';
+import { orderUpdThunk } from '../../redux/auth/operationsAuth';
+import { selectOrder } from '../../redux/auth/selectorsAuth';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
 import styles from './medicineItem.module.css';
 
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();
-  const { total, totalQuantity, id } = useSelector(selectOrder);
+  const order = useSelector(selectOrder);
+  const {
+    total,
+    totalQuantity,
+    _id: id,
+  } = order.find(el => el.status === 'Pending');
   console.log(id);
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
@@ -21,16 +23,6 @@ const MedicineItem = ({ item, isVariant }) => {
 
   const [counter, setCounter] = useState(1);
 
-  // useEffect(() => {
-  //   dispatch(
-  //     updOrderThunk({
-  //       total: newTotal,
-  //       totalQuantity: newTotalQuantity,
-  //       status: 'Pending',
-  //     })
-  //   );
-  // }, [dispatch, newTotal, newTotalQuantity]);
-  // console.log(counter)
   const counterPlus = () => {
     setCounter(prevCounter => prevCounter + 1);
   };
@@ -43,6 +35,7 @@ const MedicineItem = ({ item, isVariant }) => {
 
   const addToCart = counter => {
     const newTotalQuantity = String(totalQuantity + counter);
+    console.log(newTotalQuantity);
     const newTotal = String(counter * price + Number(total));
     //  console.log('first');
     //   console.log(_id);
@@ -55,11 +48,11 @@ const MedicineItem = ({ item, isVariant }) => {
       })
     );
     dispatch(
-      updOrderThunk({
+      orderUpdThunk({
+        id: id,
         total: newTotal,
         totalQuantity: newTotalQuantity,
         status: 'Pending',
-        _id: id,
       })
     );
   };

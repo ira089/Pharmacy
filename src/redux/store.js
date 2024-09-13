@@ -10,14 +10,13 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import {pharmaciesReducer } from './medStore/medStoreSlice';
-import {reviewsReducer } from './review/reviewSlice';
+import { pharmaciesReducer } from './medStore/medStoreSlice';
+import { reviewsReducer } from './review/reviewSlice';
 import { authReducer } from './auth/authSlice';
 import searchReducer from './search/searchSlice';
 import { productsReducer } from './products/productsSlice';
-import {orderReducer} from './order/orderSlice';
-import {orderItemsReducer} from './ordertItem/ordertItemSlice';
-
+// import {orderReducer} from './order/orderSlice';
+import { orderItemsReducer } from './ordertItem/ordertItemSlice';
 
 const authPersistConfig = {
   key: 'auth',
@@ -32,9 +31,8 @@ export const store = configureStore({
     reviews: reviewsReducer,
     search: searchReducer,
     products: productsReducer,
-    order: orderReducer,
+    // order: orderReducer,
     orderItems: orderItemsReducer,
-
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -44,4 +42,4 @@ export const store = configureStore({
     }),
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);

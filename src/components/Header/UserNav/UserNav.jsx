@@ -10,21 +10,20 @@ const UserNav = () => {
   const navigate = useNavigate();
 
   const handeleLogOut = () => {
-    navigate('/home');
+    navigate('/');
     dispatch(logOutThunk());
   };
 
   return (
-      <div className={styles.userNav}>
-       <Button onClick={handeleLogOut}
-          style={{ borderColor: 'rgba(241, 241, 241, 0.5)' }}
-          type="buttun"
-        >
-          Log Out
-        </Button>
-      </div>
-     
-    
+    <div className={styles.userNav}>
+      <Button
+        onClick={handeleLogOut}
+        style={{ borderColor: 'rgba(241, 241, 241, 0.5)' }}
+        type="buttun"
+      >
+        Log Out
+      </Button>
+    </div>
   );
 };
 

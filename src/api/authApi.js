@@ -30,7 +30,27 @@ export const fetchRefresh = async token => {
   setAuthHeader(token);
   try {
     const { data } = await axios.get('/users/current');
-    console.log(data);
+    return data;
+  } catch (error) {
+    clearAuthHeader();
+    throw error;
+  }
+};
+export const fetchCurrentFull = async token => {
+  setAuthHeader(token);
+  try {
+    const { data } = await axios.get('/users/current/full');
+    return data;
+  } catch (error) {
+    clearAuthHeader();
+    throw error;
+  }
+};
+
+export const fetchUpdOrder = async (token, id, body) => {
+  setAuthHeader(token);
+  try {
+    const { data } = await axios.put(`/users/current/full/${id}`, body);
     return data;
   } catch (error) {
     clearAuthHeader();
