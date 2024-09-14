@@ -7,7 +7,6 @@
   width: 100%;
   background: #59b17a;
   padding: 20px;
-
 }
 .link {
   text-decoration: none;
@@ -29,7 +28,6 @@
   margin-bottom: 80px;
   display: flex;
   gap: 32px;
-  /* align-items: center; */
 }
 .navLink {
   text-decoration: none;
@@ -68,5 +66,71 @@
 @media (min-width: 375px) and (max-width: 767px) {
   .wrapFooter {
     width: 335px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapFooter {
+    padding: 32px;
+  }
+  .wrapBottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 207px;
+    margin-bottom: 88px;
+  }
+  .wrapLogo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .textFooter {
+    font-size: 16px;
+    line-height: 125%;
+    margin: 0;
+  }
+  .wrapNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .navList {
+    margin-bottom: 0;
+  }
+  .navLink {
+    font-size: 16px;
+    line-height: 125%;
+  }
+  .navLink:nth-child(2n) {
+    width: 115px;
+  }
+  .listFooterSocial {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  .footerSocialItem {
+    border: 1px solid rgba(247, 248, 250, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+  }
+  .policy {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    line-height: 129%;
+    margin-top: 33px;
   }
 }

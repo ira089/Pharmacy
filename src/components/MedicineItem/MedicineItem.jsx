@@ -17,7 +17,7 @@ const MedicineItem = ({ item, isVariant }) => {
     total,
     totalQuantity,
     _id: id,
-  } = order.find(el => el.status === 'Pending');
+  } = isLogin && order.find(el => el.status === 'Pending');
   // console.log(id);
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
