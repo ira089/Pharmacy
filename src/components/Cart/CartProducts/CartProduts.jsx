@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import CartItem from '../CartItem/CartItem';
 import styles from './cartProduts.module.css';
 
-const CartProduts = ({ idOrder }) => {
+const CartProduts = ({ idOrder, totalQuantity, total }) => {
   const { cart, isLoading, error } = useSelector(selectOrderItem);
   // const productsUser = [];
   const isCartProducts = Boolean(cart.length);
@@ -24,8 +24,11 @@ const CartProduts = ({ idOrder }) => {
             <CartItem
               key={item.idProduct}
               id={item.idProduct}
+              _id={item._id}
               quantity={item.quantity}
               idOrder={idOrder}
+              total={total}
+              totalQuantity={totalQuantity}
             />
           ))}
         </ul>

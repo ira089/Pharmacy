@@ -14,19 +14,23 @@ export const fetchOrderItemAdd = async body => {
 };
 
 export const fetchOrdertItemUpd = async (id, body) => {
+  // console.log(id);
+  // console.log(body);
   const { data } = await axios.put(`/orderitems/${id}`, body);
-  console.log(data);
+  // console.log(data);
   //   setAuthHeader(data.token);
   return data;
 };
 
 export const fetchOrdertItemAll = async id => {
+  console.log(id);
   const { data } = await axios.get(`/orderitems/${id}`);
-  console.log(data);
+  // console.log(data);
   return data;
 };
 
 export const fetchOrdertItemDel = async id => {
+  console.log(id);
   const { data } = await axios.delete(`/orderitems/${id}`);
   console.log(data);
   //   setAuthHeader(data.token);

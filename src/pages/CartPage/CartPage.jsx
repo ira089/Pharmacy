@@ -21,8 +21,8 @@ const CartPage = () => {
     dispatch(allOrderItemThunk(_id));
   }, [_id, dispatch]);
 
-  console.log(_id);
-  console.log(totalQuantity);
+  // console.log(_id);
+  // console.log(totalQuantity);
   // const { productsUser } = useSelector(selectCart);
   // const cart = productsUser?.map(({ idProduct, quantity }) => ({
   //   idProduct,
@@ -73,7 +73,7 @@ const CartPage = () => {
         handleChangeForm={handleChangeForm}
         onClick={submitPlaceOrder}
       />
-      <CartProduts idOrder={_id} />
+      <CartProduts idOrder={_id} totalQuantity={totalQuantity} total={total} />
     </section>
   );
 };

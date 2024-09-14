@@ -35,8 +35,9 @@ export const updOrderItemThunk = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const id = data.id;
-      const orderItem = await orderItemsApi.fetchOrdertItemUpd(id, data);
-      console.log(orderItem);
+      const dataChange = { ...data };
+      delete dataChange.id;
+      const orderItem = await orderItemsApi.fetchOrdertItemUpd(id, dataChange);
       return orderItem;
     } catch (error) {
       toast.error(`${error.message}`);

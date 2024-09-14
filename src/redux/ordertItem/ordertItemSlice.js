@@ -22,8 +22,6 @@ const handleFulfilledAdd = (state, { payload }) => {
   state.cart = state.cart.filter(el => el.idProduct !== payload.idProduct);
   state.cart.push(payload);
   // state.idOrder = payload.owner;
-
-  console.log(payload);
   handleFulfilled(state);
 };
 
@@ -32,19 +30,16 @@ const handleFulfilledUpd = (state, { payload }) => {
   state.cart = state.cart.filter(el => el.idProduct !== payload.idProduct);
   state.cart.push(payload);
 
-  console.log(payload);
   handleFulfilled(state);
 };
 
 const handleFulfilledAll = (state, { payload }) => {
-  state.idOrder = payload.result.owner[0]._id;
+  state.idOrder = payload.result[0].owner._id;
   state.cart = payload.result.map(({ _id, idProduct, quantity }) => ({
     _id,
     idProduct,
     quantity,
   }));
-
-  console.log(payload);
   handleFulfilled(state);
 };
 
