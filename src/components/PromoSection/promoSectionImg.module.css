@@ -1,50 +1,70 @@
 .containerPromo {
-    background: #59b17a;
-    border-radius: 32px;
-    padding: 20px;
-    width: 100%;
-    /* height: 126px;  */
-display: flex;
-flex-direction: column;
-box-sizing: border-box;
-
+  background: #59b17a;
+  border-radius: 32px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .containerPromo h3 {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 114%;
-    letter-spacing: -0.01em;
-    color: #f1f1f1; 
-    margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 114%;
+  letter-spacing: -0.01em;
+  color: #f1f1f1;
+  margin-bottom: 20px;
 }
 .containerPromo p {
-    margin-bottom: 40px;
-font-size: 14px;
-line-height: 129%;
-color: #f1f1f1;
-} 
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 129%;
+  color: #f1f1f1;
+}
 .link {
-    text-decoration: none;
-    border: 1px solid rgba(241, 241, 241, 0.5);
-border-radius: 60px;
-padding: 13px 0 13px 32px;
-width: 154px;
-height: 44px;
-font-weight: 500;
-font-size: 14px;
-line-height: 129%;
-color: #f1f1f1;
-background: transparent;
-margin-bottom: 39px;
-box-sizing: border-box;
+  text-decoration: none;
+  border: 1px solid rgba(241, 241, 241, 0.5);
+  border-radius: 60px;
+  padding: 13px 0 13px 32px;
+  width: 154px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: #f1f1f1;
+  background: transparent;
+  margin-bottom: 39px;
+  box-sizing: border-box;
 }
 .link:hover {
-    background: #3f945f;
+  background: #3f945f;
 }
 .img {
-    width: 295px;
-    height: 335px;
-    object-fit: cover;
+  width: 295px;
+  height: 335px;
+  object-fit: cover;
   object-position: center;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .containerPromo {
+    padding: 104px 48px 40px 48px;
+  }
+  .containerPromo h3 {
+    font-size: 48px;
+    line-height: 115%;
+    margin-bottom: 24px;
+  }
+  .containerPromo p {
+    font-size: 16px;
+    line-height: 125%;
+  }
+  .link {
+    width: 190px;
+    margin-bottom: 83px;
+  }
+  .img {
+    width: 600px;
+    height: 406px;
+  }
+}

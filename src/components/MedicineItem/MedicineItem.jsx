@@ -42,8 +42,9 @@ const MedicineItem = ({ item, isVariant }) => {
     }
     const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
     console.log(newTotalQuantity);
-    const newTotal = String(counter * price + Number(total));
-    //  console.log('first');
+    const numberTotal = String(counter * price + Number(total));
+    const newTotal = String(Math.round(numberTotal * 100) / 100);
+    console.log(newTotal);
     //   console.log(_id);
     console.log(newTotal);
     dispatch(

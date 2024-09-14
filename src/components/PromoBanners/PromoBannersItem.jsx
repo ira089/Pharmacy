@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './promoBanners.module.css';
 
-const PromoBannersItem = ({ number, title, btn, pct, onClick }) => {
+const PromoBannersItem = ({ number, title, btn, pct }) => {
   return (
     <div className={styles.wrapItem}>
       <div className={styles.wrapTitle}>
@@ -12,8 +12,7 @@ const PromoBannersItem = ({ number, title, btn, pct, onClick }) => {
       </div>
       <div className={styles.wrapTitle}>
         <p className={styles.pct}>{pct}</p>
-        <button onClick={onClick} className={styles.btn}>{btn}</button>
-        
+        <button className={styles.btn}>{btn}</button>
       </div>
     </div>
   );

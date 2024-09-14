@@ -6,11 +6,10 @@ import styles from './promoSection.module.css';
 const PromoSection = () => {
   return (
     <section className={styles.wrapPromo}>
-      <PromoSectionImg/>
-      <PromoSectionMenu/>
-
+      <PromoSectionImg />
+      <PromoSectionMenu />
     </section>
-  )
-}
+  );
+};
 
-export default PromoSection
+export default PromoSection;

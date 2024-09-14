@@ -33,16 +33,6 @@ export const calculateTotals = products => {
   return result;
 };
 
-// const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
-// console.log(newTotalQuantity);
-// const numberTotal = Number(counter) * Number(price) + Number(total);
-
-// const newTotal = String(Math.round(numberTotal * 100) / 100);
-
-// const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
-// console.log(newTotalQuantity);
-// const newTotal = String(counter * price + Number(total));
-
 export const funTotalQuantity = a => {
   return String(Number(a) + 1);
 };

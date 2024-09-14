@@ -23,6 +23,7 @@
   line-height: 100%;
   text-shadow: 0 4px 85px 0 rgba(29, 30, 33, 0.3);
   margin-bottom: 20px;
+  margin-top: 140px;
 }
 
 .text {
@@ -34,5 +35,23 @@
 @media (min-width: 375px) and (max-width: 767px) {
   .wrapMainBanner {
     width: 335px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapMainBanner {
+    padding: 186px 32px 258px 32px;
+  }
+  .wrapImg {
+    width: 704px;
+    height: 508px;
+  }
+  .title {
+    font-size: 74px;
+    margin-bottom: 24px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 125%;
+    margin-left: 382px;
   }
 }
