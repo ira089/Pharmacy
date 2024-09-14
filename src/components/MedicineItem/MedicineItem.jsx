@@ -3,13 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { addOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
 import { orderUpdThunk } from '../../redux/auth/operationsAuth';
-import { selectOrder } from '../../redux/auth/selectorsAuth';
+import { selectOrder, selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
+import { toast } from 'react-toastify';
 import styles from './medicineItem.module.css';
 
 const MedicineItem = ({ item, isVariant }) => {
   const dispatch = useDispatch();
+  const isLogin = useSelector(selectIsLoggedIn);
   const order = useSelector(selectOrder);
   const {
     total,
@@ -34,6 +36,10 @@ const MedicineItem = ({ item, isVariant }) => {
   };
 
   const addToCart = counter => {
+    if (!isLogin) {
+      toast.error('The service is available only to authorized users');
+      return;
+    }
     const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
     console.log(newTotalQuantity);
     const newTotal = String(counter * price + Number(total));

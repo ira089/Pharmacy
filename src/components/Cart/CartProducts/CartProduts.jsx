@@ -22,8 +22,8 @@ const CartProduts = ({ idOrder, totalQuantity, total }) => {
         <ul className={styles.list}>
           {cart.map(item => (
             <CartItem
-              key={item.idProduct}
-              id={item.idProduct}
+              key={item._id}
+              idProduct={item.idProduct}
               _id={item._id}
               quantity={item.quantity}
               idOrder={idOrder}

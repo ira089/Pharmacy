@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
-import {
-  allOrderItemThunk,
-  updOrderItemThunk,
-} from '../../redux/ordertItem/operationsOrdertItem';
+import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
+import { orderUpdThunk } from '../../redux/auth/operationsAuth';
 // import { calculateTotals } from '../../helpers/functions';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
@@ -61,7 +59,7 @@ const CartPage = () => {
   console.log(placeOrder);
 
   const submitPlaceOrder = () => {
-    dispatch(updOrderItemThunk(placeOrder));
+    dispatch(orderUpdThunk(placeOrder));
   };
 
   return (
