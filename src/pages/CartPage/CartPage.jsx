@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
 import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
 import { orderUpdThunk } from '../../redux/auth/operationsAuth';
-// import { calculateTotals } from '../../helpers/functions';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
 import styles from './cartPage.module.css';
@@ -19,17 +18,6 @@ const CartPage = () => {
     dispatch(allOrderItemThunk(_id));
   }, [_id, dispatch]);
 
-  // console.log(_id);
-  // console.log(totalQuantity);
-  // const { productsUser } = useSelector(selectCart);
-  // const cart = productsUser?.map(({ idProduct, quantity }) => ({
-  //   idProduct,
-  //   quantity,
-  // }));
-  // console.log(cart);
-  // const {idProduct, quantity, price} = productsUser;
-  // const totals = calculateTotals(productsUser);
-
   const [paymentMethod, setPaymentMethod] = useState('');
   const [formData, setFormData] = useState({
     name: '',
@@ -37,8 +25,7 @@ const CartPage = () => {
     phone: '',
     address: '',
   });
-  // console.log(radio)
-  // console.log(formData);
+
   const handleChangeRadio = evt => {
     setPaymentMethod(evt.target.value);
   };

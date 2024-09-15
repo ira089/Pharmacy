@@ -1,18 +1,12 @@
 import React from 'react';
 import { selectOrderItem } from '../../../redux/ordertItem/selectorOrdertItem';
 import { useSelector } from 'react-redux';
-// import {selectCart} from '../../../redux/cart/selectorCart';
 import CartItem from '../CartItem/CartItem';
 import styles from './cartProduts.module.css';
 
 const CartProduts = ({ idOrder, totalQuantity, total }) => {
   const { cart, isLoading, error } = useSelector(selectOrderItem);
-  // const productsUser = [];
   const isCartProducts = Boolean(cart.length);
-
-  // const elements = isCartProducts && cartProducts.map(item => (
-  //  <CartItem key={item._id} id={item._id}/>
-  // ));
 
   return (
     <>

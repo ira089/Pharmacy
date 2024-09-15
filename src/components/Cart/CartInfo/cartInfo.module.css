@@ -1,54 +1,67 @@
-.wrapText{
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    width: 100%;
-    /* gap: 17px;  */
-    background: #fff;
-    border-radius: 27px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 80px;
+.wrapText {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  border-radius: 27px;
+  padding: 20px;
+  margin-bottom: 80px;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 140%;
-    color: #1d1e21; 
-    margin: 0;
-   margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1d1e21;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .text {
-font-size: 14px;
-line-height: 129%;
-color: #6a6a6f;
-margin: 0;
-margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 129%;
+  color: #6a6a6f;
+  margin: 0;
+  margin-bottom: 20px;
 }
 .wrapPayment {
-    padding: 38px 0 40px 0;
-    border-bottom: 1px solid rgba(29, 30, 33, 0.1); 
-    border-top: 1px solid rgba(29, 30, 33, 0.1); 
-    margin-top: 40px;
-    margin-bottom: 40px;
+  padding: 38px 0 40px 0;
+  border-bottom: 1px solid rgba(29, 30, 33, 0.1);
+  border-top: 1px solid rgba(29, 30, 33, 0.1);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.wrapTotal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-width: 295px;
-height: 50px;
-background: #e7f1ed;
-padding: 0 18px;
-margin-bottom: 20px;
-box-sizing: border-box;
-width: 100%;
+.wrapTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 295px;
+  height: 50px;
+  background: #e7f1ed;
+  padding: 0 18px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
-.wrapTotal h4{
-    margin: 0;
+.wrapTotal h4 {
+  margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapText {
+    padding: 40px 78px;
+    margin-bottom: 80px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 40px;
+  }
 }

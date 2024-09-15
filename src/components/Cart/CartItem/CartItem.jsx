@@ -40,20 +40,14 @@ const CartItem = ({
   }, [idProduct]);
 
   const { products } = useSelector(selectProducts);
-  console.log(products);
   const isProducts = Boolean(products.length);
   const productCart = isProducts && products.find(el => el._id === idProduct);
   const { name, photo, price, category } = productCart;
-  console.log(totalQuantity);
-  // console.log(counter);
-  console.log(total);
 
   useEffect(() => {
     if (isFirstRender.current) {
-      // Пропускаем первое срабатывание
       isFirstRender.current = false;
     } else {
-      // Выполняем логику при изменении параметров
       dispatch(
         updOrderItemThunk({
           idProduct: idProduct,
@@ -111,9 +105,14 @@ const CartItem = ({
         <img className={styles.img} src={photo} alt="product" />
       </div>
       <div className={styles.wrapText}>
-        <h4>{name}</h4>
-        <p className={styles.text}>{category}</p>
-        <p className={styles.price}>৳{price}</p>
+        <div className={styles.wrapTitle}>
+          <div className={styles.title}>
+            <h4>{name}</h4>
+            <p className={styles.text}>{category}</p>
+          </div>
+          <p className={styles.price}>৳{price}</p>
+        </div>
+
         <div className={styles.wrapBtn}>
           <div className={styles.wrapCounter}>
             <button type="submit" onClick={counterPlus}>

@@ -44,16 +44,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 117%;
-  /* text-align: right; */
   color: #1d1e21;
   margin: 0;
   margin-bottom: 18px;
 }
-.wrapBtn{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
+.wrapBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .wrapCounter {
   border: 1px solid rgba(29, 30, 33, 0.1);
@@ -62,15 +60,10 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  /* padding: 0 12px; */
-  /* font-size: 16px;
-  line-height: 125%; */
   font-size: 14px;
   line-height: 143%;
   text-align: center;
   color: #1d1e21;
-  /* width: 108px;
-  height: 44px; */
   width: 95px;
   height: 32px;
 }
@@ -100,6 +93,42 @@
 }
 
 .btnRemore:hover {
-    color: #fff; 
-    background: #e85050;
+  color: #fff;
+  background: #e85050;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapText h4 {
+    font-size: 18px;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 129%;
+    color: #6a6a6f;
+    margin-bottom: 0;
+  }
+  .price {
+    font-size: 14px;
+    line-height: 129%;
+    margin-bottom: 0;
+  }
+  .wrapBtn {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .wrapCounter {
+    font-size: 16px;
+    line-height: 125%;
+    width: 108px;
+    height: 44px;
+  }
 }

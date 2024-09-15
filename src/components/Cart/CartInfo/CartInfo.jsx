@@ -2,8 +2,8 @@ import React from 'react';
 import CartForm from './CartForm/CartForm';
 import RadioGroup from '@mui/material/RadioGroup';
 import { CustomFormControlLabel, CustomRadio } from './radioStyles';
-import styles from './cartInfo.module.css';
 import Button from 'components/Button/Button';
+import styles from './cartInfo.module.css';
 
 const CartInfo = ({ handleChange, handleChangeForm, total, onClick }) => {
   return (
