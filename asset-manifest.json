@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.db319622.css",
-    "main.js": "/Pharmacy/static/js/main.70375d77.js",
-    "static/css/888.94847697.chunk.css": "/Pharmacy/static/css/888.94847697.chunk.css",
-    "static/js/888.dcc43865.chunk.js": "/Pharmacy/static/js/888.dcc43865.chunk.js",
+    "main.css": "/Pharmacy/static/css/main.14611bb2.css",
+    "main.js": "/Pharmacy/static/js/main.5511be42.js",
+    "static/css/888.448fd1d2.chunk.css": "/Pharmacy/static/css/888.448fd1d2.chunk.css",
+    "static/js/888.dc58e79e.chunk.js": "/Pharmacy/static/js/888.dc58e79e.chunk.js",
+    "static/css/482.e06a04f1.chunk.css": "/Pharmacy/static/css/482.e06a04f1.chunk.css",
+    "static/js/482.a4c55ac7.chunk.js": "/Pharmacy/static/js/482.a4c55ac7.chunk.js",
+    "static/css/53.ff57113a.chunk.css": "/Pharmacy/static/css/53.ff57113a.chunk.css",
+    "static/js/53.68ade7fe.chunk.js": "/Pharmacy/static/js/53.68ade7fe.chunk.js",
     "static/media/tablet.svg": "/Pharmacy/static/media/tablet.9a3057fe721779a4aa95.svg",
     "static/media/PromoSection2D .png": "/Pharmacy/static/media/PromoSection2D .94c869bdab5ee442afc1.png",
     "static/media/PromoSection2T.png": "/Pharmacy/static/media/PromoSection2T.a6c52705c7dc74876aba.png",
@@ -30,13 +34,17 @@
     "static/media/Maria Tkachuk.svg": "/Pharmacy/static/media/Maria Tkachuk.b1e18c9c451e79492131e7f6707ff361.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.db319622.css.map": "/Pharmacy/static/css/main.db319622.css.map",
-    "main.70375d77.js.map": "/Pharmacy/static/js/main.70375d77.js.map",
-    "888.94847697.chunk.css.map": "/Pharmacy/static/css/888.94847697.chunk.css.map",
-    "888.dcc43865.chunk.js.map": "/Pharmacy/static/js/888.dcc43865.chunk.js.map"
+    "main.14611bb2.css.map": "/Pharmacy/static/css/main.14611bb2.css.map",
+    "main.5511be42.js.map": "/Pharmacy/static/js/main.5511be42.js.map",
+    "888.448fd1d2.chunk.css.map": "/Pharmacy/static/css/888.448fd1d2.chunk.css.map",
+    "888.dc58e79e.chunk.js.map": "/Pharmacy/static/js/888.dc58e79e.chunk.js.map",
+    "482.e06a04f1.chunk.css.map": "/Pharmacy/static/css/482.e06a04f1.chunk.css.map",
+    "482.a4c55ac7.chunk.js.map": "/Pharmacy/static/js/482.a4c55ac7.chunk.js.map",
+    "53.ff57113a.chunk.css.map": "/Pharmacy/static/css/53.ff57113a.chunk.css.map",
+    "53.68ade7fe.chunk.js.map": "/Pharmacy/static/js/53.68ade7fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db319622.css",
-    "static/js/main.70375d77.js"
+    "static/css/main.14611bb2.css",
+    "static/js/main.5511be42.js"
   ]
 }
