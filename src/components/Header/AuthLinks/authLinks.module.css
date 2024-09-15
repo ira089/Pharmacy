@@ -31,4 +31,10 @@
   .authNav {
     flex-direction: row;
   }
+  .linkLoginDes {
+    border: 1px solid rgba(89, 177, 122, 0.5);
+    color: #59b17a;
+    height: 46px;
+    border-radius: 60px;
+  }
 }

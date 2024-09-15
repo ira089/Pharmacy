@@ -21,6 +21,7 @@
   line-height: 129%;
   color: #f1f1f1;
 }
+
 .link {
   text-decoration: none;
   border: 1px solid rgba(241, 241, 241, 0.5);
@@ -35,6 +36,7 @@
   background: transparent;
   margin-bottom: 39px;
   box-sizing: border-box;
+  display: block;
 }
 .link:hover {
   background: #3f945f;

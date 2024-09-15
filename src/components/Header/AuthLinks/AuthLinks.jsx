@@ -1,9 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Button from 'components/Button/Button';
 import styles from './authLinks.module.css';
 
 const AuthLinks = () => {
+  const location = useLocation();
   return (
     <div className={styles.authNav}>
       <NavLink className={styles.linkReg} to="/register">
@@ -14,7 +15,12 @@ const AuthLinks = () => {
           Registration
         </Button>
       </NavLink>
-      <NavLink className={styles.linkLogin} to="/login">
+      <NavLink
+        className={`${styles.linkLogin} ${
+          location.pathname !== '/' && styles.linkLoginDes
+        }`}
+        to="/login"
+      >
         Log In
       </NavLink>
     </div>
