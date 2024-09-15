@@ -64,7 +64,11 @@ const MedicineItem = ({ item, isVariant }) => {
   };
 
   return (
-    <div className={styles.wrapProdukt}>
+    <div
+      className={`${styles.wrapProdukt} ${
+        variant ? styles.horizontal : styles.vertical
+      }`}
+    >
       <img className={styles.img} src={photo} alt="medicine" />
       <div className={styles.wrapText}>
         <div className={styles.wrapName}>
