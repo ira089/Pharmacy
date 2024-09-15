@@ -8,14 +8,6 @@ import { refresThunk, currentFullThunk } from '../redux/auth/operationsAuth';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
 import SharedLayout from './SharedLayout/SharedLayout';
-// import HomePage from 'pages/HomePage/HomePage';
-// import RegisterPage from 'pages/RegisterPage/RegisterPage';
-// import Login from '../pages/Login/Login';
-// import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
-// import MedicinePage from 'pages/MedicinePage/MedicinePage';
-// import CartPage from 'pages/CartPage/CartPage';
-// import ProductPage from 'pages/ProductPage/ProductPage';
-// import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const ProductPage = lazy(() => import('../pages/ProductPage/ProductPage'));
@@ -46,7 +38,6 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          {/* <Route path="home" element={<HomePage />} /> */}
           <Route index element={<HomePage />} />
           <Route path="produst/:id" element={<ProductPage />} />
           <Route path="medicine-store" element={<MedicineStorePage />} />

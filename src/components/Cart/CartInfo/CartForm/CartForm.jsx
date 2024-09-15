@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
-// import * as schema from '../../../../schemas/schemas';
 import { allFieldsFilled } from '../../../../helpers/functions';
 import Input from '../../../Input/Input';
 import styles from './cartForm.module.css';
@@ -12,20 +11,16 @@ const CartForm = ({ handleChangeForm }) => {
     phone: '',
     address: '',
   });
-  // console.log(formData);
 
   const handleChangeData = evt => {
     const { name, value } = evt.target;
-    // console.log(name);
 
-    // Обновляем состояние
     setFormData(prevData => {
       const updatedData = {
         ...prevData,
         [name]: value,
       };
 
-      // Если все поля заполнены, вызываем handleFormSubmit
       if (allFieldsFilled(updatedData)) {
         handleChangeForm(updatedData);
         setFormData({ name: '', email: '', phone: '', address: '' });
@@ -42,12 +37,6 @@ const CartForm = ({ handleChangeForm }) => {
         phone: '',
         address: '',
       }}
-      // validationSchema={schema.cartFormSchema}
-      // onSubmit={(values, { resetForm }) => {
-      //   console.log(values);
-
-      //   resetForm();
-      // }}
     >
       <Form className={styles.form}>
         <Input

@@ -4,7 +4,6 @@ import styles from './navLinks.module.css';
 
 const NavLinks = () => {
   return (
-    // <Icon width={134} height={142}  name={'icon-menu-border'}>
     <nav className={styles.navList}>
       <NavLink className={styles.navLink} to="/">
         Home
@@ -16,7 +15,6 @@ const NavLinks = () => {
         Medicine
       </NavLink>
     </nav>
-    // </Icon>
   );
 };
 

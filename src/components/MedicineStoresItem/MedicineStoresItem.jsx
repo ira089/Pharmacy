@@ -7,7 +7,6 @@ const MedicineStoresItem = ({ item }) => {
   const { name, address, city, phone, rating } = item;
   return (
     <NavLink className={styles.wrapItem} to="/medicine-store">
-      {/* <div className={styles.wrapItem}> */}
       <div className={styles.titleStar}>
         <h5 className={styles.title}>{name}</h5>
         <div className={styles.star}>
@@ -42,7 +41,6 @@ const MedicineStoresItem = ({ item }) => {
       <div className={styles.decor1}></div>
       <div className={styles.decor2}></div>
       <div className={styles.decor3}></div>
-      {/* </div> */}
     </NavLink>
   );
 };

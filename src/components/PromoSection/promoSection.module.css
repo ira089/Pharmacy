@@ -7,7 +7,6 @@
   justify-items: center;
   align-items: center;
   gap: 40px;
-  /* overflow: hidden; */
   width: 100%;
 }
 
@@ -35,10 +34,8 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .wrapPromo {
-    margin-bottom: 120px;
     padding-left: 32px;
     padding-right: 32px;
-    gap: 64px;
   }
   .wrapMenu {
     width: 1088px;
@@ -47,5 +44,19 @@
   .menu p {
     font-size: 16px;
     line-height: 125%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapPromo {
+    margin-bottom: 120px;
+    gap: 64px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapPromo {
+    padding-left: 96px;
+    padding-right: 96px;
+    box-sizing: border-box;
   }
 }

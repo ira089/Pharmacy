@@ -11,26 +11,31 @@ import styles from './promoSectionImg.module.css';
 const PromoSectionImg = () => {
   return (
     <div className={styles.containerPromo}>
-      <h3>Add the medicines you need online now</h3>
-      <p>
-        Enjoy the convenience of having your prescriptions filled from home by
-        connecting with your community pharmacy through our online platform.
-      </p>
-      <NavLink className={styles.link} to="/medicine-store">Buy medicine</NavLink>
+      <div>
+        <h3>Add the medicines you need online now</h3>
+        <p>
+          Enjoy the convenience of having your prescriptions filled from home by
+          connecting with your community pharmacy through our online platform.
+        </p>
+        <NavLink className={styles.link} to="/medicine-store">
+          Buy medicine
+        </NavLink>
+      </div>
+
       <picture className={styles.img}>
         <source
-         media="(max-width: 767px)"
+          media="(max-width: 767px)"
           srcSet={`${Img1M} 1x, ${Img2M} 2x`}
         />
         <source
-           media="(min-width: 768px) and (max-width: 1440px)"
+          media="(min-width: 768px) and (max-width: 1440px)"
           srcSet={`${Img1T} 1x, ${Img2T} 2x`}
         />
         <source
           media="(min-width: 1440px)"
           srcSet={`${Img1D} 1x, ${Img2D} 2x`}
         />
-        <img  src={Img1M} alt="girl with mobile" />
+        <img src={Img1M} alt="girl with mobile" />
       </picture>
     </div>
   );

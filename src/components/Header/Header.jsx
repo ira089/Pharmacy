@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectOrder } from '../../redux/auth/selectorsAuth';
-// import {calculateTotals} from '../../helpers/functions'
 import Logo from './Logo/Logo';
 import NavLinks from './NavLinks/NavLinks';
 import AuthLinks from './AuthLinks/AuthLinks';
@@ -10,9 +9,9 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 import Icon from 'components/Icon/Icon';
 import ImgLogoM from '../../assets/img/MaskGroupD.png';
 import ImgLogoWhiteM from '../../assets/img/MaskWhiteM.png';
-import styles from './header.module.css';
 import UserNav from './UserNav/UserNav';
 import UserMenu from './UserMenu/UserMenu';
+import styles from './header.module.css';
 
 const Header = () => {
   const [open, setOpen] = useState(false);

@@ -50,6 +50,18 @@
   .containerPromo {
     padding: 104px 48px 40px 48px;
   }
+
+  .link {
+    width: 190px;
+    margin-bottom: 83px;
+  }
+  .img {
+    width: 600px;
+    height: 406px;
+  }
+}
+
+@media (min-width: 768px) {
   .containerPromo h3 {
     font-size: 48px;
     line-height: 115%;
@@ -59,12 +71,20 @@
     font-size: 16px;
     line-height: 125%;
   }
-  .link {
-    width: 190px;
-    margin-bottom: 83px;
+}
+
+@media (min-width: 1440px) {
+  .containerPromo {
+    padding: 40px;
+    flex-direction: row;
+    gap: 10px;
   }
   .img {
-    width: 600px;
+    width: 608px;
     height: 406px;
+  }
+  .link {
+    width: 190px;
+    margin-bottom: 0;
   }
 }

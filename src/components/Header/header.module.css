@@ -55,4 +55,11 @@
   .burgerBtn {
     display: none;
   }
+  .wrapHeader {
+    padding: 28px 0;
+    padding-left: 260px;
+  }
+  .wrapNav {
+    display: flex;
+  }
 }

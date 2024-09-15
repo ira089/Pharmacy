@@ -44,6 +44,7 @@
   .wrapImg {
     width: 704px;
     height: 508px;
+    background-image: url('../../assets/svg/tabletDes.svg');
   }
   .title {
     font-size: 74px;
@@ -53,5 +54,31 @@
     font-size: 16px;
     line-height: 125%;
     margin-left: 382px;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 74px;
+    margin-bottom: 24px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 125%;
+    margin-left: 382px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapMainBanner {
+    padding: 72px 258px 146px 258px;
+  }
+  .wrapImg {
+    width: 749px;
+    height: 508px;
+    background-image: url('../../assets/svg/tabletDes.svg');
+  }
+  .wrapImg {
+    padding-right: 106px;
+    box-sizing: border-box;
   }
 }

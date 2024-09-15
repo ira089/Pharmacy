@@ -117,3 +117,19 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 1440px) {
+  .wrapItem {
+    padding: 40px;
+  }
+  .titleStar {
+    gap: 51px;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .open {
+    width: 65px;
+  }
+}
