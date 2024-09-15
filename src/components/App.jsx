@@ -11,14 +11,17 @@ import SharedLayout from './SharedLayout/SharedLayout';
 // import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import Login from '../pages/Login/Login';
-import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
+// import MedicineStorePage from 'pages/MedicineStorePage/MedicineStorePage';
 import MedicinePage from 'pages/MedicinePage/MedicinePage';
 import CartPage from 'pages/CartPage/CartPage';
-import ProductPage from 'pages/ProductPage/ProductPage';
+// import ProductPage from 'pages/ProductPage/ProductPage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
-// import Loader from './Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const ProductPage = lazy(() => import('../pages/ProductPage/ProductPage'));
+const MedicineStorePage = lazy(() =>
+  import('../pages/MedicineStorePage/MedicineStorePage')
+);
 
 const App = () => {
   const dispatch = useDispatch();

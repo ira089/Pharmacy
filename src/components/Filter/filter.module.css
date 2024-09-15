@@ -12,9 +12,7 @@
 .searchFormInput {
   border: 1px solid rgba(29, 30, 33, 0.1);
   border-radius: 60px;
-  /* width: 335px; */
   height: 44px;
-  /* display: inline-block; */
   width: 100%;
   box-sizing: border-box;
   outline: none;
@@ -31,11 +29,9 @@
 }
 .searchFormInput:focus {
   border: 1px solid #59b17a;
-  /* background: #fff; */
 }
 .searchFormInput:hover {
   border: 1px solid #59b17a;
-  /* background: #fff; */
 }
 .searchFormIcon {
   position: absolute;
@@ -44,8 +40,18 @@
   transform: translate(-50%, 50%);
   opacity: 0.6;
   background-color: transparent;
-  /* cursor: pointer; */
 }
-.icon{
-  margin-right: 2px;  
+.icon {
+  margin-right: 2px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapForma {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .searchFormLabel {
+    width: 224px;
+  }
 }

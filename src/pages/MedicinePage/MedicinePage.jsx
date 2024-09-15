@@ -10,10 +10,7 @@ import styles from './medicinePage.module.css';
 
 const MedicinePage = () => {
   const { query, category, page } = useSelector(selectSearch);
-  // const { id } = useSelector(selectOrder);
-  // const isLogin = useSelector(selectIsLoggedIn);
 
-  // console.log(category)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(productsThunk({ query, category, page }));

@@ -18,9 +18,10 @@ const MedicineItem = ({ item, isVariant }) => {
     totalQuantity,
     _id: id,
   } = isLogin && order.find(el => el.status === 'Pending');
-  // console.log(id);
+
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
+  console.log(suppliers);
   const priceRound = Math.round(price);
 
   const [counter, setCounter] = useState(1);
@@ -28,6 +29,7 @@ const MedicineItem = ({ item, isVariant }) => {
   const counterPlus = () => {
     setCounter(prevCounter => prevCounter + 1);
   };
+
   const counterMinus = () => {
     if (counter === 1) {
       return;
@@ -41,12 +43,9 @@ const MedicineItem = ({ item, isVariant }) => {
       return;
     }
     const newTotalQuantity = String(Number(totalQuantity) + Number(counter));
-    console.log(newTotalQuantity);
     const numberTotal = String(counter * price + Number(total));
     const newTotal = String(Math.round(numberTotal * 100) / 100);
-    console.log(newTotal);
-    //   console.log(_id);
-    console.log(newTotal);
+
     dispatch(
       addOrderItemThunk({
         idOrder: id,
@@ -66,16 +65,13 @@ const MedicineItem = ({ item, isVariant }) => {
 
   return (
     <div className={styles.wrapProdukt}>
-      {/* <div className={styles.wrapImg}> */}
       <img className={styles.img} src={photo} alt="medicine" />
-      {/* </div> */}
       <div className={styles.wrapText}>
         <div className={styles.wrapName}>
           <div>
             <h5>{name}</h5>
-            {variant && <p>{suppliers}</p>}
+            <p>{suppliers}</p>
           </div>
-
           <h5>৳{priceRound}</h5>
         </div>
         {variant ? (

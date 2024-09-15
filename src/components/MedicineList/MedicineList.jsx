@@ -12,47 +12,52 @@ import styles from './medicineList.module.css';
 
 const MedicineList = () => {
   const { isLoading, error, products, totalPages, page } =
-  useSelector(selectProducts);
+    useSelector(selectProducts);
+  console.log(products);
 
-const dispatch = useDispatch();
-const isVariant = { variant: false };
-const isNotices = Boolean(products.length);
+  const dispatch = useDispatch();
+  const isVariant = { variant: false };
+  const isNotices = Boolean(products.length);
 
-const selectPage = num => {
-  dispatch(addPage(num));
+  const selectPage = num => {
+    dispatch(addPage(num));
+  };
+
+  const elements = products.map(item => (
+    <Grid item mobile={12} tablet={4} desktop={3}>
+      <MedicineItem key={item._id} item={item} isVariant={isVariant} />
+    </Grid>
+  ));
+  return (
+    <>
+      {isLoading && <p>...Loading</p>}
+      {error && <p>{error.message}</p>}
+      {isNotices ? (
+        <ThemeProvider theme={theme}>
+          <Box sx={{ width: '100%' }}>
+            <Grid
+              container
+              rowSpacing={{ mobile: 2.5, tablet: 4, desktop: 5 }}
+              columnSpacing={{ tablet: 1.625, desktop: 2.625 }}
+            >
+              {elements}
+            </Grid>
+          </Box>
+        </ThemeProvider>
+      ) : (
+        <p className={styles.sorry}>Nothing was found for your request</p>
+      )}
+
+      {/* условие если количество продуктов больше 12 */}
+      {!!totalPages && totalPages > 12 && (
+        <PaginationMy
+          page={page}
+          totalPages={totalPages}
+          selectPage={selectPage}
+        />
+      )}
+    </>
+  );
 };
 
-const elements = products.map(item => (
-  <Grid item mobile={12} tablet={4} desktop={3}>
-    <MedicineItem key={item._id} item={item} isVariant={isVariant} />
-  </Grid>
-));
-return (
-  <>
-    {isLoading && <p>...Loading</p>}
-    {error && <p>{error.message}</p>}
-    {isNotices ? <ThemeProvider theme={theme}>
-      <Box sx={{ width: '100%' }}>
-        <Grid
-          container
-          rowSpacing={{ mobile: 2.5, tablet: 4, desktop: 5 }}
-          columnSpacing={{ tablet: 1.625 , desktop: 2.625 }}
-        >
-          {elements}
-        </Grid>
-      </Box>
-    </ThemeProvider> : <p className={styles.sorry}>Nothing was found for your request</p>}
-    
-{/* условие если количество продуктов больше 12 */}
-    {!!totalPages && totalPages > 12 && (
-      <PaginationMy
-        page={page}
-        totalPages={totalPages}
-        selectPage={selectPage}
-      />
-     )} 
-  </>
-);
-};
-
-export default MedicineList
+export default MedicineList;

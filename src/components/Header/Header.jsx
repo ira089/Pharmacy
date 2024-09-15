@@ -23,7 +23,6 @@ const Header = () => {
   const isOrden = Boolean(order.length);
   const { totalQuantity } =
     isOrden && order.find(el => el.status === 'Pending');
-  console.log(totalQuantity);
 
   const handleResize = () => {
     if (window.innerWidth >= 1440) {

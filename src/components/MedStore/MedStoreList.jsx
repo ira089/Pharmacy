@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSelector} from 'react-redux';
-import {selectMedStore} from '../../redux/medStore/selectorsMedStore';
+import { useSelector } from 'react-redux';
+import { selectMedStore } from '../../redux/medStore/selectorsMedStore';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import theme from '../../assets/theme';
@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import MedicineStoresItem from 'components/MedicineStoresItem/MedicineStoresItem';
 
 const MedStoreList = () => {
-  const { isLoading, error, pharmacies } = useSelector(selectMedStore)
+  const { isLoading, error, pharmacies } = useSelector(selectMedStore);
 
   const elements = pharmacies.map(item => (
     <Grid item mobile={12} tablet={6} desktop={4}>
@@ -17,7 +17,7 @@ const MedStoreList = () => {
   ));
   return (
     <>
-    {isLoading && <p>...Loading</p>}
+      {isLoading && <p>...Loading</p>}
       {error && <p>{error.message}</p>}
       <ThemeProvider theme={theme}>
         <Box sx={{ width: '100%' }}>
@@ -31,7 +31,7 @@ const MedStoreList = () => {
         </Box>
       </ThemeProvider>
     </>
-  )
-}
+  );
+};
 
-export default MedStoreList
+export default MedStoreList;
