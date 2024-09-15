@@ -24,7 +24,7 @@ const FormaLogin = () => {
         navigate('/cart');
       }}
     >
-      <Form className={styles.form}>
+      <Form className={styles.formLogin}>
         <Input name="email" placeholder="Email address" type="email" />
         <Input name="password" placeholder="Password" type="password" />
 

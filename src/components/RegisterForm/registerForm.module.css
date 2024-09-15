@@ -12,7 +12,6 @@
   background-repeat: no-repeat;
   background-position: 240px 0;
   background-size: 95px;
-  /* overflow: hidden; */
 }
 
 .title {
@@ -37,19 +36,67 @@
 .link:hover {
   color: #1d1e21;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-
+.form,
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 .btn {
-    margin-top: 10px;
-    /* width: 100%; */
+  margin-top: 10px;
 }
 .elements {
-    margin-top: 23px;
-    margin-left: 139px;
-    margin-right: -20px;
+  margin-top: 23px;
+  margin-left: 139px;
+  margin-right: -20px;
+}
+.icon {
+  height: 168px;
+  width: 216px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapRegister {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 168px 122px 0 32px;
+    background-position: 460px 80px;
+    background-size: 175px;
+  }
+  .title {
+    font-size: 54px;
+    line-height: 111%;
+    margin-bottom: 54px;
+  }
+  .form {
+    display: flex;
+    gap: 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .formLogin {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  .btn {
+    margin-top: 48px;
+    width: 280px;
+  }
+  .link {
+    margin-top: 0;
+    margin-left: 70px;
+  }
+  .icon {
+    height: 271px;
+    width: 277px;
+  }
+  .elements {
+    margin-top: -40px;
+    margin-left: 491px;
+    margin-right: -32px;
+  }
 }

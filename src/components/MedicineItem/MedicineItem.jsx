@@ -21,16 +21,23 @@ const MedicineItem = ({ item, isVariant }) => {
 
   const { variant } = isVariant;
   const { photo, name, price, _id, suppliers } = item;
-  console.log(suppliers);
   const priceRound = Math.round(price);
 
   const [counter, setCounter] = useState(1);
 
   const counterPlus = () => {
+    if (!isLogin) {
+      toast.error('The service is available only to authorized users');
+      return;
+    }
     setCounter(prevCounter => prevCounter + 1);
   };
 
   const counterMinus = () => {
+    if (!isLogin) {
+      toast.error('The service is available only to authorized users');
+      return;
+    }
     if (counter === 1) {
       return;
     }
@@ -69,9 +76,17 @@ const MedicineItem = ({ item, isVariant }) => {
         variant ? styles.horizontal : styles.vertical
       }`}
     >
-      <img className={styles.img} src={photo} alt="medicine" />
-      <div className={styles.wrapText}>
-        <div className={styles.wrapName}>
+      <img
+        className={`${styles.img} ${variant && styles.imgtId}`}
+        src={photo}
+        alt="medicine"
+      />
+      <div className={`${styles.wrapText} ${variant && styles.wrapTextId}`}>
+        <div
+          className={`${styles.wrapName} ${
+            variant ? styles.verticalText : styles.horizontalText
+          }`}
+        >
           <div>
             <h5>{name}</h5>
             <p>{suppliers}</p>

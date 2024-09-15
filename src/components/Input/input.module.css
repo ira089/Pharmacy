@@ -1,21 +1,13 @@
 .inputWrap {
   position: relative;
   width: 100%;
-  font-size: 12px;
-  line-height: 150%;
-  /* margin-bottom: 10px; */
 }
 
 .inputWrap label {
   display: block;
   position: relative;
-font-weight: 600;
-font-size: 14px;
-line-height: 129%;
-color: #1d1e21;
-padding-left: 20px;
-margin-bottom: 8px;
-  
+  padding-left: 20px;
+  margin-bottom: 8px;
 }
 
 .inputWrap input {
@@ -29,6 +21,11 @@ margin-bottom: 8px;
   cursor: pointer;
   outline: none;
   padding: 0 16px;
+  font-size: 12px;
+  line-height: 150%;
+}
+.inputWrap input::placeholder {
+  color: rgba(29, 30, 33, 0.4);
 }
 
 .inputWrap input:focus {
@@ -48,4 +45,13 @@ margin-bottom: 8px;
   font-size: 8px;
   line-height: 120%;
   letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .inputWrap {
+    width: 280px;
+  }
+  .inputWrap label {
+    margin-bottom: 0;
+  }
 }

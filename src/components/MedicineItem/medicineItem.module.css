@@ -97,6 +97,7 @@
   .wrapText {
     gap: 14px;
     margin-bottom: 0px;
+    padding: 32px;
   }
   .wrapName {
     font-size: 18px;
@@ -106,5 +107,26 @@
   }
   .horizontal {
     flex-direction: row;
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+  .verticalText {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+    margin-bottom: 66px;
+  }
+  .verticalText h5 {
+    font-size: 20px;
+  }
+  .horizontalText {
+    flex-direction: row;
+  }
+  .wrapTextId {
+    width: 324px;
+  }
+  .imgtId {
+    width: 364px;
   }
 }

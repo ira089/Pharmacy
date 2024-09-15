@@ -13,7 +13,6 @@ import styles from './medicineList.module.css';
 const MedicineList = () => {
   const { isLoading, error, products, totalPages, page } =
     useSelector(selectProducts);
-  console.log(products);
 
   const dispatch = useDispatch();
   const isVariant = { variant: false };
