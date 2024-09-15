@@ -26,3 +26,15 @@
     padding-right: 32px;
   }
 }
+@media (min-width: 1440px) {
+  .wrapCart {
+    margin-bottom: 120px;
+    margin-top: 80px;
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+  .wrap {
+    display: flex;
+    gap: 96px;
+  }
+}

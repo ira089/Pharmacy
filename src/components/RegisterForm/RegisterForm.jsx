@@ -14,19 +14,25 @@ const RegisterForm = () => {
         Your medication, delivered Say goodbye to all{' '}
         <span>your healthcare </span> worries with us
       </h2>
-      {location.pathname === '/register' ? <FormaRegicter /> : <FormaLogin />}
-      {location.pathname === '/register' ? (
-        <NavLink className={styles.link} to="/login">
-          Already have an account?
-        </NavLink>
-      ) : (
-        <NavLink className={styles.link} to="/register">
-          Don't have an account?
-        </NavLink>
-      )}
+      <div className={styles.wrapForma}>
+        {location.pathname === '/register' ? <FormaRegicter /> : <FormaLogin />}
+        {location.pathname === '/register' ? (
+          <NavLink className={styles.link} to="/login">
+            Already have an account?
+          </NavLink>
+        ) : (
+          <NavLink
+            className={styles.link}
+            style={{ marginLeft: '226px' }}
+            to="/register"
+          >
+            Don't have an account?
+          </NavLink>
+        )}
 
-      <div className={styles.elements}>
-        <Icon className={styles.icon} name={'icon-elements'} />
+        <div className={styles.elements}>
+          <Icon className={styles.icon} name={'icon-elements'} />
+        </div>
       </div>
     </div>
   );

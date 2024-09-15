@@ -49,23 +49,27 @@ const Header = () => {
         )}
       </NavLink>
 
-      <div className={styles.wrapNav}>
-        <NavLinks />
-      </div>
-      <div className={styles.wrapNav}>
-        {isLogin ? <UserNav /> : <AuthLinks />}
-      </div>
-      <BurgerMenu isOpen={isOpen} open={open} />
-      <div className={styles.rightMenu}>
-        {isLogin && <UserMenu totalQuantity={totalQuantity} />}
-        <button className={styles.burgerBtn} onClick={isOpen}>
-          {location.pathname === '/' ? (
-            <Icon width={32} height={26} name={'icon-burger-btn-white'} />
-          ) : (
-            <Icon width={32} height={26} name={'icon-burger-btn-green'} />
-          )}
-        </button>
-      </div>
+      {location.pathname !== '/register' && location.pathname !== '/login' && (
+        <>
+          <div className={styles.wrapNav}>
+            <NavLinks />
+          </div>
+          <div className={styles.wrapNav}>
+            {isLogin ? <UserNav /> : <AuthLinks />}
+          </div>
+          <BurgerMenu isOpen={isOpen} open={open} />
+          <div className={styles.rightMenu}>
+            {isLogin && <UserMenu totalQuantity={totalQuantity} />}
+            <button className={styles.burgerBtn} onClick={isOpen}>
+              {location.pathname === '/' ? (
+                <Icon width={32} height={26} name={'icon-burger-btn-white'} />
+              ) : (
+                <Icon width={32} height={26} name={'icon-burger-btn-green'} />
+              )}
+            </button>
+          </div>
+        </>
+      )}
     </header>
   );
 };

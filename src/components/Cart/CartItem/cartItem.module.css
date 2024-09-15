@@ -99,6 +99,11 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .wrapTitle {
+    margin-bottom: 38px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapTitle {
     display: flex;
     justify-content: space-between;
     margin-bottom: 38px;
@@ -130,5 +135,10 @@
     line-height: 125%;
     width: 108px;
     height: 44px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapTitle {
+    margin-bottom: 20px;
   }
 }

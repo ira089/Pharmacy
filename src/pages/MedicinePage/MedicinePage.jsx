@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectSearch } from '../../redux/search/selectorSearch';
-// import { addOrderThunk } from '../../redux/order/operationsOrder';
 import { productsThunk } from '../../redux/products/operationsProducts';
 import MedicineList from 'components/MedicineList/MedicineList';
-// import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 import Filter from 'components/Filter/Filter';
 import styles from './medicinePage.module.css';
 

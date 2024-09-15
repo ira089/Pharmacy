@@ -52,13 +52,19 @@ const CartPage = () => {
   return (
     <section className={styles.wrapCart}>
       <h2 className={styles.title}>Cart</h2>
-      <CartInfo
-        total={total}
-        handleChange={handleChangeRadio}
-        handleChangeForm={handleChangeForm}
-        onClick={submitPlaceOrder}
-      />
-      <CartProduts idOrder={_id} totalQuantity={totalQuantity} total={total} />
+      <div className={styles.wrap}>
+        <CartInfo
+          total={total}
+          handleChange={handleChangeRadio}
+          handleChangeForm={handleChangeForm}
+          onClick={submitPlaceOrder}
+        />
+        <CartProduts
+          idOrder={_id}
+          totalQuantity={totalQuantity}
+          total={total}
+        />
+      </div>
     </section>
   );
 };

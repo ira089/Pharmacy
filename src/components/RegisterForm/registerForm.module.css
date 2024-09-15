@@ -100,3 +100,56 @@
     margin-right: -32px;
   }
 }
+
+@media (min-width: 1440px) {
+  .wrapRegister {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 226px 100px 0 100px;
+    background-position: 520px 126px;
+    background-size: 175px;
+    gap: 34px;
+  }
+  .title {
+    font-size: 54px;
+    line-height: 111%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .wrapForma {
+    width: 574px;
+  }
+  .form {
+    display: flex;
+    gap: 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .formLogin {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    margin-bottom: 14px;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    margin-top: 62px;
+    width: 280px;
+  }
+  .link {
+    margin-top: 0;
+    margin-left: 70px;
+  }
+  .icon {
+    height: 257px;
+    width: 279px;
+  }
+  .elements {
+    margin-top: -40px;
+    margin-left: 491px;
+    margin-right: -32px;
+  }
+}
