@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.e2229c16.css",
-    "main.js": "/Pharmacy/static/js/main.3db47e33.js",
-    "static/css/888.6dcbd28c.chunk.css": "/Pharmacy/static/css/888.6dcbd28c.chunk.css",
+    "main.css": "/Pharmacy/static/css/main.32e08e75.css",
+    "main.js": "/Pharmacy/static/js/main.2f3503e5.js",
+    "static/css/888.f5ede323.chunk.css": "/Pharmacy/static/css/888.f5ede323.chunk.css",
     "static/js/888.aa6adecd.chunk.js": "/Pharmacy/static/js/888.aa6adecd.chunk.js",
     "static/css/482.b67541f0.chunk.css": "/Pharmacy/static/css/482.b67541f0.chunk.css",
     "static/js/482.3c333b8d.chunk.js": "/Pharmacy/static/js/482.3c333b8d.chunk.js",
@@ -51,9 +51,9 @@
     "static/media/UnionMenu.svg": "/Pharmacy/static/media/UnionMenu.962fd58e3e69cf90b50c.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.e2229c16.css.map": "/Pharmacy/static/css/main.e2229c16.css.map",
-    "main.3db47e33.js.map": "/Pharmacy/static/js/main.3db47e33.js.map",
-    "888.6dcbd28c.chunk.css.map": "/Pharmacy/static/css/888.6dcbd28c.chunk.css.map",
+    "main.32e08e75.css.map": "/Pharmacy/static/css/main.32e08e75.css.map",
+    "main.2f3503e5.js.map": "/Pharmacy/static/js/main.2f3503e5.js.map",
+    "888.f5ede323.chunk.css.map": "/Pharmacy/static/css/888.f5ede323.chunk.css.map",
     "888.aa6adecd.chunk.js.map": "/Pharmacy/static/js/888.aa6adecd.chunk.js.map",
     "482.b67541f0.chunk.css.map": "/Pharmacy/static/css/482.b67541f0.chunk.css.map",
     "482.3c333b8d.chunk.js.map": "/Pharmacy/static/js/482.3c333b8d.chunk.js.map",
@@ -76,7 +76,7 @@
     "746.9933fb77.chunk.js.map": "/Pharmacy/static/js/746.9933fb77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2229c16.css",
-    "static/js/main.3db47e33.js"
+    "static/css/main.32e08e75.css",
+    "static/js/main.2f3503e5.js"
   ]
 }
