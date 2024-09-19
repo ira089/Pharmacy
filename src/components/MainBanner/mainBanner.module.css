@@ -5,6 +5,7 @@
   width: 100%;
   background: #59b17a;
   padding: 197px 20px 246px 20px;
+  box-sizing: border-box;
 }
 
 .wrapImg {
@@ -34,12 +35,13 @@
 
 @media (min-width: 375px) and (max-width: 767px) {
   .wrapMainBanner {
-    width: 335px;
+    width: 375px;
   }
 }
 @media (min-width: 768px) and (max-width: 1439px) {
   .wrapMainBanner {
     padding: 186px 32px 258px 32px;
+    width: 768px;
   }
   .wrapImg {
     width: 704px;

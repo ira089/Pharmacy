@@ -1,12 +1,12 @@
 .container {
   background: #f7f8fa;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
+  border: 1px solid red;
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
@@ -21,12 +21,6 @@
     width: 768px;
   }
 }
-
-/* @media (min-width: 768px) {
-    .container {
-      padding: 32px;
-    }
-  } */
 
 @media (min-width: 1440px) {
   .container {
