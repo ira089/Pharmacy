@@ -21,14 +21,15 @@
 @media (min-width: 768px) and (max-width: 1439px) {
   .wrapStore {
     padding: 32px;
-    margin-top: 80px;
+    margin-top: 16px;
     margin-bottom: 120px;
   }
-  @media (min-width: 1440px) {
-    .wrapStore {
-      padding: 128px;
-      margin-top: 80px;
-      margin-bottom: 120px;
-    }
+}
+@media (min-width: 1440px) {
+  .wrapStore {
+    padding-left: 128px;
+    padding-right: 128px;
+    margin-top: 80px;
+    margin-bottom: 120px;
   }
 }

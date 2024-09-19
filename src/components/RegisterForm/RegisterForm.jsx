@@ -21,11 +21,7 @@ const RegisterForm = () => {
             Already have an account?
           </NavLink>
         ) : (
-          <NavLink
-            className={styles.link}
-            style={{ marginLeft: '226px' }}
-            to="/register"
-          >
+          <NavLink className={styles.linkLogin} to="/register">
             Don't have an account?
           </NavLink>
         )}
