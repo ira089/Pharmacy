@@ -31,7 +31,6 @@ const CartPage = () => {
   };
 
   const handleChangeForm = values => {
-    console.log('Form values:', values);
     setFormData(values);
   };
 
@@ -43,7 +42,6 @@ const CartPage = () => {
     status: 'Confirmed',
     id: _id,
   };
-  console.log(placeOrder);
 
   const submitPlaceOrder = () => {
     dispatch(orderUpdThunk(placeOrder));

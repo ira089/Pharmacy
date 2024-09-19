@@ -48,12 +48,10 @@ export const fetchCurrentFull = async token => {
 };
 
 export const fetchUpdOrder = async (token, id, body) => {
-  console.log(id);
-  console.log(body);
   setAuthHeader(token);
   try {
     const { data } = await axios.put(`/users/current/upd/${id}`, body);
-    console.log(data);
+
     return data;
   } catch (error) {
     clearAuthHeader();

@@ -54,12 +54,15 @@ const Header = () => {
           <div className={styles.wrapNav}>
             <NavLinks />
           </div>
-          <div className={styles.wrapNav}>
-            {isLogin ? <UserNav /> : <AuthLinks />}
-          </div>
+
           <BurgerMenu isOpen={isOpen} open={open} />
           <div className={styles.rightMenu}>
-            {isLogin && <UserMenu totalQuantity={totalQuantity} />}
+            {isLogin && location.pathname !== '/' && (
+              <UserMenu totalQuantity={totalQuantity} />
+            )}
+            <div className={styles.wrapNav}>
+              {isLogin ? <UserNav /> : <AuthLinks />}
+            </div>
             <button className={styles.burgerBtn} onClick={isOpen}>
               {location.pathname === '/' ? (
                 <Icon width={32} height={26} name={'icon-burger-btn-white'} />

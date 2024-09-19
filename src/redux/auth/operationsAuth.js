@@ -95,7 +95,7 @@ export const orderUpdThunk = createAsyncThunk(
         id,
         dataChange
       );
-      console.log(updOrder);
+
       return updOrder;
     } catch (error) {
       toast.error(`${error.message}`);

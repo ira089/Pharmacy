@@ -7,7 +7,6 @@ export const addOrderItemThunk = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const orderItem = await orderItemsApi.fetchOrderItemAdd(data);
-      console.log(orderItem);
       return orderItem;
     } catch (error) {
       toast.error(`${error.message}`);
@@ -21,7 +20,6 @@ export const allOrderItemThunk = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const orderItem = await orderItemsApi.fetchOrdertItemAll(id);
-      console.log(orderItem);
       return orderItem;
     } catch (error) {
       toast.error(`${error.message}`);
@@ -51,7 +49,6 @@ export const delOrderItemThunk = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const orderItem = await orderItemsApi.fetchOrdertItemDel(id);
-      console.log(orderItem);
       toast.success('Product removed!');
       return orderItem;
     } catch (error) {

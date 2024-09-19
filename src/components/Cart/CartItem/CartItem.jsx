@@ -32,8 +32,6 @@ const CartItem = ({
   const [newTotal, setNewTotal] = useState(total);
   const [newTotalQuantity, setNewTotalQuantity] = useState(totalQuantity);
 
-  console.log(typeof newTotal);
-
   useEffect(() => {
     dispatch(productsIdThunk(idProduct));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -81,8 +79,6 @@ const CartItem = ({
     setNewTotalQuantity(funTotalQuantity(totalQuantity));
     setNewTotal(funTotal(price, total));
   };
-  console.log(newTotal);
-  console.log(newTotalQuantity);
 
   const counterMinus = () => {
     if (counter === 1) {

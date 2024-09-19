@@ -50,6 +50,7 @@
 }
 .wrapBtn {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 15px;
 }
@@ -64,7 +65,6 @@
   line-height: 143%;
   text-align: center;
   color: #1d1e21;
-  width: 95px;
   height: 32px;
 }
 
@@ -79,8 +79,7 @@
 }
 .btnRemore {
   border-radius: 40px;
-  padding: 8px 0;
-  width: 89px;
+  padding: 8px;
   height: 32px;
   background: rgba(232, 80, 80, 0.1);
   font-weight: 500;
@@ -97,12 +96,34 @@
   background: #e85050;
 }
 
+@media (min-width: 375px) {
+  .wrapBtn {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1439px) {
+  .wrapText {
+    width: 562px;
+  }
   .wrapTitle {
     margin-bottom: 38px;
   }
+  .wrapBtn {
+    justify-content: space-between;
+  }
+  .wrapBtn {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .btnRemore {
+    padding: 8px 12px;
+  }
 }
 @media (min-width: 768px) {
+  .wrapItem {
+    gap: 20px;
+  }
   .wrapTitle {
     display: flex;
     justify-content: space-between;
@@ -126,10 +147,7 @@
     line-height: 129%;
     margin-bottom: 0;
   }
-  .wrapBtn {
-    justify-content: space-between;
-    gap: 0;
-  }
+
   .wrapCounter {
     font-size: 16px;
     line-height: 125%;
@@ -137,8 +155,17 @@
     height: 44px;
   }
 }
+
 @media (min-width: 1440px) {
   .wrapTitle {
     margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  .img {
+    padding: 0;
+  }
+  .wrapBtn {
+    justify-content: flex-start;
+    gap: 90px;
   }
 }
