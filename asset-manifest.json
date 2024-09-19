@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pharmacy/static/css/main.c4f32585.css",
-    "main.js": "/Pharmacy/static/js/main.9e7adb4c.js",
+    "main.css": "/Pharmacy/static/css/main.319b4889.css",
+    "main.js": "/Pharmacy/static/js/main.f5df08f9.js",
     "static/css/888.cf949801.chunk.css": "/Pharmacy/static/css/888.cf949801.chunk.css",
     "static/js/888.aa6adecd.chunk.js": "/Pharmacy/static/js/888.aa6adecd.chunk.js",
     "static/css/482.bc759259.chunk.css": "/Pharmacy/static/css/482.bc759259.chunk.css",
@@ -10,12 +10,12 @@
     "static/js/53.3658482a.chunk.js": "/Pharmacy/static/js/53.3658482a.chunk.js",
     "static/css/383.77cdb96b.chunk.css": "/Pharmacy/static/css/383.77cdb96b.chunk.css",
     "static/js/383.f4692166.chunk.js": "/Pharmacy/static/js/383.f4692166.chunk.js",
-    "static/css/589.51a6cdd3.chunk.css": "/Pharmacy/static/css/589.51a6cdd3.chunk.css",
+    "static/css/589.4e18799f.chunk.css": "/Pharmacy/static/css/589.4e18799f.chunk.css",
     "static/js/589.fd2accb0.chunk.js": "/Pharmacy/static/js/589.fd2accb0.chunk.js",
-    "static/css/427.51a6cdd3.chunk.css": "/Pharmacy/static/css/427.51a6cdd3.chunk.css",
+    "static/css/427.4e18799f.chunk.css": "/Pharmacy/static/css/427.4e18799f.chunk.css",
     "static/js/427.67bed9bd.chunk.js": "/Pharmacy/static/js/427.67bed9bd.chunk.js",
-    "static/css/542.753b8f05.chunk.css": "/Pharmacy/static/css/542.753b8f05.chunk.css",
-    "static/js/542.f4791eff.chunk.js": "/Pharmacy/static/js/542.f4791eff.chunk.js",
+    "static/css/542.68ee8df6.chunk.css": "/Pharmacy/static/css/542.68ee8df6.chunk.css",
+    "static/js/542.c7f4bf2e.chunk.js": "/Pharmacy/static/js/542.c7f4bf2e.chunk.js",
     "static/js/794.69ee8f7d.chunk.js": "/Pharmacy/static/js/794.69ee8f7d.chunk.js",
     "static/js/705.d25e8006.chunk.js": "/Pharmacy/static/js/705.d25e8006.chunk.js",
     "static/js/637.a9e3a5f4.chunk.js": "/Pharmacy/static/js/637.a9e3a5f4.chunk.js",
@@ -51,8 +51,8 @@
     "static/media/UnionMenu.svg": "/Pharmacy/static/media/UnionMenu.962fd58e3e69cf90b50c.svg",
     "static/media/borderMenu.svg": "/Pharmacy/static/media/borderMenu.80e77a923e1c4f9127ec.svg",
     "index.html": "/Pharmacy/index.html",
-    "main.c4f32585.css.map": "/Pharmacy/static/css/main.c4f32585.css.map",
-    "main.9e7adb4c.js.map": "/Pharmacy/static/js/main.9e7adb4c.js.map",
+    "main.319b4889.css.map": "/Pharmacy/static/css/main.319b4889.css.map",
+    "main.f5df08f9.js.map": "/Pharmacy/static/js/main.f5df08f9.js.map",
     "888.cf949801.chunk.css.map": "/Pharmacy/static/css/888.cf949801.chunk.css.map",
     "888.aa6adecd.chunk.js.map": "/Pharmacy/static/js/888.aa6adecd.chunk.js.map",
     "482.bc759259.chunk.css.map": "/Pharmacy/static/css/482.bc759259.chunk.css.map",
@@ -61,12 +61,12 @@
     "53.3658482a.chunk.js.map": "/Pharmacy/static/js/53.3658482a.chunk.js.map",
     "383.77cdb96b.chunk.css.map": "/Pharmacy/static/css/383.77cdb96b.chunk.css.map",
     "383.f4692166.chunk.js.map": "/Pharmacy/static/js/383.f4692166.chunk.js.map",
-    "589.51a6cdd3.chunk.css.map": "/Pharmacy/static/css/589.51a6cdd3.chunk.css.map",
+    "589.4e18799f.chunk.css.map": "/Pharmacy/static/css/589.4e18799f.chunk.css.map",
     "589.fd2accb0.chunk.js.map": "/Pharmacy/static/js/589.fd2accb0.chunk.js.map",
-    "427.51a6cdd3.chunk.css.map": "/Pharmacy/static/css/427.51a6cdd3.chunk.css.map",
+    "427.4e18799f.chunk.css.map": "/Pharmacy/static/css/427.4e18799f.chunk.css.map",
     "427.67bed9bd.chunk.js.map": "/Pharmacy/static/js/427.67bed9bd.chunk.js.map",
-    "542.753b8f05.chunk.css.map": "/Pharmacy/static/css/542.753b8f05.chunk.css.map",
-    "542.f4791eff.chunk.js.map": "/Pharmacy/static/js/542.f4791eff.chunk.js.map",
+    "542.68ee8df6.chunk.css.map": "/Pharmacy/static/css/542.68ee8df6.chunk.css.map",
+    "542.c7f4bf2e.chunk.js.map": "/Pharmacy/static/js/542.c7f4bf2e.chunk.js.map",
     "794.69ee8f7d.chunk.js.map": "/Pharmacy/static/js/794.69ee8f7d.chunk.js.map",
     "705.d25e8006.chunk.js.map": "/Pharmacy/static/js/705.d25e8006.chunk.js.map",
     "637.a9e3a5f4.chunk.js.map": "/Pharmacy/static/js/637.a9e3a5f4.chunk.js.map",
@@ -76,7 +76,7 @@
     "746.9933fb77.chunk.js.map": "/Pharmacy/static/js/746.9933fb77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4f32585.css",
-    "static/js/main.9e7adb4c.js"
+    "static/css/main.319b4889.css",
+    "static/js/main.f5df08f9.js"
   ]
 }
