@@ -1,19 +1,36 @@
 import React from 'react';
 import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
+import theme from '../../assets/theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 const PaginationMy = ({ page, totalPages, selectPage }) => {
+  console.log(theme.palette);
   return (
-    <Stack spacing={2}>
+    <ThemeProvider theme={theme}>
       <Pagination
         count={totalPages}
         page={page}
         onChange={(_, num) => selectPage(num)}
-        sx={{ marginY: 3, marginX: 'auto' }}
+        sx={{
+          marginTop: 5,
+          marginX: 'auto',
+          '& .MuiPaginationItem-root': {
+            '&.Mui-selected': {
+              backgroundColor: '#59b17a',
+              color: '#fff', // Цвет текста внутри кружочка
+              borderRadius: '50%', // Сделать кружочек
+            },
+            '&:hover': {
+              backgroundColor: '#59b17a', // Цвет фона при наведении
+              color: '#fff', // Цвет текста при наведении
+            },
+          },
+        }}
         showFirstButton
         showLastButton
+        color="secondary"
       />
-    </Stack>
+    </ThemeProvider>
   );
 };
 

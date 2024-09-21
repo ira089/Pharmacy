@@ -13,6 +13,9 @@ import styles from './medicineList.module.css';
 const MedicineList = () => {
   const { isLoading, error, products, totalPages, page } =
     useSelector(selectProducts);
+  const totalPagesPagination = totalPages / 12;
+  console.log(totalPagesPagination);
+  console.log(products.length);
 
   const dispatch = useDispatch();
   const isVariant = { variant: false };
@@ -48,10 +51,10 @@ const MedicineList = () => {
       )}
 
       {/* условие если количество продуктов больше 12 */}
-      {!!totalPages && totalPages > 12 && (
+      {!!totalPages && !products.length < 12 && (
         <PaginationMy
           page={page}
-          totalPages={totalPages}
+          totalPages={totalPagesPagination}
           selectPage={selectPage}
         />
       )}

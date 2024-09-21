@@ -35,21 +35,14 @@
 }
 
 @media (min-width: 1440px) {
-  /* .navList {
-    flex-direction: row;
-    position: relative;
-    padding-right: 40px;
-    padding-left: 40px;
-    height: 36px;
-    align-items: center;
-    background: transparent;
-    background-size: 304px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../../../assets/svg/UnionMenu.svg');
-  } */
-  /* .navLink:hover {
-    width: 50px;
-    height: 24px;
-  } */
+  .navLink:not(:last-child)::after {
+    background: #fff;
+    transform: rotate(0deg);
+  }
+  .navLink:first-child::after {
+    left: 55%;
+  }
+  .navLink:nth-child(2)::after {
+    left: 25%;
+  }
 }
