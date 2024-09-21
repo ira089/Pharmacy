@@ -33,6 +33,14 @@
 .btnClose:hover {
   opacity: 1;
 }
+.wrapNavPageHeader {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
 @media (min-width: 1440px) {
   .burger {
     display: none;

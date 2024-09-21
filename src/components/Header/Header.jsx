@@ -51,9 +51,9 @@ const Header = () => {
 
       {location.pathname !== '/register' && location.pathname !== '/login' && (
         <>
-          <div className={styles.wrapNav}>
+          <nav className={styles.wrapNavPageHeader}>
             <NavLinks />
-          </div>
+          </nav>
 
           <BurgerMenu isOpen={isOpen} open={open} />
           <div className={styles.rightMenu}>

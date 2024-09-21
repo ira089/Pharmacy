@@ -17,7 +17,8 @@
   opacity: 1;
 }
 
-.wrapNav {
+.wrapNav,
+.wrapNavPageHeader {
   display: none;
 }
 
@@ -61,7 +62,25 @@
     padding-left: 128px;
     padding-right: 128px;
   }
-  .wrapNav {
+  .wrapNav,
+  .wrapNavPageHeader {
     display: flex;
+  }
+  .wrapNavPageHeader {
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    flex: 1;
+    flex-direction: row;
+    position: relative;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 36px;
+    align-items: center;
+    background: transparent;
+    background-size: 304px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/svg/UnionMenu.svg');
   }
 }

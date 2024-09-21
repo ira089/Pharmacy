@@ -5,8 +5,8 @@ import Icon from 'components/Icon/Icon';
 import NavLinks from '../NavLinks/NavLinks';
 import AuthLinks from '../AuthLinks/AuthLinks';
 import classNames from 'classnames';
-import styles from './burgerMenu.module.css';
 import UserNav from '../UserNav/UserNav';
+import styles from './burgerMenu.module.css';
 
 const BurgerMenu = ({ isOpen, open }) => {
   const isLogin = useSelector(selectIsLoggedIn);
@@ -15,7 +15,10 @@ const BurgerMenu = ({ isOpen, open }) => {
       <button className={styles.btnClose} onClick={isOpen}>
         <Icon width={32} height={32} name={'icon-close'} />
       </button>
-      <NavLinks />
+      <nav className={styles.wrapNavPageHeader}>
+        <NavLinks />
+      </nav>
+
       {isLogin ? <UserNav /> : <AuthLinks />}
     </div>
   );

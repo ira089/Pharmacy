@@ -1,15 +1,3 @@
-.navList {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 34px;
-  background-image: url('../../../assets/svg/borderMenu.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .navLink {
   text-decoration: none;
   cursor: pointer;
@@ -22,17 +10,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  padding: 8px 12px;
+  border: 8px solid #fff;
 }
 
-.navLink:hover {
-  border-radius: 24px;
-  width: 80px;
-  height: 30px;
+.navLink:global(.active) {
   background: #59b17a;
 }
 
+.navLink:hover {
+  background: #59b17a;
+}
+.navLink:not(:last-child)::after {
+  content: '';
+  width: 8px;
+  height: 15px;
+  background: #fff;
+  transform: rotate(90deg);
+  top: 166%;
+  right: 46%;
+  position: relative;
+}
+
 @media (min-width: 1440px) {
-  .navList {
+  /* .navList {
     flex-direction: row;
     position: relative;
     padding-right: 40px;
@@ -44,9 +47,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../../../assets/svg/UnionMenu.svg');
-  }
-  .navLink:hover {
+  } */
+  /* .navLink:hover {
     width: 50px;
     height: 24px;
-  }
+  } */
 }

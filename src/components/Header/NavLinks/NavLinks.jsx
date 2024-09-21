@@ -4,7 +4,7 @@ import styles from './navLinks.module.css';
 
 const NavLinks = () => {
   return (
-    <nav className={styles.navList}>
+    <>
       <NavLink className={styles.navLink} to="/">
         Home
       </NavLink>
@@ -14,7 +14,7 @@ const NavLinks = () => {
       <NavLink className={styles.navLink} to="/medicine">
         Medicine
       </NavLink>
-    </nav>
+    </>
   );
 };
 
