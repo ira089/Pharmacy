@@ -40,7 +40,7 @@ small and medium ones screens
 2. react-dom
 3. redux-persist
 4. react-redux
-5. react-router-dom"
+5. react-router-dom
 6. material UI
 7. axios
 8. react-toastify
