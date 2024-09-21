@@ -1,105 +1,57 @@
-# React homework template
+# E-PHARMACY
 
-This project was created with
-[Create React App](https://github.com/facebook/create-react-app). To get
-acquainted and configure additional features
-[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This application is for choosing medicines. You can buy or find the medicine you
+need online the pharmacy closest to you.
 
-## Creating a repository by template
+---
 
-Use this GoIT repository as a template for creating a repository
-of your project. To use it just tap the `«Use this template»` button and choose
-`«Create a new repository»` option, as you can see on the image below.
+### The app consists of 7 pages:
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+1. Home Page – contains the title of the application, its brief description, and
+   a random list selected six pharmacies, and reviews of application users.
 
-The page for creating a new repository will open on the next step. Fill out
-the Name field and make sure the repository is public, then click
-`«Create repository from template»` button.
+2. Medicine store - list of pharmacies with address and phone number.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+3. Medicine - a list of medicines with name and price, which you can sort by
+   categories or by search term. As a registered user, then by clicking the Add
+   to cart button, you will add the selected product to your cart basket.
 
-You now have a personal project repository, having a repository-template file 
-and folder structure. After that, you can work with it as you would with any 
-other private repository: clone it on your computer, write code, commit, and 
-send it to GitHub.
+4. By clicking on the Details button, you will get the opportunity to read the
+   description of the product and reviews about it. A registered user can also
+   make adjustments quantity of the selected product.
 
-## Preparing for coding
+5. By clicking on the "Cart" icon at the top, the user gets to the Cart page,
+   where he can see his order, if desired, change the order, as well specify
+   delivery and payment details for the order. But this page is only available
+   for registered users.
 
-1. Make sure you have an LTS version of Node.js installed on your computer.
-   [Download and install](https://nodejs.org/en/) if needed.
-2. Install the project's base dependencies with the `npm install` command.
-3. Start development mode by running the `npm start` command.
-4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
-   page will automatically reload after saving changes to the project files.
+---
 
-## Deploy
+Complete a simple registration by clicking the Register button or log in to
+programs through the Log in button if you are already registered. These buttons
+are located on the large screen above is thinned out or in a burger menu on
+small and medium ones screens
 
-The production version of the project will automatically be linted, built, and
-deployed to GitHub Pages, in the `gh-pages` branch, every time the `main` branch
-is updated. For example, after a direct push or an accepted pull request. To do
-this, you need to edit the `homepage` field in the `package.json` file,
-replacing `your_username` and `your_repo_name` with your own, and submit the
-changes to GitHub.
+---
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+### The following technologies were used in the development of this project:
 
-Next, you need to go to the settings of the GitHub repository (`Settings` >
-`Pages`) and set the distribution of the production version of files from the
-`/root` folder of the `gh-pages` branch, if this was not done automatically.
+1. Reduxjs-toolkit
+2. react-dom
+3. redux-persist
+4. react-redux
+5. react-router-dom"
+6. material UI
+7. axios
+8. react-toastify
+9. formik
+10. yup
+11. react-select
 
-![GitHub Pages settings](./assets/repo-settings.png)
+---
 
-### Deployment status
+[The project is made according to the layout](<https://www.figma.com/file/qrKzOBVqM6zOZNFkTOpEO0/E-PHARMACY-(clients)?type=design&node-id=0-1&mode=design&t=O9kTuPJAS2bjEuwM-0>)
 
-The deployment status of the latest commit is displayed with an icon next to its
-ID.
+[Technical specifications of the project are here.](https://docs.google.com/spreadsheets/d/1TdZTkbTSEcscopFAAH1XiiAbkP8IOawIugpvaG9xnuw/edit?gid=0#gid=0)
 
-- **Yellow color** - the project is being built and deployed.
-- **Green color** - deployment completed successfully.
-- **Red color** - an error occurred during linting, build or deployment.
-
-More detailed information about the status can be viewed by clicking on the
-icon, and in the drop-down window, follow the link `Details`.
-
-![Deployment status](./assets/deploy-status.png)
-
-### Live page
-
-After some time, usually a couple of minutes, the live page can be viewed at the
-address specified in the edited `homepage` property. For example, here is a link
-to a live version for this repository
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-If a blank page opens, make sure there are no errors in the `Console` tab
-related to incorrect paths to the CSS and JS files of the project (**404**). You
-most likely have the wrong value for the `homepage` property in the
-`package.json` file.
-
-### Routing
-
-If your application uses the `react-router-dom` library for routing, you must
-additionally configure the `<BrowserRouter>` component by passing the exact name
-of your repository in the `basename` prop. Slashes at the beginning and end of
-the line are required.
-
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
-
-## How it works
-
-![How it works](./assets/how-it-works.png)
-
-1. After each push to the `main` branch of the GitHub repository, a special
-   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
-   file.
-2. All repository files are copied to the server, where the project is
-   initialized and linted and built before deployment.
-3. If all steps are successful, the built production version of the project
-   files is sent to the `gh-pages` branch. Otherwise, the script execution log
-   will indicate what the problem is.
+[Backend of the project is here.](https://github.com/ira089/PharmacyBackEnd)

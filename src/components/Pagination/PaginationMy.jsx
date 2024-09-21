@@ -4,12 +4,13 @@ import theme from '../../assets/theme';
 import { ThemeProvider } from '@mui/material/styles';
 
 const PaginationMy = ({ page, totalPages, selectPage }) => {
-  console.log(theme.palette);
   return (
     <ThemeProvider theme={theme}>
       <Pagination
         count={totalPages}
-        page={page}
+        defaultPage={3}
+        siblingCount={0}
+        page={Number(page)}
         onChange={(_, num) => selectPage(num)}
         sx={{
           marginTop: 5,
@@ -17,18 +18,16 @@ const PaginationMy = ({ page, totalPages, selectPage }) => {
           '& .MuiPaginationItem-root': {
             '&.Mui-selected': {
               backgroundColor: '#59b17a',
-              color: '#fff', // Цвет текста внутри кружочка
-              borderRadius: '50%', // Сделать кружочек
+              color: '#fff',
             },
             '&:hover': {
-              backgroundColor: '#59b17a', // Цвет фона при наведении
-              color: '#fff', // Цвет текста при наведении
+              backgroundColor: '#59b17a',
+              color: '#fff',
             },
           },
         }}
         showFirstButton
         showLastButton
-        color="secondary"
       />
     </ThemeProvider>
   );

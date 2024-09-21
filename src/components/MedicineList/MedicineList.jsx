@@ -14,8 +14,6 @@ const MedicineList = () => {
   const { isLoading, error, products, totalPages, page } =
     useSelector(selectProducts);
   const totalPagesPagination = totalPages / 12;
-  console.log(totalPagesPagination);
-  console.log(products.length);
 
   const dispatch = useDispatch();
   const isVariant = { variant: false };
