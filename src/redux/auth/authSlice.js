@@ -27,7 +27,6 @@ const handleFulfilledRegister = (state, { payload }) => {
   state.user.name = payload.user.name;
   state.user.email = payload.user.email;
   state.user.phone = payload.user.phone;
-  state.isLoggedIn = true;
   handleFulfilled(state);
 };
 
@@ -36,7 +35,7 @@ const handleFulfilledLogin = (state, { payload }) => {
   state.user.name = payload.name;
   state.user.email = payload.email;
   state.user.phone = payload.phone;
-  state.orders = payload.orders;
+  state.orders = payload.user.orders;
   state.isLoggedIn = true;
   handleFulfilled(state);
 };
@@ -44,6 +43,7 @@ const handleFulfilledLogin = (state, { payload }) => {
 const handleFulfilledLogOut = state => {
   state.user = { name: null, email: null, phone: '' };
   state.token = null;
+  state.orders = [];
   state.isLoggedIn = false;
   handleFulfilled(state);
 };
@@ -57,6 +57,8 @@ const handleFulfilledRefrech = (state, { payload }) => {
   handleFulfilled(state);
 };
 const handleFulfilledCurrentFull = (state, { payload }) => {
+  console.log(payload.orders);
+  console.log(payload.user.orders);
   state.user.name = payload.name;
   state.user.email = payload.email;
   state.user.phone = payload.phone;
