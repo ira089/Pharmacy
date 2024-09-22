@@ -16,23 +16,6 @@ export const allFieldsFilled = data => {
   return Object.values(data).every(field => field.trim() !== '');
 };
 
-export const calculateTotals = products => {
-  const result = products.reduce(
-    (acc, product) => {
-      const { quantity, price } = product;
-      const parsedPrice = parseFloat(price); // преобразуем цену в число
-
-      acc.total += quantity * parsedPrice; // вычисляем total
-      acc.totalQuantity += quantity; // вычисляем totalQuantity
-
-      return acc;
-    },
-    { total: 0, totalQuantity: 0 } // начальные значения
-  );
-
-  return result;
-};
-
 export const funTotalQuantity = a => {
   return String(Number(a) + 1);
 };
@@ -57,4 +40,23 @@ export const funDelTotalQuantity = (quantity, counter) => {
 export const funDelTotal = (price, total, counter) => {
   const numberTotal = Number(total) - Number(price) * Number(counter);
   return String(Math.round(numberTotal * 100) / 100);
+};
+
+export const totalQuantityFan = arr => {
+  // Проверяем, есть ли элементы в массиве
+  const isOrder = Boolean(arr.length);
+  if (!isOrder) {
+    return;
+  }
+
+  // Ищем объект с `status === 'Pending'`
+  const foundItem = arr.find(el => el.status === 'Pending');
+
+  // Если объект найден и у него есть свойство `totalQuantity`, возвращаем его
+  if (foundItem && foundItem.totalQuantity) {
+    return String(foundItem.totalQuantity);
+  }
+
+  // Если объект не найден или у него нет `totalQuantity`, возвращаем "0"
+  return '0';
 };

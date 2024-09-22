@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
 import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
-import { orderUpdThunk } from '../../redux/auth/operationsAuth';
+import {
+  orderUpdThunk,
+  currentFullThunk,
+} from '../../redux/auth/operationsAuth';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
+import { toast } from 'react-toastify';
 import styles from './cartPage.module.css';
 
 const CartPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const order = useSelector(selectOrder);
   const isOrden = Boolean(order.length);
+
   const { totalQuantity, total, _id } =
     isOrden && order.find(el => el.status === 'Pending');
 
@@ -45,6 +52,9 @@ const CartPage = () => {
 
   const submitPlaceOrder = () => {
     dispatch(orderUpdThunk(placeOrder));
+    dispatch(currentFullThunk());
+    toast.success('Your order has been accepted for processing');
+    navigate('/medicine');
   };
 
   return (

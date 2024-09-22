@@ -11,6 +11,7 @@ import ImgLogoM from '../../assets/img/MaskGroupD.png';
 import ImgLogoWhiteM from '../../assets/img/MaskWhiteM.png';
 import UserNav from './UserNav/UserNav';
 import UserMenu from './UserMenu/UserMenu';
+import { totalQuantityFan } from '../../helpers/functions';
 import styles from './header.module.css';
 
 const Header = () => {
@@ -19,9 +20,11 @@ const Header = () => {
   const location = useLocation();
   const isLogin = useSelector(selectIsLoggedIn);
   const order = useSelector(selectOrder);
-  const isOrden = Boolean(order.length);
-  const { totalQuantity } =
-    isOrden && order.find(el => el.status === 'Pending');
+  const totalQuantity = totalQuantityFan(order);
+
+  // const isOrden = Boolean(order.length);
+  // const { totalQuantity } =
+  //   isOrden && order.find(el => el.status === 'Pending');
 
   const handleResize = () => {
     if (window.innerWidth >= 1440) {

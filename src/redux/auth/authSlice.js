@@ -35,7 +35,7 @@ const handleFulfilledLogin = (state, { payload }) => {
   state.user.name = payload.name;
   state.user.email = payload.email;
   state.user.phone = payload.phone;
-  state.orders = payload.user.orders;
+  state.orders = payload.orders;
   state.isLoggedIn = true;
   handleFulfilled(state);
 };
@@ -57,8 +57,6 @@ const handleFulfilledRefrech = (state, { payload }) => {
   handleFulfilled(state);
 };
 const handleFulfilledCurrentFull = (state, { payload }) => {
-  console.log(payload.orders);
-  console.log(payload.user.orders);
   state.user.name = payload.name;
   state.user.email = payload.email;
   state.user.phone = payload.phone;
