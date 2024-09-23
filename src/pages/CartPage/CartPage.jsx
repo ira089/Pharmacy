@@ -54,7 +54,7 @@ const CartPage = () => {
     dispatch(orderUpdThunk(placeOrder));
     dispatch(currentFullThunk());
     toast.success('Your order has been accepted for processing');
-    navigate('/medicine');
+    navigate('/');
   };
 
   return (
