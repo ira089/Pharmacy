@@ -45,7 +45,9 @@ const MedicineList = () => {
           </Box>
         </ThemeProvider>
       ) : (
-        <p className={styles.sorry}>Nothing was found for your request</p>
+        !isLoading && (
+          <p className={styles.sorry}>Nothing was found for your request</p>
+        )
       )}
 
       {/* условие если количество продуктов больше 12 */}

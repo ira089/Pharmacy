@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import { allFieldsFilled } from '../../../../helpers/functions';
+import { cartFormSchema } from '../../../../schemas/schemas';
 import Input from '../../../Input/Input';
 import styles from './cartForm.module.css';
 
@@ -23,7 +24,6 @@ const CartForm = ({ handleChangeForm }) => {
 
       if (allFieldsFilled(updatedData)) {
         handleChangeForm(updatedData);
-        setFormData({ name: '', email: '', phone: '', address: '' });
       }
       return updatedData;
     });
@@ -37,6 +37,7 @@ const CartForm = ({ handleChangeForm }) => {
         phone: '',
         address: '',
       }}
+      validationSchema={cartFormSchema}
     >
       <Form className={styles.form}>
         <Input

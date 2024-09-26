@@ -38,7 +38,6 @@ export const updOrderItemThunk = createAsyncThunk(
       const orderItem = await orderItemsApi.fetchOrdertItemUpd(id, dataChange);
       return orderItem;
     } catch (error) {
-      toast.error(`${error.message}`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
