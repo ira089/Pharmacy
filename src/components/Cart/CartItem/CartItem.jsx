@@ -31,8 +31,8 @@ const CartItem = ({
   const [counter, setCounter] = useState(quantity);
   const [newTotal, setNewTotal] = useState(total);
   const [newTotalQuantity, setNewTotalQuantity] = useState(totalQuantity);
-  console.log(newTotal);
-  console.log(counter);
+  console.log(quantity);
+
   console.log(newTotalQuantity);
   useEffect(() => {
     dispatch(productsIdThunk(idProduct));
