@@ -31,17 +31,19 @@ const CartItem = ({
   const [counter, setCounter] = useState(quantity);
   const [newTotal, setNewTotal] = useState(total);
   const [newTotalQuantity, setNewTotalQuantity] = useState(totalQuantity);
-
+  console.log(newTotal);
+  console.log(counter);
+  console.log(newTotalQuantity);
   useEffect(() => {
     dispatch(productsIdThunk(idProduct));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idProduct]);
-  console.log(idProduct);
+
   const { products } = useSelector(selectProducts);
-  console.log(products);
+
   const isProducts = Boolean(products.length);
   const productCart = isProducts && products.find(el => el._id === idProduct);
-  console.log(productCart);
+
   const { name, photo, price, category } = productCart;
 
   useEffect(() => {
@@ -58,7 +60,7 @@ const CartItem = ({
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counter]);
+  }, [counter, _id]);
 
   useEffect(() => {
     if (isFirstRender.current) {

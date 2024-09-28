@@ -3,29 +3,14 @@ import { useLocation } from 'react-router-dom';
 import { Field, ErrorMessage } from 'formik';
 import styles from './input.module.css';
 
-const Input = ({
-  name,
-  placeholder,
-  type,
-  textLabel,
-  handleChange,
-  valueInput,
-}) => {
+const Input = ({ name, placeholder, type, textLabel }) => {
   const location = useLocation();
 
   return (
     <div className={styles.inputWrap}>
       <label htmlFor={name}>{textLabel}</label>
       {location.pathname === '/cart' ? (
-        <Field
-          // onChange={handleChange}
-          // value={valueInput}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          type={type}
-          // onBlur={handleChange}
-        />
+        <Field id={name} name={name} placeholder={placeholder} type={type} />
       ) : (
         <Field id={name} name={name} placeholder={placeholder} type={type} />
       )}
