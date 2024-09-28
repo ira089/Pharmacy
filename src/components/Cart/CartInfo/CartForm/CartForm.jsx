@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
-import { allFieldsFilled } from '../../../../helpers/functions';
+// import { allFieldsFilled } from '../../../../helpers/functions';
 import { cartFormSchema } from '../../../../schemas/schemas';
 import Input from '../../../Input/Input';
 import styles from './cartForm.module.css';
 
 const CartForm = ({ handleChangeForm }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   address: '',
+  // });
 
-  const handleChangeData = evt => {
-    const { name, value } = evt.target;
+  // const handleChangeData = evt => {
+  //   const { name, value } = evt.target;
 
-    setFormData(prevData => {
-      const updatedData = {
-        ...prevData,
-        [name]: value,
-      };
+  //   setFormData(prevData => {
+  //     const updatedData = {
+  //       ...prevData,
+  //       [name]: value,
+  //     };
 
-      if (allFieldsFilled(updatedData)) {
-        console.log('first');
-        // handleChangeForm(updatedData);
-      }
-      return updatedData;
-    });
-  };
+  //     if (allFieldsFilled(updatedData)) {
+  //       console.log('first');
+  //       // handleChangeForm(updatedData);
+  //     }
+  //     return updatedData;
+  //   });
+  // };
 
   return (
     <Formik
@@ -40,45 +40,51 @@ const CartForm = ({ handleChangeForm }) => {
       }}
       validationSchema={cartFormSchema}
       validateOnBlur={true}
-      validateOnChange={false}
-      validateOnMount={false}
+      validateOnChange={true}
+      // validateOnMount={false}
       // validateOnSubmit={false}
       // validateOnHandlerSubmit={false}
+      onSubmit={values => {
+        console.log('Form data:', values);
+        handleChangeForm(values);
+      }}
     >
-      <Form className={styles.form}>
-        <Input
-          handleChange={handleChangeData}
-          valueInput={formData.name}
-          name="name"
-          placeholder="Enter text"
-          type="text"
-          textLabel="Name"
-        />
-        <Input
-          handleChange={handleChangeData}
-          valueInput={formData.email}
-          name="email"
-          placeholder="Enter text"
-          type="email"
-          textLabel="Email"
-        />
-        <Input
-          handleChange={handleChangeData}
-          valueInput={formData.phone}
-          name="phone"
-          placeholder="Enter text"
-          type="text"
-          textLabel="Phone"
-        />
-        <Input
-          handleChange={handleChangeData}
-          valueInput={formData.address}
-          name="address"
-          placeholder="Enter text"
-          type="text"
-          textLabel="Address"
-        />
-      </Form>
+      {({ handleSubmit }) => (
+        <Form className={styles.form} onBlur={handleSubmit}>
+          <Input
+            // handleChange={handleChangeData}
+            // valueInput={formData.name}
+            name="name"
+            placeholder="Enter text"
+            type="text"
+            textLabel="Name"
+          />
+          <Input
+            // handleChange={handleChangeData}
+            // valueInput={formData.email}
+            name="email"
+            placeholder="Enter text"
+            type="email"
+            textLabel="Email"
+          />
+          <Input
+            // handleChange={handleChangeData}
+            // valueInput={formData.phone}
+            name="phone"
+            placeholder="Enter text"
+            type="text"
+            textLabel="Phone"
+          />
+          <Input
+            // handleChange={handleChangeData}
+            // valueInput={formData.address}
+            name="address"
+            placeholder="Enter text"
+            type="text"
+            textLabel="Address"
+          />
+        </Form>
+      )}
     </Formik>
   );
 };

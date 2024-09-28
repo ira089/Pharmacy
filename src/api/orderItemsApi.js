@@ -2,7 +2,9 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://pharmacybackend-b38i.onrender.com/api';
 
 export const fetchOrderItemAdd = async body => {
+  console.log(body);
   const { data } = await axios.post('/orderitems', body);
+  console.log(data);
   return data;
 };
 

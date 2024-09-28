@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
 import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
 import {
@@ -14,7 +14,7 @@ import styles from './cartPage.module.css';
 
 const CartPage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const order = useSelector(selectOrder);
   const isOrden = Boolean(order.length);
 
@@ -32,7 +32,7 @@ const CartPage = () => {
     phone: '',
     address: '',
   });
-
+  console.log(formData);
   const handleChangeRadio = evt => {
     setPaymentMethod(evt.target.value);
   };
@@ -51,10 +51,11 @@ const CartPage = () => {
   };
 
   const submitPlaceOrder = () => {
+    console.log('чао какоо');
     dispatch(orderUpdThunk(placeOrder));
     dispatch(currentFullThunk());
     toast.success('Your order has been accepted for processing');
-    navigate('/');
+    // navigate('/');
   };
 
   return (

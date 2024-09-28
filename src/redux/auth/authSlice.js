@@ -65,7 +65,8 @@ const handleFulfilledCurrentFull = (state, { payload }) => {
   handleFulfilled(state);
 };
 const handleFulfilledUpdOrder = (state, { payload }) => {
-  state.orders = state.orders.filter(el => el.id !== payload.id);
+  console.log(payload);
+  state.orders = state.orders.filter(el => el._id !== payload._id);
   state.orders.push(payload);
 };
 

@@ -18,13 +18,13 @@ const Input = ({
       <label htmlFor={name}>{textLabel}</label>
       {location.pathname === '/cart' ? (
         <Field
-          onChange={handleChange}
-          value={valueInput}
+          // onChange={handleChange}
+          // value={valueInput}
           id={name}
           name={name}
           placeholder={placeholder}
           type={type}
-          onBlur={handleChange}
+          // onBlur={handleChange}
         />
       ) : (
         <Field id={name} name={name} placeholder={placeholder} type={type} />

@@ -36,10 +36,12 @@ const CartItem = ({
     dispatch(productsIdThunk(idProduct));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idProduct]);
-
+  console.log(idProduct);
   const { products } = useSelector(selectProducts);
+  console.log(products);
   const isProducts = Boolean(products.length);
   const productCart = isProducts && products.find(el => el._id === idProduct);
+  console.log(productCart);
   const { name, photo, price, category } = productCart;
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const CartItem = ({
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counter, _id]);
+  }, [counter]);
 
   useEffect(() => {
     if (isFirstRender.current) {

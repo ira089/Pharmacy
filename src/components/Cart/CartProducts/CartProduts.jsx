@@ -7,6 +7,7 @@ import styles from './cartProduts.module.css';
 const CartProduts = ({ idOrder, totalQuantity, total }) => {
   const { cart, isLoading, error } = useSelector(selectOrderItem);
   const isCartProducts = Boolean(cart.length);
+  console.log(cart);
 
   return (
     <>
