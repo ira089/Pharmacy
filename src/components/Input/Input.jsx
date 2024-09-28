@@ -24,6 +24,7 @@ const Input = ({
           name={name}
           placeholder={placeholder}
           type={type}
+          onBlur={handleChange}
         />
       ) : (
         <Field id={name} name={name} placeholder={placeholder} type={type} />

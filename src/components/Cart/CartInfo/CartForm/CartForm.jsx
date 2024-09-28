@@ -23,7 +23,8 @@ const CartForm = ({ handleChangeForm }) => {
       };
 
       if (allFieldsFilled(updatedData)) {
-        handleChangeForm(updatedData);
+        console.log('first');
+        // handleChangeForm(updatedData);
       }
       return updatedData;
     });
@@ -38,6 +39,11 @@ const CartForm = ({ handleChangeForm }) => {
         address: '',
       }}
       validationSchema={cartFormSchema}
+      validateOnBlur={true}
+      validateOnChange={false}
+      validateOnMount={false}
+      // validateOnSubmit={false}
+      // validateOnHandlerSubmit={false}
     >
       <Form className={styles.form}>
         <Input
