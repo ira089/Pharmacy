@@ -65,8 +65,7 @@ const handleFulfilledCurrentFull = (state, { payload }) => {
   handleFulfilled(state);
 };
 const handleFulfilledUpdOrder = (state, { payload }) => {
-  console.log(payload);
-  state.orders = state.orders.filter(el => el.id !== payload._id);
+  state.orders = state.orders.filter(el => el._id !== payload._id);
   state.orders.push(payload);
 };
 
@@ -94,9 +93,16 @@ export const authSlice = createSlice({
         state.isRefreshing = false;
         state.isLoading = false;
       })
-      .addCase(currentFullThunk.pending, handlePending)
+      .addCase(currentFullThunk.pending, state => {
+        state.isRefreshing = true;
+        state.isLoading = true;
+        state.error = null;
+      })
       .addCase(currentFullThunk.fulfilled, handleFulfilledCurrentFull)
-      .addCase(currentFullThunk.rejected, handleRejected)
+      .addCase(currentFullThunk.rejected, state => {
+        state.isRefreshing = false;
+        state.isLoading = false;
+      })
 
       .addCase(orderUpdThunk.pending, handlePending)
       .addCase(orderUpdThunk.fulfilled, handleFulfilledUpdOrder)

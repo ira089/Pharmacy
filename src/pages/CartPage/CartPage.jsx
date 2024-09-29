@@ -5,7 +5,7 @@ import { selectOrder } from '../../redux/auth/selectorsAuth';
 import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
 import {
   orderUpdThunk,
-  currentFullThunk,
+  // currentFullThunk,
 } from '../../redux/auth/operationsAuth';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
@@ -32,7 +32,7 @@ const CartPage = () => {
     phone: '',
     address: '',
   });
-  console.log(formData);
+  // console.log(formData);
   const handleChangeRadio = evt => {
     setPaymentMethod(evt.target.value);
   };
@@ -51,9 +51,9 @@ const CartPage = () => {
   };
 
   const submitPlaceOrder = () => {
-    console.log('чао какоо');
+    // console.log('чао какоо');
     dispatch(orderUpdThunk(placeOrder));
-    dispatch(currentFullThunk());
+    // dispatch(currentFullThunk());
     toast.success('Your order has been accepted for processing');
     // navigate('/');
   };

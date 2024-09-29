@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  delOrderItemThunk,
+  // delOrderItemThunk,
   updOrderItemThunk,
 } from '../../../redux/ordertItem/operationsOrdertItem';
 import { orderUpdThunk } from '../../../redux/auth/operationsAuth';
@@ -9,9 +9,9 @@ import { productsIdThunk } from '../../../redux/products/operationsProducts';
 import { selectProducts } from '../../../redux/products/selectorProducts';
 import Icon from 'components/Icon/Icon';
 import {
-  funTotalQuantity,
+  // funTotalQuantity,
   funTotal,
-  funSubTotalQuantity,
+  // funSubTotalQuantity,
   funSubTotal,
   funDelTotalQuantity,
   funDelTotal,
@@ -26,15 +26,20 @@ const CartItem = ({
   totalQuantity,
   total,
 }) => {
-  const isFirstRender = useRef(true);
+  // const isFirstRender = useRef(true);
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(quantity);
   const [newTotal, setNewTotal] = useState(total);
   const [newTotalQuantity, setNewTotalQuantity] = useState(totalQuantity);
   console.log(quantity);
+  // console.log(total);
+  // console.log(totalQuantity);
+  // console.log(counter);
+  // console.log(newTotal);
+  // console.log(newTotalQuantity);
 
-  console.log(newTotalQuantity);
   useEffect(() => {
+    console.log('productsId');
     dispatch(productsIdThunk(idProduct));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idProduct]);
@@ -43,45 +48,64 @@ const CartItem = ({
 
   const isProducts = Boolean(products.length);
   const productCart = isProducts && products.find(el => el._id === idProduct);
-
+  console.log(productCart);
   const { name, photo, price, category } = productCart;
 
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-    } else {
-      dispatch(
-        updOrderItemThunk({
-          idProduct: idProduct,
-          quantity: String(counter),
-          idOrder: idOrder,
-          id: _id,
-        })
-      );
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counter, _id]);
+  // useEffect(() => {
+  //   if (isFirstRender.current) {
+  //     isFirstRender.current = false;
+  //   } else {
+  //     console.log('updOrderItem');
+  //     dispatch(
+  //       updOrderItemThunk({
+  //         idProduct: idProduct,
+  //         quantity: String(counter),
+  //         idOrder: idOrder,
+  //         id: _id,
+  //       })
+  //     );
+  //   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [counter, _id]);
 
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-    } else {
-      dispatch(
-        orderUpdThunk({
-          id: idOrder,
-          total: newTotal,
-          totalQuantity: newTotalQuantity,
-          status: 'Pending',
-        })
-      );
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newTotal, newTotalQuantity]);
+  // useEffect(() => {
+  //   if (isFirstRender.current) {
+  //     isFirstRender.current = false;
+  //   } else {
+  //     console.log('orderUpd');
+  //     dispatch(
+  //       orderUpdThunk({
+  //         id: idOrder,
+  //         total: newTotal,
+  //         totalQuantity: newTotalQuantity,
+  //         status: 'Pending',
+  //       })
+  //     );
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [newTotal, newTotalQuantity]);
 
   const counterPlus = () => {
     setCounter(prevCounter => Number(prevCounter) + 1);
-    setNewTotalQuantity(funTotalQuantity(totalQuantity));
-    setNewTotal(funTotal(price, total));
+    setNewTotalQuantity(prevTotalQuantity => Number(prevTotalQuantity) + 1);
+    setNewTotal(prevTotal => funTotal(price, prevTotal));
+    console.log('updOrderItem');
+    dispatch(
+      updOrderItemThunk({
+        idProduct: idProduct,
+        quantity: String(counter),
+        idOrder: idOrder,
+        id: _id,
+      })
+    );
+    dispatch(
+      orderUpdThunk({
+        id: idOrder,
+        total: newTotal,
+        totalQuantity: String(newTotalQuantity),
+        status: 'Pending',
+      })
+    );
   };
 
   const counterMinus = () => {
@@ -89,12 +113,12 @@ const CartItem = ({
       return;
     }
     setCounter(prevCounter => prevCounter - 1);
-    setNewTotalQuantity(funSubTotalQuantity(totalQuantity));
-    setNewTotal(funSubTotal(price, total));
+    setNewTotalQuantity(prevTotalQuantity => Number(prevTotalQuantity) - 1);
+    setNewTotal(prevTotal => funSubTotal(price, prevTotal));
   };
 
   const delToCart = id => {
-    dispatch(delOrderItemThunk(id));
+    // dispatch(delOrderItemThunk(id));
     setNewTotalQuantity(funDelTotalQuantity(totalQuantity, counter));
     setNewTotal(funDelTotal(price, total, counter));
   };
