@@ -39,7 +39,7 @@ export const funDelTotalQuantity = (quantity, counter) => {
 
 export const funDelTotal = (price, total, counter) => {
   const numberTotal = Number(total) - Number(price) * Number(counter);
-  return String(Math.round(numberTotal * 100) / 100);
+  return numberTotal.toFixed(2);
 };
 
 export const totalQuantityFan = arr => {
