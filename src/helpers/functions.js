@@ -43,20 +43,16 @@ export const funDelTotal = (price, total, counter) => {
 };
 
 export const totalQuantityFan = arr => {
-  // Проверяем, есть ли элементы в массиве
+  if (!Array.isArray(arr)) {
+    return;
+  }
   const isOrder = Boolean(arr.length);
   if (!isOrder) {
     return;
   }
-
-  // Ищем объект с `status === 'Pending'`
   const foundItem = arr.find(el => el.status === 'Pending');
-
-  // Если объект найден и у него есть свойство `totalQuantity`, возвращаем его
   if (foundItem && foundItem.totalQuantity) {
     return String(foundItem.totalQuantity);
   }
-
-  // Если объект не найден или у него нет `totalQuantity`, возвращаем "0"
   return '0';
 };
