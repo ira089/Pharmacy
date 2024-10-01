@@ -62,6 +62,7 @@ const handleFulfilledCurrentFull = (state, { payload }) => {
   state.user.phone = payload.phone;
   state.orders = payload.orders;
   state.isLoggedIn = true;
+  state.isRefreshing = false;
   handleFulfilled(state);
 };
 const handleFulfilledUpdOrder = (state, { payload }) => {
