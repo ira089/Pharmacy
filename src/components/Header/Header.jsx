@@ -22,10 +22,6 @@ const Header = () => {
   const order = useSelector(selectOrder);
   const totalQuantity = totalQuantityFan(order);
 
-  // const isOrden = Boolean(order.length);
-  // const { totalQuantity } =
-  //   isOrden && order.find(el => el.status === 'Pending');
-
   const handleResize = () => {
     if (window.innerWidth >= 1440) {
       setOpen(false);

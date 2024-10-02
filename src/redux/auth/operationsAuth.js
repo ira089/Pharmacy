@@ -81,7 +81,6 @@ export const currentFullThunk = createAsyncThunk(
 export const orderUpdThunk = createAsyncThunk(
   'auth/orderupd',
   async (data, thunkAPI) => {
-    console.log(data);
     try {
       const id = data.id;
       const dataChange = { ...data };

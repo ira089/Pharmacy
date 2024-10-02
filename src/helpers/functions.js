@@ -16,17 +16,10 @@ export const allFieldsFilled = data => {
   return Object.values(data).every(field => field.trim() !== '');
 };
 
-// export const funTotalQuantity = a => {
-//   return String(Number(a) + 1);
-// };
-
 export const funTotal = (price, total) => {
   const numberTotal = Number(price) + Number(total);
   return numberTotal.toFixed(2);
 };
-// export const funSubTotalQuantity = a => {
-//   return String(Number(a) - 1);
-// };
 
 export const funSubTotal = (price, total) => {
   const numberTotal = Number(total) - Number(price);

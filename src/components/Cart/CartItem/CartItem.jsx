@@ -24,39 +24,25 @@ const CartItem = ({
   totalQuantity,
   total,
 }) => {
-  // const isFirstRender = useRef(true);
   const changeCounter = useRef(false);
 
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(quantity);
   const [newTotal, setNewTotal] = useState(total);
   const [newTotalQuantity, setNewTotalQuantity] = useState(totalQuantity);
-  // console.log(quantity);
-  console.log(total);
-  console.log(totalQuantity);
-  // console.log(counter);
-  console.log(newTotal);
-  console.log(newTotalQuantity);
 
   useEffect(() => {
-    console.log('productsId');
     dispatch(productsIdThunk(idProduct));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idProduct]);
 
   const { products } = useSelector(selectProducts);
-
   const isProducts = Boolean(products.length);
   const productCart = isProducts && products.find(el => el._id === idProduct);
-  // const isProductCart = Boolean(productCart.length);
-  // console.log(productCart);
-
-  // const { name, photo, price, category } = isProductCart && productCart;
   const { name, photo, price, category } = productCart;
 
   useEffect(() => {
     if (changeCounter.current) {
-      console.log('updOrderItem');
       dispatch(
         updOrderItemThunk({
           idProduct: idProduct,
@@ -73,7 +59,6 @@ const CartItem = ({
 
   useEffect(() => {
     if (changeCounter.current) {
-      console.log('orderUpd');
       dispatch(
         orderUpdThunk({
           id: idOrder,

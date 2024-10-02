@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectOrder } from '../../redux/auth/selectorsAuth';
 import { allOrderItemThunk } from '../../redux/ordertItem/operationsOrdertItem';
-import {
-  orderUpdThunk,
-  // currentFullThunk,
-} from '../../redux/auth/operationsAuth';
+import { orderUpdThunk } from '../../redux/auth/operationsAuth';
 import CartInfo from '../../components/Cart/CartInfo/CartInfo';
 import CartProduts from '../../components/Cart/CartProducts/CartProduts';
 import { toast } from 'react-toastify';
@@ -15,12 +12,7 @@ const CartPage = () => {
   const dispatch = useDispatch();
 
   const order = useSelector(selectOrder);
-  // const isOrden = Boolean(order.length);
-  console.log(order);
-  // const { totalQuantity, total, _id } =
-  //   isOrden && order.find(el => el.status === 'Pending');
   const { totalQuantity, total, _id } = order[0];
-  console.log(_id);
 
   useEffect(() => {
     dispatch(allOrderItemThunk(_id));
@@ -33,7 +25,7 @@ const CartPage = () => {
     phone: '',
     address: '',
   });
-  // console.log(formData);
+
   const handleChangeRadio = evt => {
     setPaymentMethod(evt.target.value);
   };
@@ -52,11 +44,8 @@ const CartPage = () => {
   };
 
   const submitPlaceOrder = () => {
-    // console.log('чао какоо');
     dispatch(orderUpdThunk(placeOrder));
-    // dispatch(currentFullThunk());
     toast.success('Your order has been accepted for processing');
-    // navigate('/');
   };
 
   return (
